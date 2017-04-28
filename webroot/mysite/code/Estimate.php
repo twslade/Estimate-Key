@@ -51,11 +51,11 @@ class Estimate extends DataObject {
 
 
         $gridField = new GridField('Risks', 'Risk', Risk::get());
+
         $gridField->setConfig(
             GridFieldConfig_RelationEditor::create()
-                ->addComponent(new GridFieldAddExistingAutocompleter())
-                ->removeComponent(new GridFieldDeleteAction(true))
-                ->addComponent(new GridFieldDeleteAction('unlinkrelation'))
+                ->addComponent(new GridFieldDeleteAction('unlinkrelation')
+            )
         );
 
         $fields->addFieldsToTab('Root.Technical', array(
@@ -72,6 +72,28 @@ class Estimate extends DataObject {
             $gridField
 
         ));
+
+
+        $lineItems = new GridField('LineItems', 'LineItem', LineItem::get(),
+            GridFieldConfig::create()
+                ->addComponent(new GridFieldButtonRow('before'))
+                ->addComponent(new GridFieldToolbarHeader())
+                ->addComponent(new GridFieldTitleHeader())
+                ->addComponent(new GridFieldEditableColumns())
+                ->addComponent(new GridFieldDeleteAction())
+                ->addComponent(new GridFieldAddNewInlineButton())
+        );
+
+        $lineItems->getConfig()->getComponentByType('GridFieldEditableColumns')->setDisplayFields(array(
+           'NumHours' => function($record, $column, $grid) {
+               return new TextField('NumHours');
+           },
+           'Description' => function($record, $column, $grid) {
+               return new TextField('Description');
+           }
+        ));
+
+        $fields->addFieldsToTab('Root.Estimate', array($lineItems));
 
         return $fields;
     }
@@ -260,6 +282,25 @@ class Story extends DataObject {
     }
 }
 
+class LineItem extends DataObject {
+    private static $db = array(
+        'NumHours' => 'Int',
+        'Description' => 'Varchar(255)'
+    );
+
+    public function getCMSFields()
+    {
+        $fields = FieldList::create(
+            TextField::create('NumHours'),
+            TextField::create('Description')
+
+        );
+
+        return $fields;
+    }
+
+
+}
 class Page extends SiteTree {
     private static $db = array(
     );
