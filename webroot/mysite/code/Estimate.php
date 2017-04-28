@@ -1,4 +1,5 @@
 <?php
+
 class Estimate extends DataObject {
 
 	private static $db = array(
@@ -11,17 +12,17 @@ class Estimate extends DataObject {
         'RomLow'                    => 'Int',
         'RomHigh'                   => 'Int',
 
-        'BudgetConfidence'          => 'Enum(array("High", "Med", "Low"))',
-	    'ScheduleConfidence'        => 'Enum(array("High", "Med", "Low"))',
-	    'TechnicalConfidence'       => 'Enum(array("High", "Med", "Low"))',
+        'BudgetConfidence'          => 'Int',
+	    'ScheduleConfidence'        => 'Int',
+	    'TechnicalConfidence'       => 'Int',
 	);
 
     private static $many_many = array(
         'Risks' => 'Risk',
-        'Clients' => 'Clients',
+        'Clients' => 'Client',
         'Stories' => 'Story',
         'Artifacts' => 'Artifact',
-        'Platform' => 'Platform'
+        'Platforms' => 'Platform'
     );
 
     private $_confidenceLevels = array('High', 'Med', 'Low');
@@ -33,17 +34,18 @@ class Estimate extends DataObject {
             TextField::create('Name'),
             TextField::create('RomLow', 'Lower Rom Range'),
             TextField::create('RomHigh', 'Higher Rom Range'),
-            HtmlEditorField::create('Description'),
-            ListboxField::create('Platform', 'Platform')
-                ->setSource(Platform::get()->map('ID', 'Name')->toArray()),
-            ListboxField::create('Client', 'Client')->setSource(
+            HtmlEditorField::create('Description')->setRows(5),
+            ListboxField::create('Platforms', 'Platform')
+                ->setSource(Platform::get()->map('ID', 'Name')->toArray())
+                ->setMultiple(true),
+            ListboxField::create('Clients', 'Client')->setSource(
                 Client::get()->map('ID', 'Name')->toArray()
             )->setMultiple(true)
         ));
 
         $fields->addFieldsToTab('Root.Requirements', array(
-            HtmlEditorField::create('BusinessRequirements'),
-            HtmlEditorField::create('FunctionalRequirements'),
+            HtmlEditorField::create('BusinessRequirements')->setRows(5),
+            HtmlEditorField::create('FunctionalRequirements')->setRows(5),
 
         ));
 
@@ -57,7 +59,7 @@ class Estimate extends DataObject {
         );
 
         $fields->addFieldsToTab('Root.Technical', array(
-            HtmlEditorField::create('TechnicalApproach'),
+            HtmlEditorField::create('TechnicalApproach')->setRows(5),
             DropdownField::create('BudgetConfidence', 'Budget Confidence')
                 ->setSource($this->_confidenceLevels)
                 ->setEmptyString('-- Select a level --'),
@@ -147,7 +149,7 @@ class Risk extends DataObject {
         'MitigationPlan'            => 'HTMLText',
         'MitigationCost'            => 'Int',
         'PotentialCost'             => 'Int',
-        'Probability'               => "Enum(array('High', 'Med', 'Low'))"
+        'Probability'               => 'Int'
 
     );
 
@@ -161,6 +163,11 @@ class Risk extends DataObject {
         'RiskTypes' => 'RiskType'
     );
 
+    private static $searchable_fields = array(
+        'Name',
+        'Description'
+    );
+
     public static $summary_fields = array(
         'Name' => 'Name',
         'Type' => 'Type',
@@ -170,9 +177,8 @@ class Risk extends DataObject {
     public function getCMSFields()
     {
         $fields = FieldList::create(
-            ListboxField::create('RiskType', 'Risk Types')
+            ListboxField::create('RiskTypes', 'Risk Types')
                 ->setSource(RiskType::get()->map('ID', 'Name')->toArray())
-                ->setValue($this->RiskTypes()->map('ID', 'Name')->toArray())
                 ->setMultiple(true),
             TextField::create('Name'),
             DropdownField::create('Probability')->setSource($this->_riskProbabilities),
@@ -204,7 +210,6 @@ class RiskType extends DataObject {
         return $fields;
     }
 }
-
 
 class Role extends DataObject {
     private static $db = array(
@@ -254,7 +259,6 @@ class Story extends DataObject {
         return $fields;
     }
 }
-
 
 class Page extends SiteTree {
     private static $db = array(

@@ -4,7 +4,7 @@ class EstimateAdmin extends ModelAdmin {
         'Estimate',
         'Risk',
         'Artifact',
-        'Story',
+        'Story'
     );
 
     private static $url_segment = 'estimates';
