@@ -25,12 +25,24 @@ class Estimate extends DataObject {
         'Platforms' => 'Platform'
     );
 
+    /** @var FieldList */
+    private $_estimateFields = null;
+
     private $_confidenceLevels = array('High', 'Med', 'Low');
 
-    public function getCMSFields()
-    {
-        $fields = FieldList::create(TabSet::create('Root'));
-        $fields->addFieldsToTab('Root.Main', array(
+    /**
+     * @return FieldList
+     */
+    private function _getFields(){
+        if($this->_estimateFields){
+            return $this->_estimateFields;
+        }
+        $this->_estimateFields = FieldList::create(TabSet::create('Root'));
+        return $this->_estimateFields;
+    }
+
+    private function _getMainTab(){
+        return $this->_getFields()->addFieldsToTab('Root.Main', array(
             TextField::create('Name'),
             TextField::create('RomLow', 'Lower Rom Range'),
             TextField::create('RomHigh', 'Higher Rom Range'),
@@ -42,23 +54,23 @@ class Estimate extends DataObject {
                 Client::get()->map('ID', 'Name')->toArray()
             )->setMultiple(true)
         ));
+    }
 
-        $fields->addFieldsToTab('Root.Requirements', array(
+    private function _getRequirementTab(){
+        return $this->_getFields()->addFieldsToTab('Root.Requirements', array(
             HtmlEditorField::create('BusinessRequirements')->setRows(5),
             HtmlEditorField::create('FunctionalRequirements')->setRows(5),
-
         ));
+    }
 
-
-        $gridField = new GridField('Risks', 'Risk', Risk::get());
+    private function _getTechnicalTab(){
+        $gridField = new GridField('Risks', 'Risk', $this->Risks());
 
         $gridField->setConfig(
             GridFieldConfig_RelationEditor::create()
-                ->addComponent(new GridFieldDeleteAction('unlinkrelation')
-            )
         );
 
-        $fields->addFieldsToTab('Root.Technical', array(
+        return $this->_getFields()->addFieldsToTab('Root.Technical', array(
             HtmlEditorField::create('TechnicalApproach')->setRows(5),
             DropdownField::create('BudgetConfidence', 'Budget Confidence')
                 ->setSource($this->_confidenceLevels)
@@ -72,30 +84,34 @@ class Estimate extends DataObject {
             $gridField
 
         ));
+    }
 
+    private function _getStoryTab(){
+        $storiesConfig = GridFieldConfig_RelationEditor::create();
+        //@todo: Add line items within column as subtable
+        $storiesConfig
+            ->getComponentByType('GridFieldAddExistingAutocompleter')
+            ->setSearchFields(array('Name'))
+            ->setResultsFormat('$Name');
 
-        $lineItems = new GridField('LineItems', 'LineItem', LineItem::get(),
-            GridFieldConfig::create()
-                ->addComponent(new GridFieldButtonRow('before'))
-                ->addComponent(new GridFieldToolbarHeader())
-                ->addComponent(new GridFieldTitleHeader())
-                ->addComponent(new GridFieldEditableColumns())
-                ->addComponent(new GridFieldDeleteAction())
-                ->addComponent(new GridFieldAddNewInlineButton())
-        );
+        //@todo: Add total hours in search results
 
-        $lineItems->getConfig()->getComponentByType('GridFieldEditableColumns')->setDisplayFields(array(
-           'NumHours' => function($record, $column, $grid) {
-               return new TextField('NumHours');
-           },
-           'Description' => function($record, $column, $grid) {
-               return new TextField('Description');
-           }
-        ));
+        $gridField = new GridField('Stories', 'Story', $this->Stories(), $storiesConfig);
 
-        $fields->addFieldsToTab('Root.Estimate', array($lineItems));
+        $this->_getFields()->addFieldToTab('Root.Stories', $gridField);
 
-        return $fields;
+        return $this->_getFields();
+    }
+
+    public function getCMSFields()
+    {
+
+        $this->_getMainTab();
+        $this->_getRequirementTab();
+        $this->_getTechnicalTab();
+        $this->_getStoryTab();
+
+        return $this->_getFields();
     }
 }
 
@@ -268,14 +284,40 @@ class Story extends DataObject {
         'Name'                      => 'Varchar(255)',
     );
 
+    private $searchable_fields = array('Name');
+
     private static $belongs_many_many = array(
         'Estimates' => 'Estimate'
     );
 
+    private static $many_many = array(
+        'LineItems' => 'LineItem'
+    );
+
     public function getCMSFields()
     {
+        $lineItems = new GridField('LineItems', 'Line Items', $this->LineItems(),
+            GridFieldConfig::create()
+                ->addComponent(new GridFieldButtonRow('before'))
+                ->addComponent(new GridFieldToolbarHeader())
+                ->addComponent(new GridFieldTitleHeader())
+                ->addComponent(new GridFieldEditableColumns())
+                ->addComponent(new GridFieldDeleteAction())
+                ->addComponent(new GridFieldAddNewInlineButton())
+        );
+
+        $lineItems->getConfig()->getComponentByType('GridFieldEditableColumns')->setDisplayFields(array(
+            'NumHours' => function($record, $column, $grid) {
+                return new TextField('NumHours', 'Number of hours');
+            },
+            'Description' => function($record, $column, $grid) {
+                return new TextField('Description', 'Description');
+            }
+        ));
+
         $fields = FieldList::create(
-            TextField::create('Name')
+            TextField::create('Name'),
+            $lineItems
         );
 
         return $fields;
@@ -286,6 +328,10 @@ class LineItem extends DataObject {
     private static $db = array(
         'NumHours' => 'Int',
         'Description' => 'Varchar(255)'
+    );
+
+    private static $belongs_many_many = array(
+        'Stories' => 'Story'
     );
 
     public function getCMSFields()
