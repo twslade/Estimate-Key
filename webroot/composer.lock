@@ -4,9 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c3c5fdd2bab1a9c0211bdf172da20ba0",
-    "content-hash": "469383f6d5bb69e957288be1959e8b6b",
+    "hash": "c51837a502c34b95924b72bdbb160cc0",
+    "content-hash": "1a9dfbeea4d93614364d0cf6b745c83c",
     "packages": [
+        {
+            "name": "ajshort/silverstripe-gridfieldextensions",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ajshort/silverstripe-gridfieldextensions.git",
+                "reference": "7263bbd49af6ae8a1e87feff6364b3a633d8999c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ajshort/silverstripe-gridfieldextensions/zipball/7263bbd49af6ae8a1e87feff6364b3a633d8999c",
+                "reference": "7263bbd49af6ae8a1e87feff6364b3a633d8999c",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "replace": {
+                "ajshort/silverstripe-gridfieldextensions": "self.version"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "gridfieldextensions",
+                "screenshots": [
+                    "docs/en/_images/editable-rows.png",
+                    "docs/en/_images/add-existing-search.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Nyeholt",
+                    "email": "marcus@silverstripe.com.au"
+                },
+                {
+                    "name": "Andrew Short",
+                    "email": "andrewjshort@gmail.com"
+                }
+            ],
+            "description": "A collection of useful grid field components",
+            "homepage": "http://github.com/ajshort/silverstripe-gridfieldextensions",
+            "keywords": [
+                "gridfield",
+                "silverstripe"
+            ],
+            "abandoned": "silverstripe-australia/gridfieldextensions",
+            "time": "2015-03-04 01:28:24"
+        },
         {
             "name": "composer/installers",
             "version": "v1.3.0",
