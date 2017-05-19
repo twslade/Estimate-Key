@@ -176,6 +176,11 @@ class Artifact extends DataObject
     }
 }
 
+/**
+ * Defines client name and code, for example, XYZ
+ *
+ * Class Client
+ */
 class Client extends DataObject {
     private static $db = array(
         'Name'                      => 'Varchar(255)',
