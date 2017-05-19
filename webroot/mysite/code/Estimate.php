@@ -166,6 +166,8 @@ class Artifact extends DataObject
 
     public function getCMSFields()
     {
+
+        //@todo: Add uploader for artifact
         $fields = FieldList::create(
             TextField::create('Name')
         );
