@@ -121,6 +121,12 @@ class Estimate extends DataObject {
     }
 }
 
+/**
+ * Defines the platforms used, for examples,
+ * Magento 1, Sales Force Commerce Cloud, etc
+ *
+ * Class Platform
+ */
 class Platform extends DataObject {
     private static $db = array(
         'Name' => 'Varchar(255)',
