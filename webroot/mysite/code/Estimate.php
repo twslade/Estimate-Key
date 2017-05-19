@@ -303,6 +303,13 @@ class Role extends DataObject {
     }
 }
 
+
+/**
+ * Defines skillsets that can be used to determine who can do the work,
+ * for example, javascript, php, html, css, etc
+ *
+ * Class Skill
+ */
 class Skill extends DataObject {
     private static $db = array(
         'Name'                      => 'Varchar(255)'
