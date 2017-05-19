@@ -203,6 +203,8 @@ class Client extends DataObject {
 }
 
 /**
+ * Defines risks associated with work
+ *
  * Class Risk
  */
 class Risk extends DataObject {
@@ -255,6 +257,12 @@ class Risk extends DataObject {
     }
 }
 
+/**
+ * Defines risk type, for example,
+ * high, medium, or low
+ *
+ * Class RiskType
+ */
 class RiskType extends DataObject {
     private static $db = array(
         'Name' => 'Varchar(255)',
