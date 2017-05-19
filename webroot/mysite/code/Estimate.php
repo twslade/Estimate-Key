@@ -378,6 +378,13 @@ class Story extends DataObject {
     }
 }
 
+/**
+ * Defines line items which make up story.
+ * Line items contains number of hours and description of work
+ * For example, 1 Install module
+ *
+ * Class LineItem
+ */
 class LineItem extends DataObject {
     private static $db = array(
         'NumHours' => 'Int',
