@@ -42,7 +42,7 @@ class Estimate extends DataObject {
     }
 
     private function _getMainTab(){
-        return $this->_getFields()->addFieldsToTab('Root.Main', array(
+        $this->_getFields()->addFieldsToTab('Root.Main', array(
             TextField::create('Name'),
             TextField::create('RomLow', 'Lower Rom Range'),
             TextField::create('RomHigh', 'Higher Rom Range'),
@@ -54,13 +54,17 @@ class Estimate extends DataObject {
                 Client::get()->map('ID', 'Name')->toArray()
             )->setMultiple(true)
         ));
+
+        return;
     }
 
     private function _getRequirementTab(){
-        return $this->_getFields()->addFieldsToTab('Root.Requirements', array(
+        $this->_getFields()->addFieldsToTab('Root.Requirements', array(
             HtmlEditorField::create('BusinessRequirements')->setRows(5),
             HtmlEditorField::create('FunctionalRequirements')->setRows(5),
         ));
+
+        return;
     }
 
     private function _getTechnicalTab(){
@@ -70,7 +74,7 @@ class Estimate extends DataObject {
             GridFieldConfig_RelationEditor::create()
         );
 
-        return $this->_getFields()->addFieldsToTab('Root.Technical', array(
+        $this->_getFields()->addFieldsToTab('Root.Technical', array(
             HtmlEditorField::create('TechnicalApproach')->setRows(5),
             DropdownField::create('BudgetConfidence', 'Budget Confidence')
                 ->setSource($this->_confidenceLevels)
@@ -84,6 +88,8 @@ class Estimate extends DataObject {
             $gridField
 
         ));
+
+        return;
     }
 
     private function _getStoryTab(){
@@ -100,7 +106,7 @@ class Estimate extends DataObject {
 
         $this->_getFields()->addFieldToTab('Root.Stories', $gridField);
 
-        return $this->_getFields();
+        return;
     }
 
     public function getCMSFields()
