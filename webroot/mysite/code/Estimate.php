@@ -282,6 +282,12 @@ class RiskType extends DataObject {
     }
 }
 
+/**
+ * Defines roles, for example,
+ * Applications Engineer, Quality Engineer, etc
+ *
+ * Class Role
+ */
 class Role extends DataObject {
     private static $db = array(
         'Name'                      => 'Varchar(255)'
