@@ -367,6 +367,8 @@ class Story extends DataObject {
             }
         ));
 
+
+        //@todo: Add additional field for summing line items
         $fields = FieldList::create(
             TextField::create('Name'),
             $lineItems
