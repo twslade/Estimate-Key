@@ -146,6 +146,12 @@ class Platform extends DataObject {
     }
 }
 
+/**
+ * Defines artifacts as part of an estimate,
+ * for example, User Guide PDF, Mockups, Zip, etc
+ *
+ * Class Artifact
+ */
 class Artifact extends DataObject
 {
     private static $db = array(
