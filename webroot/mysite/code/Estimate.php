@@ -325,6 +325,12 @@ class Skill extends DataObject {
     }
 }
 
+/**
+ * Defines stories, for example,
+ * Install module or Create integration skeleton
+ *
+ * Class Story
+ */
 class Story extends DataObject {
     private static $db = array(
         'Name'                      => 'Varchar(255)',
