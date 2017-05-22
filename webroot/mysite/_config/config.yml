@@ -17,19 +17,60 @@ Name: seeder
 Seeder\Seeder:
     create:
         -
-            key: Skill1
-            class: Skill
+            key: Role1
+            class: Role
             fields:
-                Name: Javascript
-
+                Name: Quality Engineer
         -
-            key: Skill2
-            class: Skill
+            key: Role1
+            class: Role
             fields:
-                Name: Flat file API
-
+                Name: Applications Engineer
         -
-            key: Skill3
-            class: Skill
+            key: Role1
+            class: Role
             fields:
-                Name: PHP
+                Name: Frontend Engineer
+        -
+            key: RiskType1
+            class: RiskType
+            fields:
+                Name: Budget
+        -
+            key: RiskType2
+            class: RiskType
+            fields:
+                Name: Schedule
+        -
+            key: RiskType3
+            class: RiskType
+            fields:
+                Name: Quality
+        Skill:
+            count: 10
+            fields:
+                Name: faker(jobTitle)
+        Platform:
+            count: 10
+            fields:
+                Name: faker(company)
+        LineItem:
+            count: 10
+            fields:
+                Description: faker(sentence, 6)
+                NumHours: faker(numberBetween, 2, 10)
+        Story:
+            count: 10
+            fields:
+                Name: faker(sentence, 6)
+                LineItems: random(LineItem, 10)
+        Risk:
+            count: 10
+            fields:
+                Name: faker(sentence, 6)
+                Description: faker(paragraphs, 3, true)
+                MitigationPlan: faker(sentence, 10)
+                MitigationCost: faker(numberBetween, 1, 10)
+                PotentialCost: faker(numberBetween, 1, 10)
+                RiskTypes: random(RiskType)
+                Probability: 2
