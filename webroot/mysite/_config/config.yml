@@ -46,14 +46,25 @@ Seeder\Seeder:
             class: RiskType
             fields:
                 Name: Quality
+        -
+            key: Platform1
+            class: Platform
+            fields:
+                Name: Magento 1
+        -
+            key: Platform2
+            class: Platform
+            fields:
+                Name: Magento 2
+        -
+            key: Platform3
+            class: Platform
+            fields:
+                Name: Sales Force Commerce Cloud
         Skill:
             count: 10
             fields:
                 Name: faker(jobTitle)
-        Platform:
-            count: 10
-            fields:
-                Name: faker(company)
         LineItem:
             count: 10
             fields:
@@ -74,3 +85,25 @@ Seeder\Seeder:
                 PotentialCost: faker(numberBetween, 1, 10)
                 RiskTypes: random(RiskType)
                 Probability: 2
+        Client:
+            count: 10
+            fields:
+                Name: faker(company)
+                Code: faker(lexify, '???')
+        Estimate:
+            count: 10
+            fields:
+                Name: faker(sentence, 6)
+                Description: faker(sentence, 10)
+                BusinessRequirements: faker(paragraphs, 3, true)
+                FunctionialRequirements: faker(paragraphs, 3, true)
+                TechnicalApproach: faker(paragraphs, 3, true)
+                RomLow: faker(numberBetween, 5, 35)
+                RomHigh: faker(numberBetween, 50, 100)
+                BudgetConfidence: 2
+                ScheduleConfidence: 3
+                TechnicalConfidence: 1
+                Risks: random(Risk, 3)
+                Clients: random(Client, 2)
+                Stories: random(Story, 5)
+                Platforms: random(Platform, 1)
