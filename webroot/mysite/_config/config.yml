@@ -9,3 +9,27 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'simple'
+
+---
+Name: seeder
+---
+
+Seeder\Seeder:
+    create:
+        -
+            key: Skill1
+            class: Skill
+            fields:
+                Name: Javascript
+
+        -
+            key: Skill2
+            class: Skill
+            fields:
+                Name: Flat file API
+
+        -
+            key: Skill3
+            class: Skill
+            fields:
+                Name: PHP
