@@ -93,6 +93,9 @@ class Estimate extends DataObject {
     }
 
     private function _getStoryTab(){
+
+
+        /** @var GridFieldConfig_RelationEditor $storiesConfig */
         $storiesConfig = GridFieldConfig_RelationEditor::create();
         //@todo: Add line items within column as subtable
         $storiesConfig
