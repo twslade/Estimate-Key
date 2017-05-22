@@ -103,6 +103,10 @@ class Estimate extends DataObject {
             ->setSearchFields(array('Name'))
             ->setResultsFormat('$Name');
 
+        /** @var GridFieldDataColumns $columns */
+        //$columns = $storiesConfig->getComponentByType('GridFieldDataColumns');
+
+
         //@todo: Add total hours in search results
 
         $gridField = new GridField('Stories', 'Story', $this->Stories(), $storiesConfig);
