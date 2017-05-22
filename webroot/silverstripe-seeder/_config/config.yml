@@ -1,0 +1,68 @@
+---
+Name: silverstripe-seeder
+After: 'framework/*', 'cms/*'
+---
+
+Seeder:
+  providers:
+    - \Seeder\DataTypeProvider
+    - \Seeder\DateProvider
+    - \Seeder\FakerProvider
+    - \Seeder\HTMLProvider
+    - \Seeder\ImageProvider
+    - \Seeder\MemberProvider
+    - \Seeder\FirstObjectProvider
+    - \Seeder\PageTitleProvider
+    - \Seeder\RandomObjectProvider
+    - \Seeder\SortProvider
+    - \Seeder\UniqueProvider
+    - \Seeder\URLSegmentProvider
+    - \Seeder\ValueProvider
+    - \Seeder\WhereProvider
+    # tests
+    - \Seeder\Tests\TestProvider
+  empty_shorthand_provider: \Seeder\ValueProvider
+  default_provider: \Seeder\DataTypeProvider
+  default_providers:
+    Image: \Seeder\ImageProvider
+  default_ignores:
+    SiteTree:
+      - Sort
+      - URLSegment
+      - MenuTitle
+      - HasBrokenFile
+      - HasBrokenLink
+      - ReportClass
+      - Priority
+      - Version
+      - MetaTitle
+      - MetaDescription
+      - ExtraMeta
+    Member:
+      - TempIDHash
+      - TempIDExpired
+      - RememberLoginToken
+      - NumVisit
+      - LastVisited
+      - AutoLoginHash
+      - AutoLoginExpired
+      - PasswordEncryption
+      - Salt
+      - PasswordExpiry
+      - LockedOutUntil
+      - Locale
+      - FailedLoginCount
+      - DateFormat
+      - TimeFormat
+  default_values:
+    SiteTree:
+      ShowInMenus: 0
+      ShowInSearch: 1
+      CanViewType: Anyone
+      CanEditType: LoggedInUsers
+
+
+Director:
+  rules:
+    'seed' : '\Seeder\Tasks\Seed'
+    'unseed' : '\Seeder\Tasks\Unseed'

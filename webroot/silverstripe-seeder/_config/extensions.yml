@@ -1,0 +1,9 @@
+---
+Name: silverstripe-seeder-extensions
+After: 'framework/*', 'cms/*'
+---
+
+DataObject:
+  extensions:
+    - IsSeededExtension
+    - WriteCallbackExtension
