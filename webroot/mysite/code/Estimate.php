@@ -249,10 +249,10 @@ class Risk extends DataObject {
     public function getCMSFields()
     {
         $fields = FieldList::create(
+            TextField::create('Name'),
             ListboxField::create('RiskTypes', 'Risk Types')
                 ->setSource(RiskType::get()->map('ID', 'Name')->toArray())
                 ->setMultiple(true),
-            TextField::create('Name'),
             DropdownField::create('Probability')->setSource($this->_riskProbabilities),
             HtmlEditorField::create('Description'),
             HtmlEditorField::create('MitigationPlan'),
