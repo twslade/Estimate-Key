@@ -21,8 +21,8 @@ class Estimate extends DataObject {
         'Risks' => 'Risk',
         'Clients' => 'Client',
         'Stories' => 'Story',
-        'Artifacts' => 'Artifact',
-        'Platforms' => 'Platform'
+        'Platforms' => 'Platform',
+        'Files' => 'File'
     );
 
     /** @var FieldList */
@@ -111,7 +111,20 @@ class Estimate extends DataObject {
 
         $gridField = new GridField('Stories', 'Story', $this->Stories(), $storiesConfig);
 
-        $this->_getFields()->addFieldToTab('Root.Stories', $gridField);
+        $this->_getFields()->addFieldsToTab('Root.Stories', array(
+            $gridField
+            ));
+
+        return;
+    }
+
+    private function _getArtifactsTab(){
+        $this->_getFields()->addFieldsToTab('Root.Artifacts', array(
+            new UploadField(
+                $name = 'Files',
+                $title = 'Upload file'
+            )
+        ));
 
         return;
     }
@@ -123,6 +136,7 @@ class Estimate extends DataObject {
         $this->_getRequirementTab();
         $this->_getTechnicalTab();
         $this->_getStoryTab();
+        $this->_getArtifactsTab();
 
         return $this->_getFields();
     }
@@ -145,36 +159,6 @@ class Platform extends DataObject {
 
     public function getCMSFields()
     {
-        $fields = FieldList::create(
-            TextField::create('Name')
-        );
-
-        return $fields;
-    }
-}
-
-/**
- * Defines artifacts as part of an estimate,
- * for example, User Guide PDF, Mockups, Zip, etc
- *
- * Class Artifact
- */
-class Artifact extends DataObject
-{
-    private static $db = array(
-        'Name' => 'Varchar(255)',
-        'File' => 'Varchar(255)',
-        'Link' => 'Varchar(255)'
-    );
-
-    private static $belongs_many_many = array(
-        'Estimates' => 'Estimate'
-    );
-
-    public function getCMSFields()
-    {
-
-        //@todo: Add uploader for artifact
         $fields = FieldList::create(
             TextField::create('Name')
         );
