@@ -140,6 +140,17 @@ class Estimate extends DataObject {
 
         return $this->_getFields();
     }
+
+    public function TotalHours(){
+        $hours = 0;
+        foreach ($this->Stories() as $story){
+            foreach ($story->LineItems() as $lineItem){
+                $hours += $lineItem->NumHours;
+            }
+        }
+        return $hours;
+    }
+
 }
 
 /**
@@ -399,13 +410,14 @@ class LineItem extends DataObject {
 
 
 }
+
 class Page extends SiteTree {
-    private static $db = array(
-    );
-    private static $has_one = array(
-    );
+    private static $db = array();
+    private static $has_one = array();
 }
 class Page_Controller extends ContentController {
+
+
     /**
      * An array of actions that can be accessed via a request. Each array element should be an action name, and the
      * permissions or conditions required to allow the user to access it.
@@ -428,4 +440,15 @@ class Page_Controller extends ContentController {
         // You can include any CSS or JS required by your project here.
         // See: http://doc.silverstripe.org/framework/en/reference/requirements
     }
+
+    public function LatestEstimates(){
+        //@todo: Make configurable. Set to 9 by default
+        return Estimate::get()
+            ->sort('Created', 'DESC')
+            ->limit(30);
+    }
+}
+
+class HomePage extends Page{
+
 }
