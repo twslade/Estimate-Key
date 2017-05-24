@@ -25,6 +25,10 @@ class Estimate extends DataObject {
         'Files' => 'File'
     );
 
+    private static $has_one = array(
+        'EstimatePage' => 'EstimatePage'
+    );
+
     /** @var FieldList */
     private $_estimateFields = null;
 
@@ -149,6 +153,26 @@ class Estimate extends DataObject {
             }
         }
         return $hours;
+    }
+
+    public function Link(){
+            return $this->EstimatePage()->Link('estimate/view/' . $this->ID);
+    }
+
+    public function GetTechnicalConfidence(){
+        return $this->_getConfidenceLevel($this->record['TechnicalConfidence']);
+    }
+
+    public function GetScheduleConfidence(){
+        return $this->_getConfidenceLevel($this->record['ScheduleConfidence']);
+    }
+
+    public function GetBudgetConfidence(){
+        return $this->_getConfidenceLevel($this->record['BudgetConfidence']);
+    }
+
+    private function _getConfidenceLevel($idx){
+        return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
 }
@@ -378,6 +402,15 @@ class Story extends DataObject {
 
         return $fields;
     }
+
+    public function TotalHours(){
+        $hours = 0;
+        foreach ($this->LineItems() as $lineItem){
+            $hours += $lineItem->NumHours;
+        }
+
+        return $hours;
+    }
 }
 
 /**
@@ -433,8 +466,7 @@ class Page_Controller extends ContentController {
      *
      * @var array
      */
-    private static $allowed_actions = array (
-    );
+    private static $allowed_actions = array ();
     public function init() {
         parent::init();
         // You can include any CSS or JS required by your project here.
@@ -449,6 +481,27 @@ class Page_Controller extends ContentController {
     }
 }
 
-class HomePage extends Page{
+class EstimatePage extends Page{
+    private static $has_many = array(
+        'Estimates' => 'Estimate'
+    );
+}
 
+class EstimatePage_Controller extends Page_Controller {
+
+    private static $allowed_actions = array(
+        'view'
+    );
+
+    public function view(SS_HTTPRequest $request){
+        $estimate = Estimate::get()->byID($request->param('ID'));
+
+        if(!$estimate){
+            return $this->httpError(404, 'Estimate specified could not be found');
+        }
+
+        return array(
+            'Estimate' => $estimate
+        );
+    }
 }
