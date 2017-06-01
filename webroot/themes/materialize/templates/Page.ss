@@ -11,13 +11,16 @@
         <div class="col s3">
             <h5>Layered Navigation</h5>
             <ul class="collapsible" data-collapsible="expandable">
+                <% loop $GetLeftNav %>
+                    $test
+                <% end_loop %>
                     <li>
                         <div class="collapsible-header active">
                             Platform
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <% loop $GetPlatforms %>
+                                <% loop $GetPlatform %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
                                         <label for="platform-$ID">$Name</label>
@@ -32,7 +35,7 @@
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <% loop $GetClients %>
+                                <% loop $GetClient %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
                                         <label for="platform-$ID">$Name</label>
@@ -47,7 +50,7 @@
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <% loop $GetRoles %>
+                                <% loop $GetRole %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
                                         <label for="platform-$ID">$Name</label>
@@ -62,7 +65,7 @@
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <% loop $GetSkills %>
+                                <% loop $GetSkill %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
                                         <label for="platform-$ID">$Name</label>

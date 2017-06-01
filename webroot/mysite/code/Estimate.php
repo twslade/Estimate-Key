@@ -451,6 +451,13 @@ class Page extends SiteTree {
 class Page_Controller extends ContentController {
 
 
+    protected $_leftNavClasses =  array(
+        'Role',
+        'Client',
+        'Platform',
+        'Skill'
+    );
+
     /**
      * An array of actions that can be accessed via a request. Each array element should be an action name, and the
      * permissions or conditions required to allow the user to access it.
@@ -480,20 +487,38 @@ class Page_Controller extends ContentController {
             ->limit(30);
     }
 
-    public function GetPlatforms(){
-        return Platform::get()->sort('Name', 'ASC');
+    public function GetLeftNav(){
+        $test = new ArrayList($this->_leftNavClasses);
+        return $test;
     }
+//
+//    public function GetPlatforms(){
+//        return Platform::get()->sort('Name', 'ASC');
+//    }
+//
+//    public function GetClients(){
+//        return Client::get()->sort('Name', 'ASC');
+//    }
+//
+//    public function GetRoles(){
+//        return Role::get()->sort('Name', 'ASC');
+//    }
+//
+//    public function GetSkills(){
+//        return Skill::get()->sort('Name', 'ASC');
+//    }
 
-    public function GetClients(){
-        return Client::get()->sort('Name', 'ASC');
-    }
+    public function __get($method){
+        if(substr($method, 0, 3) == 'Get'){
+            $className = substr($method, 3, strlen($method));
+            if(in_array($className, $this->_leftNavClasses) and class_exists($className)){
+                return $className::get()->sort('Name', 'ASC');
+            } else {
+                //echo sprintf('Class %s not found.', $className);
+            }
 
-    public function GetRoles(){
-        return Role::get()->sort('Name', 'ASC');
-    }
-
-    public function GetSkills(){
-        return Skill::get()->sort('Name', 'ASC');
+        } else {
+        }
     }
 
     public function GetEstimates(){
