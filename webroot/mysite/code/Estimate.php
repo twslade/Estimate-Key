@@ -479,6 +479,33 @@ class Page_Controller extends ContentController {
             ->sort('Created', 'DESC')
             ->limit(30);
     }
+
+    public function GetPlatforms(){
+        return Platform::get()->sort('Name', 'ASC');
+    }
+
+    public function GetClients(){
+        return Client::get()->sort('Name', 'ASC');
+    }
+
+    public function GetRoles(){
+        return Role::get()->sort('Name', 'ASC');
+    }
+
+    public function GetSkills(){
+        return Skill::get()->sort('Name', 'ASC');
+    }
+
+    public function GetEstimates(){
+        return  new PaginatedList(Estimate::get(), $this->getRequest());
+    }
+
+    public function index(SS_HTTPRequest $request){
+        //var_dump($request);die;
+
+        $estimates = Estimate::get();
+        return array('Results' => $estimates);
+    }
 }
 
 class EstimatePage extends Page{

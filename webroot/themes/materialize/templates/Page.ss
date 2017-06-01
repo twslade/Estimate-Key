@@ -12,44 +12,62 @@
             <h5>Layered Navigation</h5>
             <ul class="collapsible" data-collapsible="expandable">
                     <li>
-                        <div class="collapsible-header">
+                        <div class="collapsible-header active">
                             Platform
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>
-                                    <input type="checkbox" name="magento">
-                                    <label for="magento">Magento (10)</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="magento2">
-                                    <label for="magento2">Magento 2 (2)</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="sfcc">
-                                    <label for="sfcc">Sales Force Commerce Cloud (3)</label>
-                                </li>
+                                <% loop $GetPlatforms %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$ID">
+                                        <label for="platform-$ID">$Name</label>
+                                    </li>
+                                <% end_loop %>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <div class="collapsible-header">
+                        <div class="collapsible-header active">
                             Clients
                         </div>
                         <div class="collapsible-body">
                             <ul>
-                                <li>
-                                    <input type="checkbox" name="xyz">
-                                    <label for="xyz">X Y Z Corp (8)</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="google">
-                                    <label for="google">Google (2)</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="shoes">
-                                    <label for="shoes">Shoes R Us (3)</label>
-                                </li>
+                                <% loop $GetClients %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$ID">
+                                        <label for="platform-$ID">$Name</label>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header active">
+                            Roles
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <% loop $GetRoles %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$ID">
+                                        <label for="platform-$ID">$Name</label>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header active">
+                            Skills
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <% loop $GetSkills %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$ID">
+                                        <label for="platform-$ID">$Name</label>
+                                    </li>
+                                <% end_loop %>
                             </ul>
                         </div>
                     </li>
@@ -112,10 +130,5 @@
 <% require javascript('framework/thirdparty/jquery/jquery.js') %>
 <% require themedJavascript('materialize') %>
 
-<script>
-    $(document).ready(function(){
-        $('.collapsible').collapsible('open', 0);
-    });
-</script>
 </body>
 </html>
