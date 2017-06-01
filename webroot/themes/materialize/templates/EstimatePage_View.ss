@@ -115,8 +115,5 @@
 <% end_with %>
 </div>
 <% include Footer %>
-<!--Import jQuery before materialize.js-->
-<% require javascript('framework/thirdparty/jquery/jquery.js') %>
-<% require themedJavascript('materialize') %>
 </body>
 </html>
