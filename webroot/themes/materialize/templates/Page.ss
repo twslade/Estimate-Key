@@ -34,14 +34,14 @@
             <h5>Latest Estimates</h5>
             <div class="divider"></div>
 
-            <% if $GetEstimates.MoreThanOnePage %>
+            <% if $Results.MoreThanOnePage %>
                 <div class="row">
                     <div class="col s9 center">
                         <ul class="pagination">
-                        <% if $GetEstimates.NotFirstPage %>
-                            <li><a href="$GetEstimates.PrevLink" class=""><i class="material-icons">chevron_left</i></a></li>
+                        <% if $Results.NotFirstPage %>
+                            <li><a href="$Results.PrevLink" class=""><i class="material-icons">chevron_left</i></a></li>
                         <% end_if %>
-                        <% loop $GetEstimates.Pages %>
+                        <% loop $Results.Pages %>
                             <% if $CurrentBool %>
                                 <li class="active"><a href="#!">$PageNum</a></li>
                             <% else %>
@@ -50,8 +50,8 @@
                                 <% end_if %>
                             <% end_if %>
                         <% end_loop %>
-                        <% if $GetEstimates.NotLastPage %>
-                            <li><a href="$GetEstimates.NextLink" class=""><i class="material-icons">chevron_right</i></a></li>
+                        <% if $Results.NotLastPage %>
+                            <li><a href="$Results.NextLink" class=""><i class="material-icons">chevron_right</i></a></li>
                         <% end_if %>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@
 
             
                 <!-- Todo: Add row inside loop on mod 3 -->
-            <% loop $GetEstimates %>
+            <% loop $Results %>
                 <% if $Modulus(3) == 0 %>
                     <div class="row">
                 <% end_if %>

@@ -5,7 +5,7 @@
                 <div class="col s8">
 					<!-- Todo: Add real search form -->
 					<% if $SearchForm %>
-                        <form id="SearchForm_SearchForm" action="/home/SearchForm" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
+                        <form id="SearchForm_SearchForm" action="/" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
                             <div class="input-field">
                                 <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
                                 <input type="search" name="Search" placeholder="Search" required id="SearchForm_SearchForm_Search search">

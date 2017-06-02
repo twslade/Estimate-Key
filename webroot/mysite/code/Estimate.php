@@ -506,9 +506,13 @@ class Page_Controller extends ContentController {
     }
 
     public function index(SS_HTTPRequest $request){
-        //var_dump($request);die;
-
         $estimates = Estimate::get();
+
+        if($searchTerms = $request->getVar('Search')){
+            $estimates = $estimates->filter(array(
+                'Name:PartialMatch' => $searchTerms
+            ));
+        }
         return array('Results' => $estimates);
     }
 }
