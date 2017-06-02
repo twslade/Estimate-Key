@@ -12,68 +12,22 @@
             <h5>Layered Navigation</h5>
             <ul class="collapsible" data-collapsible="expandable">
                 <% loop $GetLeftNav %>
-                    $test
+                    <li>
+                        <div class="collapsible-header active">
+                            $className
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <% loop $Up.getMembers($className) %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$ID">
+                                        <label for="platform-$ID">$Name</label>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        </div>
+                    </li>
                 <% end_loop %>
-                    <li>
-                        <div class="collapsible-header active">
-                            Platform
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <% loop $GetPlatform %>
-                                    <li>
-                                        <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">$Name</label>
-                                    </li>
-                                <% end_loop %>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header active">
-                            Clients
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <% loop $GetClient %>
-                                    <li>
-                                        <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">$Name</label>
-                                    </li>
-                                <% end_loop %>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header active">
-                            Roles
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <% loop $GetRole %>
-                                    <li>
-                                        <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">$Name</label>
-                                    </li>
-                                <% end_loop %>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header active">
-                            Skills
-                        </div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <% loop $GetSkill %>
-                                    <li>
-                                        <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">$Name</label>
-                                    </li>
-                                <% end_loop %>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </div>
         <div class="col s9">

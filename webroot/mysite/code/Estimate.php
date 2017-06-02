@@ -452,9 +452,9 @@ class Page_Controller extends ContentController {
 
 
     protected $_leftNavClasses =  array(
-        'Role',
-        'Client',
         'Platform',
+        'Client',
+        'Role',
         'Skill'
     );
 
@@ -488,38 +488,18 @@ class Page_Controller extends ContentController {
     }
 
     public function GetLeftNav(){
-        $test = new ArrayList($this->_leftNavClasses);
-        return $test;
-    }
-//
-//    public function GetPlatforms(){
-//        return Platform::get()->sort('Name', 'ASC');
-//    }
-//
-//    public function GetClients(){
-//        return Client::get()->sort('Name', 'ASC');
-//    }
-//
-//    public function GetRoles(){
-//        return Role::get()->sort('Name', 'ASC');
-//    }
-//
-//    public function GetSkills(){
-//        return Skill::get()->sort('Name', 'ASC');
-//    }
-
-    public function __get($method){
-        if(substr($method, 0, 3) == 'Get'){
-            $className = substr($method, 3, strlen($method));
-            if(in_array($className, $this->_leftNavClasses) and class_exists($className)){
-                return $className::get()->sort('Name', 'ASC');
-            } else {
-                //echo sprintf('Class %s not found.', $className);
-            }
-
-        } else {
+        $classArray = new ArrayList();
+        foreach ($this->_leftNavClasses as $class){
+           $classArray->add(ArrayData::create(array('className' => $class)));
         }
+        return $classArray;
     }
+
+        public function getMembers($className){
+            if($className && in_array($className, $this->_leftNavClasses) && class_exists($className)){
+                return $className::get()->sort('Name', 'ASC');
+            }
+        }
 
     public function GetEstimates(){
         return  new PaginatedList(Estimate::get(), $this->getRequest());
