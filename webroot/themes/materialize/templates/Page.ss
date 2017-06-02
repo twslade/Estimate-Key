@@ -21,7 +21,7 @@
                                 <% loop $Up.getMembers($className) %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">$Name</label>
+                                        <label for="platform-$ID"><a href="$Up.GetFilterLink($className, $ID)">$Name</a></label>
                                     </li>
                                 <% end_loop %>
                             </ul>

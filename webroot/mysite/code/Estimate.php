@@ -450,7 +450,11 @@ class Page extends SiteTree {
 }
 class Page_Controller extends ContentController {
 
-
+    /**
+     * List of layered Nav classes
+     *
+     * @var array
+     */
     protected $_leftNavClasses =  array(
         'Platform',
         'Client',
@@ -458,35 +462,18 @@ class Page_Controller extends ContentController {
         'Skill'
     );
 
-    /**
-     * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-     * permissions or conditions required to allow the user to access it.
-     *
-     * <code>
-     * array (
-     *     'action', // anyone can access this action
-     *     'action' => true, // same as above
-     *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-     *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-     * );
-     * </code>
-     *
-     * @var array
-     */
     private static $allowed_actions = array ();
+
     public function init() {
         parent::init();
-        // You can include any CSS or JS required by your project here.
-        // See: http://doc.silverstripe.org/framework/en/reference/requirements
     }
 
-    public function LatestEstimates(){
-        //@todo: Make configurable. Set to 9 by default
-        return Estimate::get()
-            ->sort('Created', 'DESC')
-            ->limit(30);
-    }
 
+    /**
+     * Gets top level layered nav classes
+     *
+     * @return ArrayList
+     */
     public function GetLeftNav(){
         $classArray = new ArrayList();
         foreach ($this->_leftNavClasses as $class){
@@ -495,15 +482,42 @@ class Page_Controller extends ContentController {
         return $classArray;
     }
 
-        public function getMembers($className){
+    public function GetFilterLink($filterGroup, $filterId){
+
+        $filterGroup = strtolower($filterGroup);
+
+        $currentUrl = Controller::curr()->getRequest()->getURL(true);
+        $getVars = array();
+
+        list($url, $getVarsEncoded) = explode('?', $currentUrl, 2);
+        parse_str($getVarsEncoded, $getVars);
+
+        if(is_array($getVars) && in_array($filterGroup, array_keys($getVars))) {
+            if (strpos(',', $getVars[$filterGroup])) {
+                $getVars[$filterGroup] = implode(',', $getVars[$filterGroup]) . ',' . $filterId;
+            } else {
+                $getVars[$filterGroup] = $getVars[$filterGroup] . ','  . $filterId;
+            }
+        } else {
+            $getVars[$filterGroup] = $filterId;
+        }
+
+        $newUrl = new SS_HTTPRequest(null, '/', $getVars);
+        return $newUrl->getURL(true);
+    }
+
+    /**
+     * Gets a collection of records for specified $className
+     * Used in layered navigation
+     *
+     * @param $className
+     * @return mixed
+     */
+    public function getMembers($className){
             if($className && in_array($className, $this->_leftNavClasses) && class_exists($className)){
                 return $className::get()->sort('Name', 'ASC');
             }
         }
-
-    public function GetEstimates(){
-        return  new PaginatedList(Estimate::get(), $this->getRequest());
-    }
 
     public function index(SS_HTTPRequest $request){
         $estimates = Estimate::get();
@@ -512,6 +526,16 @@ class Page_Controller extends ContentController {
             $estimates = $estimates->filter(array(
                 'Name:PartialMatch' => $searchTerms
             ));
+        }
+
+        foreach ($this->_leftNavClasses as $filterGroup) {
+            $param = strtolower($filterGroup);
+            if($filter = $request->getVar($param)){
+                $estimates = $estimates->filter(array(
+                    //@todo: Fix for multiple of same filter group. Url decode
+                    $filterGroup.'s.ID' => $filter
+                ));
+            }
         }
         return array('Results' => $estimates);
     }
