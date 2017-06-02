@@ -5,15 +5,16 @@
                 <div class="col s8">
 					<!-- Todo: Add real search form -->
 					<% if $SearchForm %>
-							$SearchForm
+                        <form id="SearchForm_SearchForm" action="/home/SearchForm" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
+                            <div class="input-field">
+                                <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
+                                <input type="search" name="Search" placeholder="Search" required id="SearchForm_SearchForm_Search search">
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+							<%--$SearchForm--%>
 					<% end_if %>
-                    <form>
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
                 </div>
                 <div class="col s4">
 					<% include Navigation %>

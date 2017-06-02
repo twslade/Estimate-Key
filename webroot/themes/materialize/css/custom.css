@@ -1,0 +1,4 @@
+input[type="search"] {
+    height: 64px !important; /* or height of nav */
+    margin-bottom: 0;
+}
