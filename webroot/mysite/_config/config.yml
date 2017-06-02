@@ -74,7 +74,7 @@ Seeder\Seeder:
             count: 10
             fields:
                 Name: faker(sentence, 6)
-                LineItems: random(LineItem, 10)
+                LineItems: random(LineItem, 5)
         Risk:
             count: 10
             fields:
@@ -91,7 +91,7 @@ Seeder\Seeder:
                 Name: faker(company)
                 Code: faker(lexify, '???')
         Estimate:
-            count: 10
+            count: 100
             fields:
                 Name: faker(sentence, 6)
                 Description: faker(sentence, 10)
@@ -105,5 +105,5 @@ Seeder\Seeder:
                 TechnicalConfidence: 1
                 Risks: random(Risk, 3)
                 Clients: random(Client, 2)
-                Stories: random(Story, 5)
+                Stories: random(Story, 3)
                 Platforms: random(Platform, 1)
