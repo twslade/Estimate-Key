@@ -489,6 +489,7 @@ class Page_Controller extends ContentController {
         $currentUrl = Controller::curr()->getRequest()->getURL(true);
         $getVars = array();
 
+        //@todo: Undefined offset of 1
         list($url, $getVarsEncoded) = explode('?', $currentUrl, 2);
         parse_str($getVarsEncoded, $getVars);
 
@@ -502,7 +503,7 @@ class Page_Controller extends ContentController {
             $getVars[$filterGroup] = $filterId;
         }
 
-        $newUrl = new SS_HTTPRequest(null, '/', $getVars);
+        $newUrl = new SS_HTTPRequest(null, $url, $getVars);
         return $newUrl->getURL(true);
     }
 
