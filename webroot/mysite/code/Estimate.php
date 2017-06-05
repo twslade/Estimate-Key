@@ -613,6 +613,13 @@ class Page_Controller extends ContentController {
         return in_array(strtolower($filterGroup), array_keys($getVars));
     }
 
+    /**
+     * Check if filter is already applied. If so, don't show it
+     *
+     * @param null $filterGroup
+     * @param null $filterId
+     * @return bool
+     */
     public function IsActiveFilter($filterGroup = null, $filterId = null){
         $filterGroup = strtolower($filterGroup);
         return $this->IsActiveFilterGroup($filterGroup) &&
@@ -633,6 +640,11 @@ class Page_Controller extends ContentController {
         }
     }
 
+    /**
+     * Get a list of currently applied filters
+     *
+     * @return ArrayList
+     */
     public function GetActiveFilters(){
         $activeFilter = new ArrayList();
 
@@ -652,6 +664,13 @@ class Page_Controller extends ContentController {
         return $activeFilter;
     }
 
+    /**
+     * Get applied filter's values names
+     *
+     * @param null $filterGroup
+     * @param array $filterIds
+     * @return ArrayList
+     */
     protected function _getActiveFilterNames($filterGroup = null, $filterIds = array()){
         $filterNames = new ArrayList();
         foreach($filterIds as $filterId){
@@ -665,6 +684,24 @@ class Page_Controller extends ContentController {
             );
         }
         return $filterNames;
+    }
+
+    /**
+     * Get total number of estimates available based on filtering
+     *
+     * @param null $filterGroup
+     * @param $filterId
+     * @return int
+     *
+     */
+    public function GetFilterCount($filterGroup = null, $filterId){
+        //@todo: Filter current estimate collection
+        $estimates = Estimate::get();
+        $estimates = $estimates->filter(array(
+            $filterGroup.'s.ID' => $filterId
+        ));
+
+        return $estimates->count();
     }
 
     public function index(SS_HTTPRequest $request){

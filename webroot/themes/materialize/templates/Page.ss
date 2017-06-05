@@ -12,6 +12,7 @@
             <h5>Layered Navigation</h5>
 
             <ul class="collapsible" data-collapsible="expandable">
+                <%--Get list of currently applied/active filters--%>
                 <% loop $GetActiveFilters %>
                     <li>
                         <div class="collapsible-header active">
@@ -21,7 +22,11 @@
                             <ul>
                                 <% loop $values %>
                                     <li>
-                                        <a href="$Up.Up.GetFilterLink($Up.label, $ID, true)" class="remove-filter"><i class="tiny material-icons">delete</i>$filter.Name</a></label>
+                                        <%--Remove filter from link if it is already active/applied--%>
+                                        <a href="$Up.Up.GetFilterLink($Up.label, $ID, true)" class="remove-filter">
+                                            <i class="tiny material-icons">delete</i>
+                                            $filter.Name
+                                        </a></label>
                                     </li>
                                 <% end_loop %>
                             </ul>
@@ -31,6 +36,7 @@
             </ul>
 
             <ul class="collapsible" data-collapsible="expandable">
+                <%--Get available filters--%>
                 <% loop $GetLeftNav %>
                     <li>
                         <div class="collapsible-header active">
@@ -39,10 +45,15 @@
                         <div class="collapsible-body">
                             <ul>
                                 <% loop $Up.getMembers($className) %>
+                                    <%--Exclude active filters since they are already applied--%>
                                     <% if not $Up.IsActiveFilter($className, $ID) %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID"><a href="$Up.GetFilterLink($className, $ID)">$Name</a></label>
+                                        <label for="platform-$ID">
+                                            <a href="$Up.GetFilterLink($className, $ID)">
+                                                $Name ($Up.GetFilterCount($className, $ID))
+                                            </a>
+                                        </label>
                                     </li>
                                     <% end_if %>
                                 <% end_loop %>
@@ -53,9 +64,10 @@
             </ul>
         </div>
         <div class="col s9">
-            <h5>Latest Estimates</h5>
+            <h5>Estimates</h5>
             <div class="divider"></div>
 
+            <%--Pagination--%>
             <% if $Results.MoreThanOnePage %>
                 <div class="row">
                     <div class="col s9 center">
@@ -81,7 +93,7 @@
             <% end_if %>
 
             
-                <!-- Todo: Add row inside loop on mod 3 -->
+            <%--Loop over estimates--%>
             <% loop $Results %>
                 <% if $Modulus(3) == 0 %>
                     <div class="row">
@@ -108,6 +120,5 @@
 <!--Import jQuery before materialize.js-->
 <% require javascript('framework/thirdparty/jquery/jquery.js') %>
 <% require themedJavascript('materialize') %>
-
 </body>
 </html>
