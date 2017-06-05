@@ -10,6 +10,27 @@
     <div class="row">
         <div class="col s3">
             <h5>Layered Navigation</h5>
+
+            <ul class="collapsible" data-collapsible="expandable">
+                <% loop $GetActiveFilters %>
+                    <li>
+                        <div class="collapsible-header active">
+                            Active - $label
+                        </div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <% loop $values %>
+                                    <li>
+                                        <input type="checkbox" name="platform-$filter.ID">
+                                        <label for="platform-$filter.ID"><a href="">$filter.Name</a></label>
+                                    </li>
+                                <% end_loop %>
+                            </ul>
+                        </div>
+                    </li>
+                <% end_loop %>
+            </ul>
+
             <ul class="collapsible" data-collapsible="expandable">
                 <% loop $GetLeftNav %>
                     <li>
@@ -28,8 +49,8 @@
                         </div>
                     </li>
                 <% end_loop %>
-                </ul>
-            </div>
+            </ul>
+        </div>
         <div class="col s9">
             <h5>Latest Estimates</h5>
             <div class="divider"></div>

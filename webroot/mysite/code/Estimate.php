@@ -482,29 +482,57 @@ class Page_Controller extends ContentController {
         return $classArray;
     }
 
+    /**
+     * Build links for layered navigation.
+     * Multiple filters are possible per filter group.
+     * For example: Filter estimates by platform Magento 1 OR Magento 2
+     * Url would be encoded but represent example.com?platform=12,13
+     *
+     * @param $filterGroup string
+     * @param $filterId int
+     * @return string
+     */
     public function GetFilterLink($filterGroup, $filterId){
-
         $filterGroup = strtolower($filterGroup);
+        $getVars = Controller::curr()->getRequest()->getVars();
 
-        $currentUrl = Controller::curr()->getRequest()->getURL(true);
-        $getVars = array();
+        $getVars[$filterGroup] = $this->_createDeDupedGetParams($filterGroup, $filterId);
 
-        //@todo: Undefined offset of 1
-        list($url, $getVarsEncoded) = explode('?', $currentUrl, 2);
-        parse_str($getVarsEncoded, $getVars);
-
-        if(is_array($getVars) && in_array($filterGroup, array_keys($getVars))) {
-            if (strpos(',', $getVars[$filterGroup])) {
-                $getVars[$filterGroup] = implode(',', $getVars[$filterGroup]) . ',' . $filterId;
-            } else {
-                $getVars[$filterGroup] = $getVars[$filterGroup] . ','  . $filterId;
-            }
-        } else {
-            $getVars[$filterGroup] = $filterId;
-        }
-
-        $newUrl = new SS_HTTPRequest(null, $url, $getVars);
+        $newUrl = new SS_HTTPRequest(null, '/', $getVars);
         return $newUrl->getURL(true);
+    }
+
+
+    /**
+     * Check if filter already exists and is active to prevent dupes
+     *
+     * @param $filterGroup string
+     * @param $filterId int
+     * @return string
+     */
+    protected function _createDeDupedGetParams($filterGroup, $filterId){
+        $getVars = Controller::curr()->getRequest()->getVars();
+        $currentGetParams = array();
+        if(array_key_exists($filterGroup, $getVars)){
+            $currentGetParams = explode(',', $getVars[$filterGroup]);
+        }
+        array_push($currentGetParams, $filterId);
+        $currentGetParams = array_unique($currentGetParams);
+
+        return implode(',', $currentGetParams);
+    }
+
+
+    /**
+     * Check if current filter group is actively filtered
+     *
+     * @param null $filterGroup string
+     * @return bool
+     */
+    protected function _isActiveFilter($filterGroup = null){
+        $getVars = Controller::curr()->getRequest()->getVars();
+
+        return in_array($filterGroup, array_keys($getVars));
     }
 
     /**
@@ -515,10 +543,41 @@ class Page_Controller extends ContentController {
      * @return mixed
      */
     public function getMembers($className){
-            if($className && in_array($className, $this->_leftNavClasses) && class_exists($className)){
-                return $className::get()->sort('Name', 'ASC');
+        if($className && in_array($className, $this->_leftNavClasses) && class_exists($className)){
+            return $className::get()->sort('Name', 'ASC');
+        }
+    }
+
+    public function GetActiveFilters(){
+        $activeFilter = new ArrayList();
+
+        $getVars = Controller::curr()->getRequest()->getVars();
+        foreach ($getVars as $key => $value){
+            if(in_array(ucfirst($key), $this->_leftNavClasses)){
+                $activeFilter->add(
+                    ArrayData::create(
+                        array(
+                            'label' => ucfirst($key),
+                            'values' => $this->_getActiveFilterNames(ucfirst($key), explode(',', $value))
+                        )
+                    )
+                );
             }
         }
+        return $activeFilter;
+    }
+
+    protected function _getActiveFilterNames($filterGroup = null, $filterIds = array()){
+        $filterNames = new ArrayList();
+        foreach($filterIds as $filterId){
+            $filterNames->add(
+                ArrayData::create(
+                    array('filter' => $filterGroup::get()->byID($filterId))
+                )
+            );
+        }
+        return $filterNames;
+    }
 
     public function index(SS_HTTPRequest $request){
         $estimates = Estimate::get();
@@ -529,9 +588,14 @@ class Page_Controller extends ContentController {
             ));
         }
 
+
+        /*
+         * Handle dynamic filtering via layered navigation.
+         */
         foreach ($this->_leftNavClasses as $filterGroup) {
             $param = strtolower($filterGroup);
             if($filter = $request->getVar($param)){
+                $filter = explode(',', $filter);
                 $estimates = $estimates->filter(array(
                     //@todo: Fix for multiple of same filter group. Url decode
                     $filterGroup.'s.ID' => $filter
