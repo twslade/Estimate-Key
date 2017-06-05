@@ -488,38 +488,116 @@ class Page_Controller extends ContentController {
      * For example: Filter estimates by platform Magento 1 OR Magento 2
      * Url would be encoded but represent example.com?platform=12,13
      *
-     * @param $filterGroup string
-     * @param $filterId int
+     * @param $filterGroup string Filter Group, for example, Platform
+     * @param $filterId int ID of platform option, for example, Magento 1
+     * @param $forRemove bool used for removing parameter from url
      * @return string
      */
-    public function GetFilterLink($filterGroup, $filterId){
+    public function GetFilterLink($filterGroup = null, $filterId = null, $forRemove = false){
         $filterGroup = strtolower($filterGroup);
         $getVars = Controller::curr()->getRequest()->getVars();
 
-        $getVars[$filterGroup] = $this->_createDeDupedGetParams($filterGroup, $filterId);
+        // Hide complexity of de-duping/removing filters via query params
+        $getVars[$filterGroup] = $this->_handleFilterQueryParams($filterGroup, $filterId, $forRemove);
+
+        // Just in case filter group was emptied from removing
+        if(empty($getVars[$filterGroup])){
+            unset($getVars[$filterGroup]);
+        }
 
         $newUrl = new SS_HTTPRequest(null, '/', $getVars);
         return $newUrl->getURL(true);
     }
 
-
     /**
-     * Check if filter already exists and is active to prevent dupes
+     * Check if filter already exists and is active to prevent dupe
+     * query params and instead use comma delimited values
+     * For example: Filter estimates by platform Magento 1 OR Magento 2
+     * Url would be encoded but represent example.com?platform=12,13
      *
      * @param $filterGroup string
      * @param $filterId int
+     * @param $shouldRemove bool
      * @return string
      */
-    protected function _createDeDupedGetParams($filterGroup, $filterId){
-        $getVars = Controller::curr()->getRequest()->getVars();
+    protected function _handleFilterQueryParams($filterGroup, $filterId, $shouldRemove = false){
         $currentGetParams = array();
-        if(array_key_exists($filterGroup, $getVars)){
-            $currentGetParams = explode(',', $getVars[$filterGroup]);
-        }
-        array_push($currentGetParams, $filterId);
-        $currentGetParams = array_unique($currentGetParams);
 
-        return implode(',', $currentGetParams);
+        // Turn active filters into arrays to handle push/pops without string manipulation
+        $currentGetParams = ($this->IsActiveFilterGroup($filterGroup)) ?
+            $this->_getQueryParamByKey($filterGroup) : $currentGetParams;
+
+
+        // Don't add filter if it is remove link for active filters
+        $currentGetParams = ($shouldRemove) ?
+            $this->_removeArrayValue($currentGetParams, $filterId) :
+            $this->_addArrayValue($currentGetParams, $filterId);
+
+
+        // Give back filter value as array
+        return $this->_stringifyQueryParamsArray($currentGetParams);
+    }
+
+    /**
+     *
+     *
+     * @param null $key
+     * @param bool $asArray
+     * @return array | string
+     */
+    protected function _getQueryParamByKey($key = null, $asArray = true){
+        $getVars = Controller::curr()->getRequest()->getVars();
+
+        if(array_key_exists($key, $getVars)){
+            return ($asArray) ?
+                $this->_arrayizeQueryParam($getVars[$key]) : $getVars[$key];
+
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Turn query params into array
+     *
+     * @param string $values
+     * @return array
+     */
+    protected function _arrayizeQueryParam($values = ''){
+        return explode(',', $values);
+    }
+
+    /**
+     * Turn array into query params
+     *
+     * @param array $arr
+     * @return string
+     */
+    protected function _stringifyQueryParamsArray($arr = array()){
+        return implode(',', $arr);
+    }
+
+    /**
+     * Remove val from array
+     *
+     * @param array $arr
+     * @param string $val
+     * @return array
+     */
+    protected function _removeArrayValue($arr = array(), $val = ''){
+            return array_diff($arr, array($val));
+    }
+
+    /**
+     * Add val to array
+     *
+     * @param array $arr
+     * @param string $val
+     * @return array
+     */
+    protected function _addArrayValue($arr = array(), $val = ''){
+        array_push($arr, $val);
+        return array_unique($arr);
     }
 
 
@@ -529,10 +607,17 @@ class Page_Controller extends ContentController {
      * @param null $filterGroup string
      * @return bool
      */
-    protected function _isActiveFilter($filterGroup = null){
+    public function IsActiveFilterGroup($filterGroup = null){
+        $filterGroup = strtolower($filterGroup);
         $getVars = Controller::curr()->getRequest()->getVars();
+        return in_array(strtolower($filterGroup), array_keys($getVars));
+    }
 
-        return in_array($filterGroup, array_keys($getVars));
+    public function IsActiveFilter($filterGroup = null, $filterId = null){
+        $filterGroup = strtolower($filterGroup);
+        return $this->IsActiveFilterGroup($filterGroup) &&
+            $this->_getQueryParamByKey($filterGroup) &&
+            in_array($filterId, $this->_getQueryParamByKey($filterGroup));
     }
 
     /**
@@ -572,7 +657,10 @@ class Page_Controller extends ContentController {
         foreach($filterIds as $filterId){
             $filterNames->add(
                 ArrayData::create(
-                    array('filter' => $filterGroup::get()->byID($filterId))
+                    array(
+                        'filter' => $filterGroup::get()->byID($filterId),
+                        'ID' => $filterId
+                    )
                 )
             );
         }

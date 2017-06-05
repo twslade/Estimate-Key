@@ -21,8 +21,7 @@
                             <ul>
                                 <% loop $values %>
                                     <li>
-                                        <input type="checkbox" name="platform-$filter.ID">
-                                        <label for="platform-$filter.ID"><a href="">$filter.Name</a></label>
+                                        <a href="$Up.Up.GetFilterLink($Up.label, $ID, true)" class="remove-filter"><i class="tiny material-icons">delete</i>$filter.Name</a></label>
                                     </li>
                                 <% end_loop %>
                             </ul>
@@ -40,10 +39,12 @@
                         <div class="collapsible-body">
                             <ul>
                                 <% loop $Up.getMembers($className) %>
+                                    <% if not $Up.IsActiveFilter($className, $ID) %>
                                     <li>
                                         <input type="checkbox" name="platform-$ID">
                                         <label for="platform-$ID"><a href="$Up.GetFilterLink($className, $ID)">$Name</a></label>
                                     </li>
+                                    <% end_if %>
                                 <% end_loop %>
                             </ul>
                         </div>
