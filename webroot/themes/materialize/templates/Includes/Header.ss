@@ -8,7 +8,7 @@
                         <form id="SearchForm_SearchForm" action="/" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
                             <div class="input-field">
                                 <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
-                                <input type="search" name="Search" placeholder="Search" required id="SearchForm_SearchForm_Search search">
+                                <input type="search" name="Search" value="$GetSearchText" placeholder="Search" required id="SearchForm_SearchForm_Search search">
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
                             </div>
