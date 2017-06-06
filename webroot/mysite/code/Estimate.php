@@ -687,6 +687,14 @@ class Page_Controller extends ContentController {
     }
 
     /**
+     * @return string
+     */
+    public function GetSearchText()
+    {
+        return Controller::curr()->getRequest()->getVar('Search');
+    }
+
+    /**
      * Get total number of estimates available based on filtering
      *
      * @param null $filterGroup
@@ -696,7 +704,7 @@ class Page_Controller extends ContentController {
      */
     public function GetFilterCount($filterGroup = null, $filterId){
         //@todo: Filter current estimate collection
-        $estimates = Estimate::get();
+        $estimates = $this->_getCurrentlyFilteredEstimates(Controller::curr()->getRequest());
         $estimates = $estimates->filter(array(
             $filterGroup.'s.ID' => $filterId
         ));
@@ -705,6 +713,15 @@ class Page_Controller extends ContentController {
     }
 
     public function index(SS_HTTPRequest $request){
+
+        return array('Results' => $this->_getCurrentlyFilteredEstimates($request));
+    }
+
+    /**
+     *
+     * @param SS_HTTPRequest $request
+     */
+    protected function _getCurrentlyFilteredEstimates(SS_HTTPRequest $request){
         $estimates = Estimate::get();
 
         if($searchTerms = $request->getVar('Search')){
@@ -727,7 +744,8 @@ class Page_Controller extends ContentController {
                 ));
             }
         }
-        return array('Results' => $estimates);
+
+        return $estimates;
     }
 }
 
