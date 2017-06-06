@@ -47,14 +47,17 @@
                                 <% loop $Up.getMembers($className) %>
                                     <%--Exclude active filters since they are already applied--%>
                                     <% if not $Up.IsActiveFilter($className, $ID) %>
-                                    <li>
-                                        <input type="checkbox" name="platform-$ID">
-                                        <label for="platform-$ID">
-                                            <a href="$Up.GetFilterLink($className, $ID)">
-                                                $Name ($Up.GetFilterCount($className, $ID))
-                                            </a>
-                                        </label>
-                                    </li>
+                                        <%--Exclude zero count filters--%>
+                                        <% if $Up.GetFilterCount($className, $ID) > "0" %>
+                                            <li>
+                                                <input type="checkbox" name="platform-$ID">
+                                                <label for="platform-$ID">
+                                                    <a href="$Up.GetFilterLink($className, $ID)">
+                                                        $Name ($Up.GetFilterCount($className, $ID))
+                                                    </a>
+                                                </label>
+                                            </li>
+                                        <% end_if %>
                                     <% end_if %>
                                 <% end_loop %>
                             </ul>
