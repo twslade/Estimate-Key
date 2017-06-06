@@ -426,6 +426,11 @@ class LineItem extends DataObject {
         'Description' => 'Varchar(255)'
     );
 
+    private static $many_many = array(
+        'Role' => 'Role',
+        'Skill' => 'Skill'
+    );
+
     private static $belongs_many_many = array(
         'Stories' => 'Story'
     );
@@ -434,7 +439,13 @@ class LineItem extends DataObject {
     {
         $fields = FieldList::create(
             TextField::create('NumHours'),
-            TextField::create('Description')
+            TextField::create('Description'),
+            ListboxField::create('Role', 'Role')
+                ->setSource(Role::get()->map('ID', 'Name')->toArray())
+                ->setMultiple(true),
+            ListboxField::create('Skill', 'Skill')
+                ->setSource(Skill::get()->map('ID', 'Name')->toArray())
+                ->setMultiple(true)
 
         );
 
