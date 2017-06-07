@@ -30,8 +30,11 @@ class GridFieldEditableColumns extends GridFieldDataColumns implements
 
 		$fields = $this->getForm($grid, $record)->Fields();
 		$value  = $grid->getDataFieldValue($record, $col);
+
+
 		$rel = (strpos($col,'.') === false); // field references a relation value
 		$field = ($rel) ? clone $fields->fieldByName($col) : new ReadonlyField($col);
+        $value  = ($rel && $field->value) ? $field->value : $value;
 
 		if(!$field) {
 			throw new Exception("Could not find the field '$col'");

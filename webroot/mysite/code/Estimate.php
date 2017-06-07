@@ -319,6 +319,10 @@ class Role extends DataObject {
         'Name'                      => 'Varchar(255)'
     );
 
+    private static $belongs_many_many = array(
+        'LineItems' => 'LineItem'
+    );
+
     public function getCMSFields()
     {
         $fields = FieldList::create(
@@ -337,8 +341,13 @@ class Role extends DataObject {
  * Class Skill
  */
 class Skill extends DataObject {
+
     private static $db = array(
         'Name'                      => 'Varchar(255)'
+    );
+
+    private static $belongs_many_many = array(
+        'LineItems' => 'LineItem'
     );
 
     public function getCMSFields()
@@ -384,6 +393,7 @@ class Story extends DataObject {
                 ->addComponent(new GridFieldAddNewInlineButton())
         );
 
+        /** @var $LineItems GridFieldDataColumns */
         $lineItems->getConfig()->getComponentByType('GridFieldEditableColumns')->setDisplayFields(array(
             'NumHours' => function($record, $column, $grid) {
                 return new TextField('NumHours', 'Number of hours');
@@ -392,20 +402,17 @@ class Story extends DataObject {
                 return new TextField('Description', 'Description');
             },
             'Roles' => function($record, $column, $grid) {
-//
-//                if($record->ID) {
-//                    var_dump($record->Roles()->column('ID'));die;
-//}
                 return ListboxField::create($column)
                     ->setMultiple(true)
-                    ->setValue(($record->ID) ? $record->Roles()->column('ID') : '')
+                    ->setValue(($record->ID && get_class($record) == 'LineItem') ? $record->Roles()->column('ID') : '')
                     ->setSource(Role::get()->map('ID', 'Name')->toArray());
             },
-//            'Skills' => function($record, $column, $grid) {
-//                return ListboxField::create('Skill', 'Skill')
-//                    ->setSource(Skill::get()->map('ID', 'Name')->toArray())
-//                    ->setMultiple(true);
-//            }
+            'Skills' => function($record, $column, $grid) {
+                return ListboxField::create($column)
+                    ->setMultiple(true)
+                    ->setValue(($record->ID && get_class($record) == 'LineItem') ? $record->Skills()->column('ID') : '')
+                    ->setSource(Skill::get()->map('ID', 'Name')->toArray());
+            }
         ));
 
 
