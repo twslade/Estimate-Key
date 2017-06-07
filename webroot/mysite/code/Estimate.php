@@ -390,7 +390,22 @@ class Story extends DataObject {
             },
             'Description' => function($record, $column, $grid) {
                 return new TextField('Description', 'Description');
-            }
+            },
+            'Roles' => function($record, $column, $grid) {
+//
+//                if($record->ID) {
+//                    var_dump($record->Roles()->column('ID'));die;
+//}
+                return ListboxField::create($column)
+                    ->setMultiple(true)
+                    ->setValue(($record->ID) ? $record->Roles()->column('ID') : '')
+                    ->setSource(Role::get()->map('ID', 'Name')->toArray());
+            },
+//            'Skills' => function($record, $column, $grid) {
+//                return ListboxField::create('Skill', 'Skill')
+//                    ->setSource(Skill::get()->map('ID', 'Name')->toArray())
+//                    ->setMultiple(true);
+//            }
         ));
 
 
@@ -427,8 +442,8 @@ class LineItem extends DataObject {
     );
 
     private static $many_many = array(
-        'Role' => 'Role',
-        'Skill' => 'Skill'
+        'Roles' => 'Role',
+        'Skills' => 'Skill'
     );
 
     private static $belongs_many_many = array(
@@ -440,10 +455,10 @@ class LineItem extends DataObject {
         $fields = FieldList::create(
             TextField::create('NumHours'),
             TextField::create('Description'),
-            ListboxField::create('Role', 'Role')
+            ListboxField::create('Roles', 'Role')
                 ->setSource(Role::get()->map('ID', 'Name')->toArray())
                 ->setMultiple(true),
-            ListboxField::create('Skill', 'Skill')
+            ListboxField::create('Skills', 'Skill')
                 ->setSource(Skill::get()->map('ID', 'Name')->toArray())
                 ->setMultiple(true)
 
