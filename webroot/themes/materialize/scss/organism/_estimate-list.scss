@@ -1,0 +1,45 @@
+.estimate-list {
+    .card {
+        position: relative;
+        padding-bottom: 54px;
+        width: 100%;
+
+        .card-content {
+            .card-title {
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+        }
+
+        &-parent {
+            padding: 10px;
+        }
+
+        &-action {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @each $name, $value in $platforms {
+            &.#{$name} {
+                background: color($value, 'lighten-3');
+
+                .card-title,
+                .card-title a {
+                    color: color($value, 'darken-4');
+                }
+
+                .card-action {
+                    border-top-color: color($value, 'darken-1');
+
+                    a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+                        color: color($value, 'darken-4');
+                    }
+                }
+            }
+        }
+    }
+}

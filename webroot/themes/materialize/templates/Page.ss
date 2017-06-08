@@ -10,7 +10,7 @@
         $Form
     <% else %>
         <div class="row">
-            <div class="col s3">
+            <div class="layered-nav col s12 m3 xl2">
                 <h5>Layered Navigation</h5>
 
                 <% if $GetActiveFilters %>
@@ -54,12 +54,9 @@
                                             <%--Exclude zero count filters--%>
                                             <% if $Up.GetFilterCount($className, $ID) > "0" %>
                                                 <li>
-                                                    <input type="checkbox" name="platform-$ID">
-                                                    <label for="platform-$ID">
-                                                        <a href="$Up.GetFilterLink($className, $ID)">
-                                                            $Name ($Up.GetFilterCount($className, $ID))
-                                                        </a>
-                                                    </label>
+                                                    <a class="label" href="$Up.GetFilterLink($className, $ID)">
+                                                        $Name ($Up.GetFilterCount($className, $ID))
+                                                    </a>
                                                 </li>
                                             <% end_if %>
                                         <% end_if %>
@@ -71,7 +68,7 @@
                 </ul>
             </div>
 
-            <div class="estimate-list col s9">
+            <div class="estimate-list col s12 m9 xl10">
                 <h5>Estimates</h5>
                 <div class="divider"></div>
 
@@ -104,10 +101,11 @@
                 <%--Loop over estimates--%>
                 <div class="flex-row">
                 <% loop $Results %>
-                        <div class="flex-col flex-xs12 flex-s6 flex-m4 flex-l3 flex-xl2 card-parent">
-                            <div class="card hoverable">
-                                <div class="card-content blue-grey-text text-darken-3">
-                                    <span class="card-title"><a href="$Link" class="light-blue-text text-darken-4">$Name</a></span>
+                        <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
+                            <div class="card hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
+                                <div class="card-content">
+
+                                    <span class="card-title"><a href="$Link">$Name</a></span>
                                     <p>$Description</p>
                                 </div>
                                 <div class="card-action">

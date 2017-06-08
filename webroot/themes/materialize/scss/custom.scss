@@ -1,8 +1,15 @@
+// Import from Materialize
+@import "components/color";
+@import "components/variables";
+
+// New Imports
 @import "components/var";
 @import "components/mixins";
 @import "components/flex-grid";
+@import "components/helpers";
 
-@import "pages/estimate-list";
+@import "organism/layered-nav";
+@import "organism/estimate-list";
 
 input[type="search"] {
     height: 64px !important; /* or height of nav */
