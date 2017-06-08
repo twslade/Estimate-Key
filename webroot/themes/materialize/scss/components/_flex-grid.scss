@@ -1,0 +1,50 @@
+$grid-count: 12;
+
+.flex {
+    &-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-col {
+        display: flex;
+
+        @for $i from 1 through 12 {
+            &.flex-s#{$i} {
+                width: percentage($i/12);
+            }
+        }
+
+        @include bp('max-width', $bp-xsmall) {
+            @for $i from 1 through 12 {
+                &.flex-xs#{$i} {
+                    width: percentage($i/12);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-medium + 1) {
+            @for $i from 1 through 12 {
+                &.flex-m#{$i} {
+                    width: percentage($i/12);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-large + 1) {
+            @for $i from 1 through 12 {
+                &.flex-l#{$i} {
+                    width: percentage($i/12);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-xlarge + 1) {
+            @for $i from 1 through 12 {
+                &.flex-xl#{$i} {
+                    width: percentage($i/12);
+                }
+            }
+        }
+    }
+}

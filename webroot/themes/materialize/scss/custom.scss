@@ -1,6 +1,10 @@
+@import "components/var";
+@import "components/mixins";
+@import "components/flex-grid";
+
+@import "pages/estimate-list";
+
 input[type="search"] {
     height: 64px !important; /* or height of nav */
     margin-bottom: 0;
 }
-
-.card{height: 275px;}

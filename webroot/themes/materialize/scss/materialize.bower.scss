@@ -1,1 +1,20 @@
+@import "components/mixins";
+@import "components/color";
+
+// Materialize Overrides
+// 1. Colors
+$primary-color: color("light-blue", "darken-3");
+
+// 4. Cards
+$card-link-color: color("orange", "darken-3");
+
+// 11. Global
+// Media Query Ranges
+$small-screen-up: 600px !default;
+$medium-screen-up: 770px !default;
+$large-screen-up: 980px !default;
+$small-screen: 599px !default;
+$medium-screen: 769px !default;
+$large-screen: 979px !default;
+
 @import "materialize.scss";

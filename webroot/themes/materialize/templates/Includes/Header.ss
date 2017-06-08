@@ -1,10 +1,10 @@
 <header>
-    <nav>
+    <nav class="z-depth-0">
         <div class="nav-wrapper">
             <div class="row">
                 <div class="col s8">
-					<!-- Todo: Add real search form -->
-					<% if $SearchForm %>
+                    <!-- Todo: Add real search form -->
+                    <% if $SearchForm %>
                         <form id="SearchForm_SearchForm" action="/" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
                             <div class="input-field">
                                 <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
@@ -13,14 +13,13 @@
                                 <i class="material-icons">close</i>
                             </div>
                         </form>
-							<%--$SearchForm--%>
-					<% end_if %>
+                    <%--$SearchForm--%>
+                    <% end_if %>
                 </div>
                 <div class="col s4">
-					<% include Navigation %>
+                    <% include Navigation %>
                     <a href="$BaseHref" class="brand-log right">$SiteConfig.Title</a>
                 </div>
-
             </div>
         </div>
     </nav>
