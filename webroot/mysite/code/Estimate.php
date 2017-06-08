@@ -807,7 +807,7 @@ class EstimatePage extends Page{
     );
 }
 
-class EstimatePage_Controller extends Page_Controller {
+class EstimateController extends Page_Controller {
 
     private static $allowed_actions = array(
         'view'
@@ -820,8 +820,6 @@ class EstimatePage_Controller extends Page_Controller {
             return $this->httpError(404, 'Estimate specified could not be found');
         }
 
-        return array(
-            'Estimate' => $estimate
-        );
+        return $this->customise(array('Estimate' => $estimate))->renderWith('EstimateController');
     }
 }
