@@ -101,23 +101,29 @@ class Estimate extends DataObject {
 
 
         /** @var GridFieldConfig_RelationEditor $storiesConfig */
-        $storiesConfig = GridFieldConfig_RelationEditor::create();
+        $storiesConfig = GridFieldConfig_RelationEditor::create()
+        ->addComponent(new GridFieldDataColumns());
         //@todo: Add line items within column as subtable
         $storiesConfig
             ->getComponentByType('GridFieldAddExistingAutocompleter')
             ->setSearchFields(array('Name'))
             ->setResultsFormat('$Name');
 
-        /** @var GridFieldDataColumns $columns */
-        //$columns = $storiesConfig->getComponentByType('GridFieldDataColumns');
 
 
         //@todo: Add total hours in search results
 
         $gridField = new GridField('Stories', 'Story', $this->Stories(), $storiesConfig);
 
+        //Add total hours per story
+        $storiesConfig->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Name' => 'Name',
+            'getTotalHours' => 'Total Hours'
+
+        ));
         $this->_getFields()->addFieldsToTab('Root.Stories', array(
-            $gridField
+            $gridField,
+            ReadonlyField::create('Total Hours')->setValue($this->TotalHours())
             ));
 
         return;
