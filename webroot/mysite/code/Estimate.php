@@ -107,7 +107,7 @@ class Estimate extends DataObject {
         $storiesConfig
             ->getComponentByType('GridFieldAddExistingAutocompleter')
             ->setSearchFields(array('Name'))
-            ->setResultsFormat('$Name');
+            ->setResultsFormat('$getClients - $Name - $TotalHours');
 
 
 
@@ -395,6 +395,16 @@ class Story extends DataObject {
             $totalHours += (int) $lineItem->NumHours;
         }
         return $totalHours;
+    }
+
+    public function getClients(){
+        $clients = array();
+        foreach ($this->Estimates() as $estimate) {
+            foreach ($estimate->Clients() as $client) {
+                array_push($clients, $client->Code);
+            }
+        }
+        return implode(',', array_unique($clients));
     }
 
     public function getCMSFields()
