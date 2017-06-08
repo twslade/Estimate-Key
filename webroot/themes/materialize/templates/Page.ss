@@ -5,7 +5,7 @@
 <body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
 
 <% include Header %>
-<div class="container">
+<%-- <div class="container"> --%>
     <% if $Form %>
         $Form
     <% else %>
@@ -13,6 +13,7 @@
             <div class="col s3">
                 <h5>Layered Navigation</h5>
 
+                <% if $GetActiveFilters %>
                 <ul class="collapsible" data-collapsible="expandable">
                     <%--Get list of currently applied/active filters--%>
                     <% loop $GetActiveFilters %>
@@ -36,6 +37,7 @@
                         </li>
                     <% end_loop %>
                 </ul>
+                <% end_if %>
 
                 <ul class="collapsible" data-collapsible="expandable">
                     <%--Get available filters--%>
@@ -68,7 +70,8 @@
                     <% end_loop %>
                 </ul>
             </div>
-            <div class="col s9">
+
+            <div class="estimate-list col s9">
                 <h5>Estimates</h5>
                 <div class="divider"></div>
 
@@ -99,33 +102,26 @@
 
 
                 <%--Loop over estimates--%>
+                <div class="flex-row">
                 <% loop $Results %>
-                    <% if $Modulus(3) == 0 %>
-                    <div class="row">
-                    <% end_if %>
-                    <div class="col s3">
-                        <div class="card">
-                            <div class="cart-content blue-grey-text">
-                                <span class="card-title">$Name</span>
-                            </div>
-                            <div class="card-action">
-                                <a href="$Link">View</a>
+                        <div class="flex-col flex-xs12 flex-s6 flex-m4 flex-l3 flex-xl2 card-parent">
+                            <div class="card hoverable">
+                                <div class="card-content blue-grey-text text-darken-3">
+                                    <span class="card-title"><a href="$Link" class="light-blue-text text-darken-4">$Name</a></span>
+                                    <p>$Description</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="$Link">View</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <% if $Modulus(3) == 0 %>
-                    </div>
-                        <div class="divider"></div>
-                    <% end_if %>
                 <% end_loop %>
+                </div>
             </div>
         </div>
-    </div>
+    <%-- </div> --%>
     <% end_if %>
 
 <% include Footer %>
-<!--Import jQuery before materialize.js-->
-<% require javascript('framework/thirdparty/jquery/jquery.js') %>
-<% require themedJavascript('materialize') %>
 </body>
 </html>

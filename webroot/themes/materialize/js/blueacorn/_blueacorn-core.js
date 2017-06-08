@@ -31,7 +31,7 @@
         domReady: false,
 
         settings: {
-            'debug': false,
+            'debug': true,
             'moduleName' : 'blueAcornCore'
         },
 
