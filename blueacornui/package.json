@@ -1,0 +1,58 @@
+{
+  "name": "blueacornui",
+  "version": "4.6.0",
+  "description": "Common Workflow for Front-end Development",
+  "private": "true",
+  "namespace": "Blue Acorn",
+  "homepage": "https://github.com/BlueAcornInc/green-pistachio#readme",
+  "bugs": {
+    "email": "greg@blueacorn.com",
+    "url": "https://github.com/BlueAcornInc/green-pistachio/issues"
+  },
+  "author": {
+    "name": "Greg Harvell @ Blue Acorn, Inc.",
+    "email": "greg@blueacorn.com",
+    "copyright": "Copyright © 2017 Blue Acorn, Inc."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BlueAcornInc/green-pistachio.git"
+  },
+  "keywords": [
+    "grunt",
+    "browsersync",
+    "autoprefixer",
+    "svgmin",
+    "imagemin",
+    "compilation",
+    "preprocessor"
+  ],
+  "dependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "glob": "^7.1.1",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-eslint": "^19.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "jit-grunt": "^0.10.0",
+    "load-grunt-config": "^0.19.2",
+    "time-grunt": "^1.4.0"
+  },
+  "devDependencies": {
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-githooks": "^0.6.0",
+    "grunt-shell": "^2.1.0",
+    "grunt-svg-sprite": "^1.3.6",
+    "grunt-svgmin": "^4.0.0"
+  }
+}

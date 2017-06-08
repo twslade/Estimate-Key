@@ -1,0 +1,34 @@
+{
+    "compile": [
+        {"svg_sprite": ""},
+        {"concurrent": "Compile"}
+    ],
+    "css": [
+        {"sass":    "Dev"},
+        {"postcss": "Dev"}
+    ],
+    "cssProd": [
+        {"sass":    "Production"},
+        {"postcss": "Production"}
+    ],
+    "img": [
+        {"svg_sprite": ""},
+        {"concurrent": "MinifyImages"}
+    ],
+    "js": [
+        {"jshint":  ""},
+        {"clean":   ""},
+        {"babel":   "Dev"},
+        {"uglify":  "Dev"}
+    ],
+    "jsProd": [
+        {"jshint":  ""},
+        {"clean":   ""},
+        {"babel":   "Production"},
+        {"uglify":  "Production"}
+    ],
+    "production": [
+        {"cssProd": ""},
+        {"jsProd": ""}
+    ]
+}
