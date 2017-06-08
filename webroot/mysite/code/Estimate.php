@@ -775,8 +775,8 @@ class Page_Controller extends ContentController {
     }
 
     public function index(SS_HTTPRequest $request){
-
-        return array('Results' => $this->_getCurrentlyFilteredEstimates($request));
+        $estimateList = new PaginatedList($this->_getCurrentlyFilteredEstimates($request), $request);
+        return array('Results' => $estimateList);
     }
 
     /**
