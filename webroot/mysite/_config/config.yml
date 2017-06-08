@@ -10,6 +10,9 @@ After:
 SSViewer:
   theme: 'simple'
 
+Estimate:
+  api_access: true
+
 ---
 Name: seeder
 ---
