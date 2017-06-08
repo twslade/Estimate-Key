@@ -9,7 +9,8 @@
 		"silverstripe/siteconfig": "3.5.3",
 		"silverstripe-themes/simple": "3.1.*",
 		"ajshort/silverstripe-gridfieldextensions": "^1.1",
-		"littlegiant/silverstripe-seeder": "^2.1"
+		"littlegiant/silverstripe-seeder": "^2.1",
+		"colymba/silverstripe-restfulapi": "^2.1"
 	},
 	"require-dev": {
 		"phpunit/PHPUnit": "~3.7@stable"
