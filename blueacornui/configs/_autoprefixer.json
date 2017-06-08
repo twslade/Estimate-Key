@@ -1,0 +1,38 @@
+{
+    "dev": {
+        "map": true,
+        "options": {
+            "browsers": [
+                "Explorer 11",
+                "last 1 Edge versions",
+                "last 3 Chrome versions",
+                "last 2 Safari versions",
+                "last 1 Firefox Versions",
+                "last 3 iOS versions",
+                "last 2 ChromeAndroid versions",
+                "> 1% in US"
+            ],
+            "map": {
+                "inline": false,
+                "prev": true,
+                "annotation": "!",
+                "sourceContent": false
+            }
+        }
+    },
+    "production": {
+        "map": false,
+        "options": {
+            "browsers": [
+                "Explorer 11",
+                "last 2 Edge versions",
+                "last 3 Chrome versions",
+                "last 2 Safari versions",
+                "last 2 Firefox Versions",
+                "last 3 iOS versions",
+                "last 2 ChromeAndroid versions",
+                "> 1% in US"
+            ]
+        }
+    }
+}

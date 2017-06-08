@@ -5,7 +5,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!--Import materialize.css-->
-    <% require themedCSS('materialize') %>
+    <% require themedCSS('materialize.bower') %>
     <% require themedCSS('custom') %>
 
     <!--Let browser know website is optimized for mobile-->

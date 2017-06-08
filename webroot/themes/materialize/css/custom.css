@@ -1,6 +1,10 @@
 input[type="search"] {
-    height: 64px !important; /* or height of nav */
-    margin-bottom: 0;
+  height: 64px !important;
+  /* or height of nav */
+  margin-bottom: 0;
 }
 
-.card{height: 275px;}
+.card {
+  height: 275px;
+}
+/*# sourceMappingURL=custom.css.map */
