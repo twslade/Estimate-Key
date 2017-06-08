@@ -137,6 +137,7 @@ class Estimate extends DataObject {
     public function getCMSFields()
     {
 
+        Requirements::javascript( 'mysite/js/total-hours.js');
         $this->_getMainTab();
         $this->_getRequirementTab();
         $this->_getTechnicalTab();
