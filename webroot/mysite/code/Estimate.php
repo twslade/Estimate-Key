@@ -50,6 +50,7 @@ class Estimate extends DataObject {
             TextField::create('Name'),
             TextField::create('RomLow', 'Lower Rom Range'),
             TextField::create('RomHigh', 'Higher Rom Range'),
+            ReadonlyField::create('Total Hours')->setValue($this->TotalHours()),
             HtmlEditorField::create('Description')->setRows(5),
             ListboxField::create('Platforms', 'Platform')
                 ->setSource(Platform::get()->map('ID', 'Name')->toArray())
@@ -381,6 +382,14 @@ class Story extends DataObject {
         'LineItems' => 'LineItem'
     );
 
+    public function getTotalHours(){
+        $totalHours = 0;
+        foreach($this->LineItems() as $lineItem){
+            $totalHours += (int) $lineItem->NumHours;
+        }
+        return $totalHours;
+    }
+
     public function getCMSFields()
     {
         $lineItems = new GridField('LineItems', 'Line Items', $this->LineItems(),
@@ -419,7 +428,10 @@ class Story extends DataObject {
         //@todo: Add additional field for summing line items
         $fields = FieldList::create(
             TextField::create('Name'),
-            $lineItems
+            $lineItems,
+            ReadonlyField::create('Total Hours')->setValue(
+                $this->getTotalHours()
+            )
         );
 
         return $fields;
