@@ -1,0 +1,27 @@
+.layered-nav {
+    .label {
+        position: relative;
+        display: inline-block;
+        padding-left: 35px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            z-index: 0;
+            border: 2px solid $radio-empty-color;
+            border-radius: 1px;
+            margin-top: 2px;
+            transition: .2s;
+        }
+
+        &:hover {
+            &:before {
+                background-color: rgba(0,0,0,.1);
+            }
+        }
+    }
+}

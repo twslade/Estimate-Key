@@ -1,5 +1,47 @@
 $grid-count: 12;
 
+.row {
+    .col {
+        @for $i from 1 through $grid-count {
+            &.s#{$i} {
+                width: percentage($i/$grid-count);
+            }
+        }
+
+        @include bp('max-width', $bp-xsmall) {
+            @for $i from 1 through $grid-count {
+                &.xs#{$i} {
+                    width: percentage($i/$grid-count);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-medium + 1) {
+            @for $i from 1 through $grid-count {
+                &.m#{$i} {
+                    width: percentage($i/$grid-count);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-large + 1) {
+            @for $i from 1 through $grid-count {
+                &.l#{$i} {
+                    width: percentage($i/$grid-count);
+                }
+            }
+        }
+
+        @include bp('min-width', $bp-xlarge + 1) {
+            @for $i from 1 through $grid-count {
+                &.xl#{$i} {
+                    width: percentage($i/$grid-count);
+                }
+            }
+        }
+    }
+}
+
 .flex {
     &-row {
         display: flex;
@@ -9,40 +51,40 @@ $grid-count: 12;
     &-col {
         display: flex;
 
-        @for $i from 1 through 12 {
+        @for $i from 1 through $grid-count {
             &.flex-s#{$i} {
-                width: percentage($i/12);
+                width: percentage($i/$grid-count);
             }
         }
 
         @include bp('max-width', $bp-xsmall) {
-            @for $i from 1 through 12 {
+            @for $i from 1 through $grid-count {
                 &.flex-xs#{$i} {
-                    width: percentage($i/12);
+                    width: percentage($i/$grid-count);
                 }
             }
         }
 
         @include bp('min-width', $bp-medium + 1) {
-            @for $i from 1 through 12 {
+            @for $i from 1 through $grid-count {
                 &.flex-m#{$i} {
-                    width: percentage($i/12);
+                    width: percentage($i/$grid-count);
                 }
             }
         }
 
         @include bp('min-width', $bp-large + 1) {
-            @for $i from 1 through 12 {
+            @for $i from 1 through $grid-count {
                 &.flex-l#{$i} {
-                    width: percentage($i/12);
+                    width: percentage($i/$grid-count);
                 }
             }
         }
 
         @include bp('min-width', $bp-xlarge + 1) {
-            @for $i from 1 through 12 {
+            @for $i from 1 through $grid-count {
                 &.flex-xl#{$i} {
-                    width: percentage($i/12);
+                    width: percentage($i/$grid-count);
                 }
             }
         }

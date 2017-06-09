@@ -10,7 +10,7 @@
         $Form
     <% else %>
         <div class="row">
-            <div class="col s3">
+            <div class="layered-nav col s12 m3 xl2">
                 <h5>Layered Navigation</h5>
 
                 <% if $GetActiveFilters %>
@@ -43,31 +43,31 @@
                     <%--Get available filters--%>
                     <% loop $GetLeftNav %>
                         <% if $Up.getSanitizeMembers($className).count > 0 %>
-                        <li>
-                            <div class="collapsible-header active">
-                                $className
-                            </div>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <% loop $Up.getSanitizeMembers($className) %>
-                                        <li>
-                                            <input type="checkbox" name="platform-$filter.ID">
-                                            <label for="platform-$filter.ID">
-                                                <a href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
-                                                    $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
-                                                </a>
-                                            </label>
-                                        </li>
-                                    <% end_loop %>
-                                </ul>
-                            </div>
-                        </li>
-                    <% end_if %>
+		                <li>
+		                    <div class="collapsible-header active">
+		                        $className
+		                    </div>
+		                    <div class="collapsible-body">
+		                        <ul>
+		                            <% loop $Up.getSanitizeMembers($className) %>
+		                                <li>
+		                                    <input type="checkbox" name="platform-$filter.ID">
+		                                    <label for="platform-$filter.ID">
+		                                        <a href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
+		                                            $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
+		                                        </a>
+		                                    </label>
+		                                </li>
+		                            <% end_loop %>
+		                        </ul>
+		                    </div>
+		                </li>
+                    	<% end_if %>
                     <% end_loop %>
                 </ul>
             </div>
 
-            <div class="estimate-list col s9">
+            <div class="estimate-list col s12 m9 xl10">
                 <h5>Estimates</h5>
                 <div class="divider"></div>
 
@@ -100,10 +100,11 @@
                 <%--Loop over estimates--%>
                 <div class="flex-row">
                 <% loop $Results %>
-                        <div class="flex-col flex-xs12 flex-s6 flex-m4 flex-l3 flex-xl2 card-parent">
-                            <div class="card hoverable">
-                                <div class="card-content blue-grey-text text-darken-3">
-                                    <span class="card-title"><a href="$Link" class="light-blue-text text-darken-4">$Name</a></span>
+                        <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
+                            <div class="card hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
+                                <div class="card-content">
+
+                                    <span class="card-title"><a href="$Link">$Name</a></span>
                                     <p>$Description</p>
                                 </div>
                                 <div class="card-action">
