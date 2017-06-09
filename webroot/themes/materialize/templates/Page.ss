@@ -10,59 +10,64 @@
         $Form
     <% else %>
         <div class="row">
+            <% if $Results.TotalItems == 0 %>
+                <div class="col s12">
+                    <h1>No Estimates found...</h1>
+                </div>
+            <% else %>
             <div class="layered-nav col s12 m3 xl2">
                 <h5>Layered Navigation</h5>
 
                 <% if $GetActiveFilters %>
-                <ul class="collapsible" data-collapsible="expandable">
-                    <%--Get list of currently applied/active filters--%>
-                    <% loop $GetActiveFilters %>
-                        <li>
-                            <div class="collapsible-header active">
-                                Active - $label
-                            </div>
-                            <div class="collapsible-body">
-                                <ul>
-                                    <% loop $values %>
-                                        <li>
-                                            <%--Remove filter from link if it is already active/applied--%>
-                                            <a href="$Up.Up.GetFilterLink($Up.label, $ID, true)" class="remove-filter">
-                                                <i class="tiny material-icons">delete</i>
-                                                $filter.Name
-                                            </a></label>
-                                        </li>
-                                    <% end_loop %>
-                                </ul>
-                            </div>
-                        </li>
-                    <% end_loop %>
-                </ul>
+                    <ul class="collapsible" data-collapsible="expandable">
+                        <%--Get list of currently applied/active filters--%>
+                        <% loop $GetActiveFilters %>
+                            <li>
+                                <div class="collapsible-header active">
+                                    Active - $label
+                                </div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <% loop $values %>
+                                            <li>
+                                                <%--Remove filter from link if it is already active/applied--%>
+                                                <a href="$Up.Up.GetFilterLink($Up.label, $ID, true)" class="remove-filter">
+                                                    <i class="tiny material-icons">delete</i>
+                                                    $filter.Name
+                                                </a></label>
+                                            </li>
+                                        <% end_loop %>
+                                    </ul>
+                                </div>
+                            </li>
+                        <% end_loop %>
+                    </ul>
                 <% end_if %>
 
                 <ul class="collapsible" data-collapsible="expandable">
                     <%--Get available filters--%>
                     <% loop $GetLeftNav %>
                         <% if $Up.getSanitizeMembers($className).count > 0 %>
-		                <li>
-		                    <div class="collapsible-header active">
-		                        $className
-		                    </div>
-		                    <div class="collapsible-body">
-		                        <ul>
-		                            <% loop $Up.getSanitizeMembers($className) %>
-		                                <li>
-		                                    <input type="checkbox" name="platform-$filter.ID">
-		                                    <label for="platform-$filter.ID">
-		                                        <a href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
-		                                            $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
-		                                        </a>
-		                                    </label>
-		                                </li>
-		                            <% end_loop %>
-		                        </ul>
-		                    </div>
-		                </li>
-                    	<% end_if %>
+                            <li>
+                                <div class="collapsible-header active">
+                                    $className
+                                </div>
+                                <div class="collapsible-body">
+                                    <ul>
+                                        <% loop $Up.getSanitizeMembers($className) %>
+                                            <li>
+                                                <input type="checkbox" name="platform-$filter.ID">
+                                                <label for="platform-$filter.ID">
+                                                    <a href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
+                                                        $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
+                                                    </a>
+                                                </label>
+                                            </li>
+                                        <% end_loop %>
+                                    </ul>
+                                </div>
+                            </li>
+                        <% end_if %>
                     <% end_loop %>
                 </ul>
             </div>
@@ -99,7 +104,7 @@
 
                 <%--Loop over estimates--%>
                 <div class="flex-row">
-                <% loop $Results %>
+                    <% loop $Results %>
                         <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
                             <div class="card hoverable $GetCssClasses">
                                 <div class="card-content">
@@ -112,12 +117,14 @@
                                 </div>
                             </div>
                         </div>
-                <% end_loop %>
+                    <% end_loop %>
                 </div>
             </div>
         </div>
-    <%-- </div> --%>
-    <% end_if %>
+            <%-- </div> --%>
+        <% end_if %>
+
+        <% end_if %>
 
 <% include Footer %>
 </body>

@@ -21,7 +21,7 @@ class Estimate extends DataObject {
         'SearchFields' => array(
             'type' => 'fulltext',
             'name' => 'SearchFields',
-            'value' => '"Name", "Description", "BuesinessRequirements", "FunctionalRequirements", "TechnicalApproach"'
+            'value' => '"Name", "Description", "BusinessRequirements", "FunctionalRequirements", "TechnicalApproach"'
         )
     );
 
