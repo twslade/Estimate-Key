@@ -544,6 +544,12 @@ class Page_Controller extends ContentController {
         'Skill'
     );
 
+    /**
+     * Some of the left nav filters are not directly related
+     * to the estimate, but instead, are related to children.
+     *
+     * @var array
+     */
     protected $_unrelatedLeftNavClasses = array(
         'Role',
         'Skill'
@@ -828,6 +834,7 @@ class Page_Controller extends ContentController {
                 $filterGroup.'s.ID' => $filterId
             ));
         } else {
+            //Watch out for specially related filters
             $estimates = $estimates->filter(array(
                 'Stories.LineItems.'.$filterGroup.'s.ID' => $filterId
             ));
@@ -870,6 +877,7 @@ class Page_Controller extends ContentController {
                         $filterGroup.'s.ID' => $filter
                     ));
                 } else {
+                    //Watch out for specially related filters
                     $estimates = $estimates->filter(array(
                         //@todo: Fix for multiple of same filter group. Url decode
                         'Stories.LineItems.'.$filterGroup.'s.ID' => $filter
