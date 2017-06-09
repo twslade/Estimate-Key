@@ -1,0 +1,5 @@
+.hide-on-large-and-down {
+    @include bp('max-width', $bp-large) {
+        display: none;
+    }
+}

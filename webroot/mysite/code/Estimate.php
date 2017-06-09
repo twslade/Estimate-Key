@@ -194,6 +194,7 @@ class Estimate extends DataObject {
 class Platform extends DataObject {
     private static $db = array(
         'Name' => 'Varchar(255)',
+        'CssClass' => 'Varchar(255)'
     );
 
     private static $belongs_many_many = array(
@@ -203,7 +204,8 @@ class Platform extends DataObject {
     public function getCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Name')
+            TextField::create('Name'),
+            TextField::create('CssClass')
         );
 
         return $fields;
@@ -324,7 +326,7 @@ class RiskType extends DataObject {
  */
 class Role extends DataObject {
     private static $db = array(
-        'Name'                      => 'Varchar(255)'
+        'Name' => 'Varchar(255)'
     );
 
     private static $belongs_many_many = array(
@@ -351,7 +353,7 @@ class Role extends DataObject {
 class Skill extends DataObject {
 
     private static $db = array(
-        'Name'                      => 'Varchar(255)'
+        'Name' => 'Varchar(255)'
     );
 
     private static $belongs_many_many = array(
@@ -376,7 +378,7 @@ class Skill extends DataObject {
  */
 class Story extends DataObject {
     private static $db = array(
-        'Name'                      => 'Varchar(255)',
+        'Name' => 'Varchar(255)',
     );
 
     private $searchable_fields = array('Name');

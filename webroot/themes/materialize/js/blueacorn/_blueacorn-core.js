@@ -28,7 +28,7 @@
         utils: utils,
         helpers: helpers,
         config: {},
-        domReady: false,
+        domReady: true,
 
         settings: {
             'debug': true,
