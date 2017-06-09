@@ -101,7 +101,7 @@
                 <div class="flex-row">
                 <% loop $Results %>
                         <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
-                            <div class="card hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
+                            <div class="card hoverable $GetCssClasses">
                                 <div class="card-content">
 
                                     <span class="card-title"><a href="$Link">$Name</a></span>

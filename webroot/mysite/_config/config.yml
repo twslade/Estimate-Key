@@ -54,19 +54,16 @@ Seeder\Seeder:
             class: Platform
             fields:
                 Name: Magento 1
-                CssClass: magento-1
         -
             key: Platform2
             class: Platform`
             fields:
                 Name: Magento 2
-                CssClass: magento-2
         -
             key: Platform3
             class: Platform
             fields:
                 Name: Sales Force Commerce Cloud
-                CssClass: sfcc
         Skill:
             count: 10
             fields:
@@ -99,6 +96,7 @@ Seeder\Seeder:
         Estimate:
             count: 100
             fields:
+                Name: faker(sentence, 6)
                 Name: faker(sentence, 6)
                 Description: faker(sentence, 10)
                 BusinessRequirements: faker(paragraphs, 3, true)

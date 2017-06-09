@@ -17,6 +17,18 @@ class Estimate extends DataObject {
 	    'TechnicalConfidence'       => 'Int',
 	);
 
+    private static $indexes = array(
+        'SearchFields' => array(
+            'type' => 'fulltext',
+            'name' => 'SearchFields',
+            'value' => '"Name", "Description", "BuesinessRequirements", "FunctionalRequirements", "TechnicalApproach"'
+        )
+    );
+
+    private static $create_table_options = array(
+        'MySQLDatabase' => 'Engine=MyISAM'
+    );
+
     private static $many_many = array(
         'Risks' => 'Risk',
         'Clients' => 'Client',
@@ -183,6 +195,14 @@ class Estimate extends DataObject {
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
+    public function GetCssClasses(){
+        $class = '';
+        foreach ($this->Platforms()->toArray() as $platform){
+            $class = str_replace(' ', '-', strtolower($platform->Name)) . ' ';
+        }
+        return $class;
+    }
+
 }
 
 /**
@@ -193,8 +213,7 @@ class Estimate extends DataObject {
  */
 class Platform extends DataObject {
     private static $db = array(
-        'Name' => 'Varchar(255)',
-        'CssClass' => 'Varchar(255)'
+        'Name' => 'Varchar(255)'
     );
 
     private static $belongs_many_many = array(
@@ -204,8 +223,7 @@ class Platform extends DataObject {
     public function getCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Name'),
-            TextField::create('CssClass')
+            TextField::create('Name')
         );
 
         return $fields;
@@ -819,9 +837,7 @@ class Page_Controller extends ContentController {
         $estimates = Estimate::get();
 
         if($searchTerms = $request->getVar('Search')){
-            $estimates = $estimates->filter(array(
-                'Name:PartialMatch' => $searchTerms
-            ));
+            $estimates = $estimates->filter('SearchFields:fulltext', $searchTerms);
         }
 
 
