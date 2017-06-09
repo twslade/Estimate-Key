@@ -8,7 +8,7 @@ After:
 # See http://doc.silverstripe.org/framework/en/topics/configuration
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
-  theme: 'simple'
+  theme: 'materialize'
 
 Estimate:
   api_access: true
@@ -54,33 +54,32 @@ Seeder\Seeder:
             class: Platform
             fields:
                 Name: Magento 1
-                CssClass: magento-1
         -
             key: Platform2
             class: Platform`
             fields:
                 Name: Magento 2
-                CssClass: magento-2
         -
             key: Platform3
             class: Platform
             fields:
                 Name: Sales Force Commerce Cloud
-                CssClass: sfcc
         Skill:
             count: 10
             fields:
                 Name: faker(jobTitle)
         LineItem:
-            count: 10
+            count: 100
             fields:
                 Description: faker(sentence, 6)
                 NumHours: faker(numberBetween, 2, 10)
+                Skills: random(Skill)
+                Roles: random(Role)
         Story:
             count: 10
             fields:
                 Name: faker(sentence, 6)
-                LineItems: random(LineItem, 5)
+                LineItems: random(LineItem, 4)
         Risk:
             count: 10
             fields:
@@ -99,6 +98,7 @@ Seeder\Seeder:
         Estimate:
             count: 100
             fields:
+                Name: faker(sentence, 6)
                 Name: faker(sentence, 6)
                 Description: faker(sentence, 10)
                 BusinessRequirements: faker(paragraphs, 3, true)

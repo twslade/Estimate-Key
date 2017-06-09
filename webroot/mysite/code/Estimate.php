@@ -17,6 +17,18 @@ class Estimate extends DataObject {
 	    'TechnicalConfidence'       => 'Int',
 	);
 
+    private static $indexes = array(
+        'SearchFields' => array(
+            'type' => 'fulltext',
+            'name' => 'SearchFields',
+            'value' => '"Name", "Description", "BusinessRequirements", "FunctionalRequirements", "TechnicalApproach"'
+        )
+    );
+
+    private static $create_table_options = array(
+        'MySQLDatabase' => 'Engine=MyISAM'
+    );
+
     private static $many_many = array(
         'Risks' => 'Risk',
         'Clients' => 'Client',
@@ -183,6 +195,14 @@ class Estimate extends DataObject {
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
+    public function GetCssClasses(){
+        $class = '';
+        foreach ($this->Platforms()->toArray() as $platform){
+            $class = str_replace(' ', '-', strtolower($platform->Name)) . ' ';
+        }
+        return $class;
+    }
+
 }
 
 /**
@@ -193,8 +213,7 @@ class Estimate extends DataObject {
  */
 class Platform extends DataObject {
     private static $db = array(
-        'Name' => 'Varchar(255)',
-        'CssClass' => 'Varchar(255)'
+        'Name' => 'Varchar(255)'
     );
 
     private static $belongs_many_many = array(
@@ -204,8 +223,7 @@ class Platform extends DataObject {
     public function getCMSFields()
     {
         $fields = FieldList::create(
-            TextField::create('Name'),
-            TextField::create('CssClass')
+            TextField::create('Name')
         );
 
         return $fields;
@@ -526,6 +544,17 @@ class Page_Controller extends ContentController {
         'Skill'
     );
 
+    /**
+     * Some of the left nav filters are not directly related
+     * to the estimate, but instead, are related to children.
+     *
+     * @var array
+     */
+    protected $_unrelatedLeftNavClasses = array(
+        'Role',
+        'Skill'
+    );
+
     private static $allowed_actions = array ();
 
     public function init() {
@@ -542,6 +571,22 @@ class Page_Controller extends ContentController {
         $classArray = new ArrayList();
         foreach ($this->_leftNavClasses as $class){
            $classArray->add(ArrayData::create(array('className' => $class)));
+        }
+        return $classArray;
+    }
+
+    /**
+     *
+     * Utility function for template looping on arrays
+     *
+     * @param array $arr
+     * @param string $key
+     * @return ArrayList
+     */
+    public function arrayToArrayList($arr = array(), $key = 'key'){
+        $classArray = new ArrayList();
+        foreach ($arr as $val){
+            $classArray->add(ArrayData::create(array($key => $val)));
         }
         return $classArray;
     }
@@ -705,6 +750,20 @@ class Page_Controller extends ContentController {
     }
 
     /**
+     * Remove active filters and those without matching records
+     *
+     * @param $className
+     * @return ArrayList
+     */
+    public function getSanitizeMembers($className){
+        $filters = array_filter($this->getMembers($className)->toArray(), function($filter) use ($className){
+            return  !$this->IsActiveFilter($className, $filter->ID) && $this->GetFilterCount($className, $filter->ID) > 0;
+        });
+        return $this->arrayToArrayList($filters, 'filter', array('className', $className));
+    }
+
+
+    /**
      * Get a list of currently applied filters
      *
      * @return ArrayList
@@ -769,11 +828,23 @@ class Page_Controller extends ContentController {
     public function GetFilterCount($filterGroup = null, $filterId){
         //@todo: Filter current estimate collection
         $estimates = $this->_getCurrentlyFilteredEstimates(Controller::curr()->getRequest());
-        $estimates = $estimates->filter(array(
-            $filterGroup.'s.ID' => $filterId
-        ));
+
+        if(!$this->_isUnrelatedFilter($filterGroup)){
+            $estimates = $estimates->filter(array(
+                $filterGroup.'s.ID' => $filterId
+            ));
+        } else {
+            //Watch out for specially related filters
+            $estimates = $estimates->filter(array(
+                'Stories.LineItems.'.$filterGroup.'s.ID' => $filterId
+            ));
+        }
 
         return $estimates->count();
+    }
+
+    protected function _isUnrelatedFilter($filterGroup){
+        return in_array($filterGroup, $this->_unrelatedLeftNavClasses);
     }
 
     public function index(SS_HTTPRequest $request){
@@ -789,9 +860,7 @@ class Page_Controller extends ContentController {
         $estimates = Estimate::get();
 
         if($searchTerms = $request->getVar('Search')){
-            $estimates = $estimates->filter(array(
-                'Name:PartialMatch' => $searchTerms
-            ));
+            $estimates = $estimates->filter('SearchFields:fulltext', $searchTerms);
         }
 
 
@@ -802,10 +871,18 @@ class Page_Controller extends ContentController {
             $param = strtolower($filterGroup);
             if($filter = $request->getVar($param)){
                 $filter = explode(',', $filter);
-                $estimates = $estimates->filter(array(
-                    //@todo: Fix for multiple of same filter group. Url decode
-                    $filterGroup.'s.ID' => $filter
-                ));
+                if(!$this->_isUnrelatedFilter($filterGroup)){
+                    $estimates = $estimates->filter(array(
+                        //@todo: Fix for multiple of same filter group. Url decode
+                        $filterGroup.'s.ID' => $filter
+                    ));
+                } else {
+                    //Watch out for specially related filters
+                    $estimates = $estimates->filter(array(
+                        //@todo: Fix for multiple of same filter group. Url decode
+                        'Stories.LineItems.'.$filterGroup.'s.ID' => $filter
+                    ));
+                }
             }
         }
 
