@@ -545,6 +545,22 @@ class Page_Controller extends ContentController {
     }
 
     /**
+     *
+     * Utility function for template looping on arrays
+     *
+     * @param array $arr
+     * @param string $key
+     * @return ArrayList
+     */
+    public function arrayToArrayList($arr = array(), $key = 'key'){
+        $classArray = new ArrayList();
+        foreach ($arr as $val){
+            $classArray->add(ArrayData::create(array($key => $val)));
+        }
+        return $classArray;
+    }
+
+    /**
      * Build links for layered navigation.
      * Multiple filters are possible per filter group.
      * For example: Filter estimates by platform Magento 1 OR Magento 2
@@ -701,6 +717,20 @@ class Page_Controller extends ContentController {
             return $className::get()->sort('Name', 'ASC');
         }
     }
+
+    /**
+     * Remove active filters and those without matching records
+     *
+     * @param $className
+     * @return ArrayList
+     */
+    public function getSanitizeMembers($className){
+        $filters = array_filter($this->getMembers($className)->toArray(), function($filter) use ($className){
+            return  !$this->IsActiveFilter($className, $filter->ID) && $this->GetFilterCount($className, $filter->ID) > 0;
+        });
+        return $this->arrayToArrayList($filters, 'filter', array('className', $className));
+    }
+
 
     /**
      * Get a list of currently applied filters

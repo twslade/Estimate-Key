@@ -42,31 +42,27 @@
                 <ul class="collapsible" data-collapsible="expandable">
                     <%--Get available filters--%>
                     <% loop $GetLeftNav %>
+                        <% if $Up.getSanitizeMembers($className).count > 0 %>
                         <li>
                             <div class="collapsible-header active">
                                 $className
                             </div>
                             <div class="collapsible-body">
                                 <ul>
-                                    <% loop $Up.getMembers($className) %>
-                                        <%--Exclude active filters since they are already applied--%>
-                                        <% if not $Up.IsActiveFilter($className, $ID) %>
-                                            <%--Exclude zero count filters--%>
-                                            <% if $Up.GetFilterCount($className, $ID) > "0" %>
-                                                <li>
-                                                    <input type="checkbox" name="platform-$ID">
-                                                    <label for="platform-$ID">
-                                                        <a href="$Up.GetFilterLink($className, $ID)">
-                                                            $Name ($Up.GetFilterCount($className, $ID))
-                                                        </a>
-                                                    </label>
-                                                </li>
-                                            <% end_if %>
-                                        <% end_if %>
+                                    <% loop $Up.getSanitizeMembers($className) %>
+                                        <li>
+                                            <input type="checkbox" name="platform-$filter.ID">
+                                            <label for="platform-$filter.ID">
+                                                <a href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
+                                                    $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
+                                                </a>
+                                            </label>
+                                        </li>
                                     <% end_loop %>
                                 </ul>
                             </div>
                         </li>
+                    <% end_if %>
                     <% end_loop %>
                 </ul>
             </div>
