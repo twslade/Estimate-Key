@@ -4,18 +4,27 @@
         padding-bottom: 90px;
         width: 100%;
 
-        .card-content {
-            .card-title {
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: 900;
-                text-transform: uppercase;
-            }
+        .card-title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
 
+        .card-content {
             .chip {
                 position: absolute;
-                bottom: 60px;
-                right: 0;
+                bottom: 65px;
+                right: 5px;
+            }
+        }
+
+        .chip {
+            @each $name, $value in $conf-levels {
+                &.#{$name} {
+                    color: color('shades','white');
+                    background: color($value, 'darken-3');
+                }
             }
         }
 
@@ -27,6 +36,16 @@
             position: absolute;
             width: 100%;
             bottom: 0;
+
+            a.activator:not(.btn):not(.btn-large):not(.btn-floating) {
+                margin-right: 0;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
         }
 
         @each $name, $value in $platforms {
@@ -40,11 +59,13 @@
                 .card-action {
                     border-top-color: color($value, 'darken-1');
 
-                    a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+                    a:not(.btn):not(.btn-large):not(.btn-floating) {
                         color: color($value, 'darken-3');
                     }
                 }
             }
         }
+
+
     }
 }

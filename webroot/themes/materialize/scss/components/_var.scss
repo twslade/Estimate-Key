@@ -17,3 +17,9 @@ $platforms: (
     magento-2: 'deep-orange',
     sales-force-commerce-cloud: 'cyan'
 );
+
+$conf-levels: (
+    high: 'green',
+    med: 'orange',
+    low: 'red'
+);

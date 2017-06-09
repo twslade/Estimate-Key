@@ -195,7 +195,19 @@ class Estimate extends DataObject {
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
-    public function GetCssClasses(){
+    public function GetTechnicalConfidenceCssClass() {
+        return strtolower($this->GetTechnicalConfidence());
+    }
+
+    public function GetScheduleConfidenceCssClass() {
+        return strtolower($this->GetScheduleConfidence());
+    }
+
+    public function GetBudgetConfidenceCssClass() {
+        return strtolower($this->GetBudgetConfidence());
+    }
+
+    public function GetPlatformCssClasses(){
         $class = '';
         foreach ($this->Platforms()->toArray() as $platform){
             $class = str_replace(' ', '-', strtolower($platform->Name)) . ' ';

@@ -101,21 +101,53 @@
                 <div class="flex-row">
                     <% loop $Results %>
                         <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
-                            <div class="card hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
+                            <div class="card hoverable $GetPlatformCssClasses">
                                 <div class="card-content">
                                     <span class="card-title">
                                         <a href="$Link">$Name</a>
                                     </span>
                                     <p>$Description</p>
-                                    <% loop $Platforms %>
-                                        <div class="chip $CssClass">$Name</div>
-                                    <% end_loop %>
+
+                                    <div class="chip $GetPlatformCssClasses">
+                                        <% loop $Platforms %>$Name<% end_loop %>
+                                    </div>
                                 </div>
                                 <div class="card-action">
                                     <a href="$Link">View</a>
+                                    <a href="#" class="activator right"><i class="material-icons right">more_vert</i></a>
                                 </div>
                                 <div class="card-reveal">
-                                    <a href="#">TEST</a>
+                                    <span class="card-title">
+                                        <strong>Confidence Levels</strong>
+                                        <i class="close material-icons right">close</i>
+                                    </span>
+
+                                    <div class="row">
+                                        <div class="col center">
+                                            <p>Tech</p>
+                                            <% if $GetTechnicalConfidence %>
+                                                <div class="chip $GetTechnicalConfidenceCssClass">
+                                                    $GetTechnicalConfidence
+                                                </div>
+                                            <% end_if %>
+                                        </div>
+                                        <div class="col center">
+                                            <p>Budget</p>
+                                            <% if $GetBudgetConfidence %>
+                                                <div class="chip $GetBudgetConfidenceCssClass">
+                                                    $GetBudgetConfidence
+                                                </div>
+                                            <% end_if %>
+                                        </div>
+                                        <div class="col center">
+                                            <p>Schedule</p>
+                                            <% if $GetScheduleConfidence %>
+                                                <div class="chip $GetScheduleConfidenceCssClass">
+                                                    $GetScheduleConfidence
+                                                </div>
+                                            <% end_if %>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
