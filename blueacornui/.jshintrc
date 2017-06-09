@@ -1,5 +1,4 @@
 {
-    // Enforcing
     "esversion":    6,       // Specify the ECMAScript version to which the code must adhere.
     "bitwise":      true,   // true: Prohibit bitwise operators (&, |, ^, etc.)
     "indent":       4,      // Number of spaces to use for indentation

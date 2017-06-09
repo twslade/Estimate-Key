@@ -1,7 +1,7 @@
 .estimate-list {
     .card {
         position: relative;
-        padding-bottom: 54px;
+        padding-bottom: 90px;
         width: 100%;
 
         .card-content {
@@ -10,6 +10,12 @@
                 line-height: 20px;
                 font-weight: 900;
                 text-transform: uppercase;
+            }
+
+            .chip {
+                position: absolute;
+                bottom: 60px;
+                right: 0;
             }
         }
 
@@ -25,18 +31,17 @@
 
         @each $name, $value in $platforms {
             &.#{$name} {
-                background: color($value, 'lighten-3');
 
                 .card-title,
                 .card-title a {
-                    color: color($value, 'darken-4');
+                    color: color($value, 'darken-3');
                 }
 
                 .card-action {
                     border-top-color: color($value, 'darken-1');
 
                     a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-                        color: color($value, 'darken-4');
+                        color: color($value, 'darken-3');
                     }
                 }
             }

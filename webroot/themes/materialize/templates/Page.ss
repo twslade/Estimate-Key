@@ -11,8 +11,6 @@
     <% else %>
         <div class="row">
             <div class="layered-nav col s12 m3 xl2">
-                <h5>Layered Navigation</h5>
-
                 <% if $GetActiveFilters %>
                 <ul class="collapsible" data-collapsible="expandable">
                     <%--Get list of currently applied/active filters--%>
@@ -75,7 +73,7 @@
                 <%--Pagination--%>
                 <% if $Results.MoreThanOnePage %>
                     <div class="row">
-                        <div class="col s9 center">
+                        <div class="col s10 offset-s1 center">
                             <ul class="pagination">
                                 <% if $Results.NotFirstPage %>
                                     <li><a href="$Results.PrevLink" class=""><i class="material-icons">chevron_left</i></a></li>
@@ -97,19 +95,25 @@
                     </div>
                 <% end_if %>
 
-
                 <%--Loop over estimates--%>
                 <div class="flex-row">
                 <% loop $Results %>
                         <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
-                            <div class="card hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
+                            <div class="card sticky-action hoverable <% loop $Platforms %>$CssClass<% end_loop %>">
                                 <div class="card-content">
-
-                                    <span class="card-title"><a href="$Link">$Name</a></span>
+                                    <span class="card-title">
+                                        <a href="$Link">$Name</a>
+                                    </span>
                                     <p>$Description</p>
+                                    <% loop $Platforms %>
+                                        <div class="chip $CssClass">$Name</div>
+                                    <% end_loop %>
                                 </div>
                                 <div class="card-action">
                                     <a href="$Link">View</a>
+                                </div>
+                                <div class="card-reveal">
+                                    <a href="#">TEST</a>
                                 </div>
                             </div>
                         </div>
