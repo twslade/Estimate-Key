@@ -544,6 +544,11 @@ class Page_Controller extends ContentController {
         'Skill'
     );
 
+    protected $_unrelatedLeftNavClasses = array(
+        'Role',
+        'Skill'
+    );
+
     private static $allowed_actions = array ();
 
     public function init() {
@@ -817,11 +822,22 @@ class Page_Controller extends ContentController {
     public function GetFilterCount($filterGroup = null, $filterId){
         //@todo: Filter current estimate collection
         $estimates = $this->_getCurrentlyFilteredEstimates(Controller::curr()->getRequest());
-        $estimates = $estimates->filter(array(
-            $filterGroup.'s.ID' => $filterId
-        ));
+
+        if(!$this->_isUnrelatedFilter($filterGroup)){
+            $estimates = $estimates->filter(array(
+                $filterGroup.'s.ID' => $filterId
+            ));
+        } else {
+            $estimates = $estimates->filter(array(
+                'Stories.LineItems.'.$filterGroup.'s.ID' => $filterId
+            ));
+        }
 
         return $estimates->count();
+    }
+
+    protected function _isUnrelatedFilter($filterGroup){
+        return in_array($filterGroup, $this->_unrelatedLeftNavClasses);
     }
 
     public function index(SS_HTTPRequest $request){
@@ -848,10 +864,17 @@ class Page_Controller extends ContentController {
             $param = strtolower($filterGroup);
             if($filter = $request->getVar($param)){
                 $filter = explode(',', $filter);
-                $estimates = $estimates->filter(array(
-                    //@todo: Fix for multiple of same filter group. Url decode
-                    $filterGroup.'s.ID' => $filter
-                ));
+                if(!$this->_isUnrelatedFilter($filterGroup)){
+                    $estimates = $estimates->filter(array(
+                        //@todo: Fix for multiple of same filter group. Url decode
+                        $filterGroup.'s.ID' => $filter
+                    ));
+                } else {
+                    $estimates = $estimates->filter(array(
+                        //@todo: Fix for multiple of same filter group. Url decode
+                        'Stories.LineItems.'.$filterGroup.'s.ID' => $filter
+                    ));
+                }
             }
         }
 
