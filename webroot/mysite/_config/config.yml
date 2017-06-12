@@ -17,6 +17,10 @@ Estimate:
 Name: seeder
 ---
 
+Seeder:
+  providers:
+    - Seeder
+
 Seeder\Seeder:
     create:
         -
@@ -56,7 +60,7 @@ Seeder\Seeder:
                 Name: Magento 1
         -
             key: Platform2
-            class: Platform`
+            class: Platform
             fields:
                 Name: Magento 2
         -
@@ -67,7 +71,7 @@ Seeder\Seeder:
         Skill:
             count: 10
             fields:
-                Name: faker(jobTitle)
+                Name: Seeder(skill)
         LineItem:
             count: 100
             fields:
@@ -98,17 +102,16 @@ Seeder\Seeder:
         Estimate:
             count: 100
             fields:
-                Name: faker(sentence, 6)
-                Name: faker(sentence, 6)
+                Name: Seeder(name)
                 Description: faker(sentence, 10)
                 BusinessRequirements: faker(paragraphs, 3, true)
                 FunctionialRequirements: faker(paragraphs, 3, true)
                 TechnicalApproach: faker(paragraphs, 3, true)
-                RomLow: faker(numberBetween, 5, 35)
-                RomHigh: faker(numberBetween, 50, 100)
-                BudgetConfidence: 2
-                ScheduleConfidence: 3
-                TechnicalConfidence: 1
+                RomLow: Seeder(romLow)
+                RomHigh: Seeder(romHigh)
+                BudgetConfidence: High
+                ScheduleConfidence: Medium
+                TechnicalConfidence: Low
                 Risks: random(Risk, 3)
                 Clients: random(Client, 2)
                 Stories: random(Story, 3)
