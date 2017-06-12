@@ -2,7 +2,8 @@
     <% base_tag %>
     <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
     <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 
     <!--Import materialize.css-->
     <% require themedCSS('materialize.bower') %>

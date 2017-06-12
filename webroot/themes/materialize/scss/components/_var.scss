@@ -23,3 +23,23 @@ $conf-levels: (
     med: 'orange',
     low: 'red'
 );
+
+$roles: (
+    applications-engineer: ('yellow', 'darken-3'),
+    front-end-engineer: ('cyan', 'darken-1'),
+    quality-engineer: ('blue', 'darken-3'),
+    client-success: ('lime', 'darken-3'),
+    production-engineer: ('amber', 'darken-4'),
+    ecommerce-solutions: ('brown', 'darken-2'),
+    optimization-strategy: ('pink', 'darken-1')
+);
+
+$skills: (
+    docker: 'docker-plain',
+    less: 'less-plain-wordmark',
+    css: 'css3-plain-wordmark',
+    mysql: 'mysql-plain-wordmark',
+    javascript: 'javascript-plain',
+    sass: 'sass-original',
+    grunt: 'grunt-line-wordmark'
+);

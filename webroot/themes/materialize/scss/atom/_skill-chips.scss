@@ -1,0 +1,48 @@
+.skill-chip {
+    span {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+%devicon-base {
+    font-family: 'devicon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@each $name, $value in $skills {
+    .skill-chip.#{$name} {
+        position: relative;
+        @extend .devicon-#{$value}, .colored;
+
+        &:before {
+            @extend %devicon-base;
+            font-size: 30px;
+            padding: 4px;
+            border-radius: 100%;
+            background: color('grey', 'lighten-5');
+        }
+
+        span {
+            display: none;
+        }
+
+        &:hover {
+            span {
+                position: relative;
+                left: 100%;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.estimate-view {
+
+    @each $name, $value in $platforms {
+        &.#{$name} {
+
+            .card-panel.hours-card {
+                background: color($value, 'darken-3');
+            }
+
+            .estimate {
+                &.-desc {
+
+                    h3 {
+                        color: color($value, 'darken-3');
+                    }
+                }
+            }
+
+        }
+    }
+
+    .stories {
+        table {
+            margin-bottom: 75px;
+        }
+    }
+}
