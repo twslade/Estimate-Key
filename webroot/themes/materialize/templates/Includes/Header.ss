@@ -17,7 +17,6 @@
                     <% end_if %>
                 </div>
                 <div class="col s6">
-                    <% include Navigation %>
                     <a href="$BaseHref" class="brand-log right">$SiteConfig.Title</a>
                 </div>
             </div>
