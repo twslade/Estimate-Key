@@ -12,10 +12,16 @@ class Estimate extends DataObject {
         'RomLow'                    => 'Int',
         'RomHigh'                   => 'Int',
 
-        'BudgetConfidence'          => 'Int',
-	    'ScheduleConfidence'        => 'Int',
-	    'TechnicalConfidence'       => 'Int',
+        'BudgetConfidence'          => 'Varchar(100)',
+	    'ScheduleConfidence'        => 'Varchar(100)',
+	    'TechnicalConfidence'       => 'Varchar(100)'
 	);
+
+    private $_confidenceLevels = array(
+        'High' => 'High',
+        'Medium' => 'Medium',
+        'Low' => 'Low',
+    );
 
     private static $indexes = array(
         'SearchFields' => array(
@@ -44,8 +50,6 @@ class Estimate extends DataObject {
     /** @var FieldList */
     private $_estimateFields = null;
 
-    private $_confidenceLevels = array('High', 'Med', 'Low');
-
     /**
      * @return FieldList
      */
@@ -53,6 +57,7 @@ class Estimate extends DataObject {
         if($this->_estimateFields){
             return $this->_estimateFields;
         }
+        $this->_estimateFields = parent::getCMSFields();
         $this->_estimateFields = FieldList::create(TabSet::create('Root'));
         return $this->_estimateFields;
     }
@@ -93,15 +98,19 @@ class Estimate extends DataObject {
 
         $this->_getFields()->addFieldsToTab('Root.Technical', array(
             HtmlEditorField::create('TechnicalApproach')->setRows(5),
-            DropdownField::create('BudgetConfidence', 'Budget Confidence')
-                ->setSource($this->_confidenceLevels)
+            DropdownField::create(
+                'BudgetConfidence',
+                'Budget Confidence',
+                $this->_confidenceLevels)
                 ->setEmptyString('-- Select a level --'),
-            DropdownField::create('ScheduleConfidence', 'Schedule Confidence')
-                ->setSource($this->_confidenceLevels)
-                ->setEmptyString('-- Select a level --'),
-            DropdownField::create('TechnicalConfidence', 'Technical Confidence')
-                ->setSource($this->_confidenceLevels)
-                ->setEmptyString('-- Select a level --'),
+            DropdownField::create(
+                'ScheduleConfidence',
+                'Schedule Confidence',
+                $this->_confidenceLevels)->setValue($this->GetTechnicalConfidence()),
+            DropdownField::create(
+                'TechnicalConfidence',
+                'Technical Confidence',
+                $this->_confidenceLevels),
             $gridField
 
         ));
