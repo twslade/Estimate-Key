@@ -106,7 +106,14 @@ class Seeder extends \Seeder\Provider {
     }
 
     protected function getSkill($state){
-        return $this->_skills[array_rand($this->_skills)];
+        return $this->_getRandomArrayVal($this->_skills);
+    }
+
+    protected function _getRandomArrayVal(&$arr){
+        $arrIndex = array_rand($arr);
+        $ret = $arr[$arrIndex];
+        unset($arr[$arrIndex]);
+        return $ret;
     }
 
 
