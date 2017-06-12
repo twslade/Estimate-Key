@@ -125,27 +125,21 @@
                                     <div class="row">
                                         <div class="col center">
                                             <p>Tech</p>
-                                            <% if $TechnicalConfidence %>
-                                                <div class="chip $GetTechnicalConfidenceCssClass">
+                                                <div class="chip">
                                                     $TechnicalConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                         <div class="col center">
                                             <p>Budget</p>
-                                            <% if $GetBudgetConfidence %>
-                                                <div class="chip $GetBudgetConfidenceCssClass">
-                                                    $GetBudgetConfidence
+                                                <div class="chip">
+                                                    $BudgetConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                         <div class="col center">
                                             <p>Schedule</p>
-                                            <% if $GetScheduleConfidence %>
-                                                <div class="chip $GetScheduleConfidenceCssClass">
-                                                    $GetScheduleConfidence
+                                                <div class="chip">
+                                                    $ScheduleConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                     </div>
                                 </div>
