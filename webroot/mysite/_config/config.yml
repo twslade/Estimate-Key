@@ -72,6 +72,10 @@ Seeder\Seeder:
             count: 10
             fields:
                 Name: Seeder(skill)
+        Category:
+            count: 25
+            fields:
+                Name: Seeder(category)
         LineItem:
             count: 100
             fields:
@@ -85,9 +89,9 @@ Seeder\Seeder:
                 Name: faker(sentence, 6)
                 LineItems: random(LineItem, 4)
         Risk:
-            count: 10
+            count: 5
             fields:
-                Name: faker(sentence, 6)
+                Name: Seeder(risk)
                 Description: faker(paragraphs, 3, true)
                 MitigationPlan: faker(sentence, 10)
                 MitigationCost: faker(numberBetween, 1, 10)
@@ -113,6 +117,7 @@ Seeder\Seeder:
                 ScheduleConfidence: Medium
                 TechnicalConfidence: Low
                 Risks: random(Risk, 3)
+                Categorys: random(Category, 3)
                 Clients: random(Client, 2)
                 Stories: random(Story, 3)
                 Platforms: random(Platform, 1)

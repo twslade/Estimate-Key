@@ -40,7 +40,8 @@ class Estimate extends DataObject {
         'Clients' => 'Client',
         'Stories' => 'Story',
         'Platforms' => 'Platform',
-        'Files' => 'File'
+        'Files' => 'File',
+        'Categorys' => 'Category'
     );
 
     private static $has_one = array(
@@ -106,11 +107,14 @@ class Estimate extends DataObject {
             DropdownField::create(
                 'ScheduleConfidence',
                 'Schedule Confidence',
-                $this->_confidenceLevels)->setValue($this->GetTechnicalConfidence()),
+                $this->_confidenceLevels),
             DropdownField::create(
                 'TechnicalConfidence',
                 'Technical Confidence',
                 $this->_confidenceLevels),
+            ListboxField::create('Categorys', 'Category')
+                ->setSource(Category::get()->map('ID', 'Name')->toArray())
+                ->setMultiple(true),
             $gridField
 
         ));
@@ -350,7 +354,6 @@ class Role extends DataObject {
     }
 }
 
-
 /**
  * Defines skillsets that can be used to determine who can do the work,
  * for example, javascript, php, html, css, etc
@@ -365,6 +368,26 @@ class Skill extends DataObject {
 
     private static $belongs_many_many = array(
         'LineItems' => 'LineItem'
+    );
+
+    public function getCMSFields()
+    {
+        $fields = FieldList::create(
+            TextField::create('Name')
+        );
+
+        return $fields;
+    }
+}
+
+class Category extends DataObject {
+
+    private static $db = array(
+        'Name' => 'Varchar(255)'
+    );
+
+    private static $belongs_many_many = array(
+        'Estimates' => 'Estimate'
     );
 
     public function getCMSFields()
@@ -544,7 +567,8 @@ class Page_Controller extends ContentController {
         'Platform',
         'Client',
         'Role',
-        'Skill'
+        'Skill',
+        'Category'
     );
 
     /**
