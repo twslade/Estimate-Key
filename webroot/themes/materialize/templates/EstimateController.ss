@@ -1,21 +1,73 @@
 <!DOCTYPE html>
 <html>
     <% include Head %>
-<body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
+<body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %> estimate-view" <% if $i18nScriptDirection %>dir="$i18nScriptDirection"<% end_if %>>
 
     <% include Header %>
 <div class="container">
     <% with $Estimate %>
-        <h1>$Name</h1>
-        <div class="divider"></div>
-        <h3>Description</h3>
-        <p class="flow-text">$Description</p>
-        <div class="divider"></div>
-        <h3>Number of Hours: $TotalHours</h3>
-        <div class="divider"></div>
-        <h3>ROM</h3>
-        $RomLow - $RomHigh
-        <div class="divider"></div>
+        <div class="row">
+            <div class="estimate-left col s12 m3 xl2">
+                <h1 class="hide-on-large-only">$Name</h1>
+
+                <div class="card-panel light-blue darken-3 white-text">
+                    <h6>Hours:</h6>
+                    <h5>$TotalHours</h5>
+                </div>
+
+                <div class="card-panel">
+                    <h6>ROM</h6>
+                    <h5>$RomLow - $RomHigh</h5>
+                </div>
+            </div>
+            <div class="estimate-desc col s12 m7 xl9">
+                <h1 class="hide-on-med-and-down">$Name</h1>
+
+                <div class="divider"></div>
+
+                <div id="description" class="section scrollspy">
+                    <h3 class="light-blue-text text-darken-3">Description</h3>
+                    <p class="flow-text">$Description</p>
+                </div>
+
+                <div id="stories" class="section scrollspy">
+                    <h3 class="light-blue-text text-darken-3">Stories</h3>
+
+                    <% loop $Stories %>
+                        <h5>$Name</h5>
+                        <table class="striped responsive-table">
+                            <thead>
+                            <tr>
+                                <th>Number of Hours</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                                <% loop $LineItems %>
+                                <tr>
+                                    <td>$NumHours</td>
+                                    <td>$Description</td>
+                                </tr>
+                                <% end_loop %>
+                            <tr><td><b>$TotalHours Hours</b></td><td></td></tr>
+                            </tbody>
+                        </table>
+                    <% end_loop %>
+                </div>
+            </div>
+            <div class="estimate-nav col m2 xl1 hide-on-med-and-down">
+                <ul class="section table-of-contents">
+                    <li><a href="#description">Description</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#description">Description</a></li>
+                    <li><a href="#description">Description</a></li>
+                    <li><a href="#description">Description</a></li>
+                </ul>
+            </div>
+        </div>
+        <%--
+
         <h3>Stories</h3>
         <div class="row">
             <div class="col s12">
@@ -111,10 +163,9 @@
                 </ul>
             </div>
         </div>
-
+ --%>
     <% end_with %>
-</div>
+    </div>
     <% include Footer %>
 </body>
 </html>
-
