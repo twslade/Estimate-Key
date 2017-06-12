@@ -192,14 +192,6 @@ class Estimate extends DataObject {
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
-    public function GetPlatformCssClasses(){
-        $class = '';
-        foreach ($this->Platforms()->toArray() as $platform){
-            $class = str_replace(' ', '-', strtolower($platform->Name)) . ' ';
-        }
-        return $class;
-    }
-
 }
 
 /**
@@ -526,6 +518,20 @@ class LineItem extends DataObject {
 class Page extends SiteTree {
     private static $db = array();
     private static $has_one = array();
+
+
+    public function getCssClass($arg) {
+        $ret = '';
+        if(is_array($arg)){
+            foreach ($arg as $str){
+                $ret = str_replace(' ', '-', strtolower($str)) . ' ';
+            }
+        } else {
+            $ret = str_replace(' ', '-', strtolower($arg)) . ' ';
+        }
+        return $ret;
+    }
+
 }
 class Page_Controller extends ContentController {
 
@@ -907,11 +913,5 @@ class EstimateController extends Page_Controller {
         }
 
         return $this->customise(array('Estimate' => $estimate))->renderWith('EstimateController');
-    }
-}
-
-class Utilities {
-    public static function getCssClass($sourceName) {
-
     }
 }

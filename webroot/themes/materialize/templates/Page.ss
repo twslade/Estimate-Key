@@ -108,7 +108,7 @@
                                     </span>
                                     <p>$Description</p>
 
-                                    <div class="chip $GetPlatformCssClasses">
+                                    <div class="chip <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %>">
                                         <% loop $Platforms %>$Name<% end_loop %>
                                     </div>
                                 </div>
@@ -125,27 +125,21 @@
                                     <div class="row">
                                         <div class="col center">
                                             <p>Tech</p>
-                                            <% if $TechnicalConfidence %>
-                                                <div class="chip $GetTechnicalConfidenceCssClass">
+                                                <div class="chip $Top.getCssClass($TechnicalConfidence)">
                                                     $TechnicalConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                         <div class="col center">
                                             <p>Budget</p>
-                                            <% if $GetBudgetConfidence %>
-                                                <div class="chip $GetBudgetConfidenceCssClass">
-                                                    $GetBudgetConfidence
+                                                <div class="chip $Top.getCssClass($BudgetConfidence)">
+                                                    $BudgetConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                         <div class="col center">
                                             <p>Schedule</p>
-                                            <% if $GetScheduleConfidence %>
-                                                <div class="chip $GetScheduleConfidenceCssClass">
-                                                    $GetScheduleConfidence
+                                                <div class="chip $Top.getCssClass($ScheduleConfidence)">
+                                                    $ScheduleConfidence
                                                 </div>
-                                            <% end_if %>
                                         </div>
                                     </div>
                                 </div>
