@@ -74,12 +74,18 @@ class Seeder extends \Seeder\Provider {
 
     protected function generateField($field, $state)
     {
-
-        $func = 'get' . ucwords($field->name);
-        if(method_exists($this, $func)){
-            return $this->$func($state);
+        if(array_key_exists('arguments', $field->options) && array_key_exists(0, $field->options['arguments'])){
+            $funcName = $field->options['arguments'][0];
+        } else {
+            $funcName = $field->name;
         }
 
+        $func = 'get' . $funcName;
+        if(method_exists($this, $func)){
+            return $this->$func($state);
+        } else {
+            throw new Exception('Function ' . $func . ' does not exist');
+        }
     }
 
     protected function getRomLow($state){
