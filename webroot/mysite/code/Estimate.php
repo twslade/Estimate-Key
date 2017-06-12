@@ -188,32 +188,8 @@ class Estimate extends DataObject {
             return $this->EstimatePage()->Link('estimate/view/' . $this->ID);
     }
 
-    public function GetTechnicalConfidence(){
-        return $this->_getConfidenceLevel($this->record['TechnicalConfidence']);
-    }
-
-    public function GetScheduleConfidence(){
-        return $this->_getConfidenceLevel($this->record['ScheduleConfidence']);
-    }
-
-    public function GetBudgetConfidence(){
-        return $this->_getConfidenceLevel($this->record['BudgetConfidence']);
-    }
-
     private function _getConfidenceLevel($idx){
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
-    }
-
-    public function GetTechnicalConfidenceCssClass() {
-        return strtolower($this->GetTechnicalConfidence());
-    }
-
-    public function GetScheduleConfidenceCssClass() {
-        return strtolower($this->GetScheduleConfidence());
-    }
-
-    public function GetBudgetConfidenceCssClass() {
-        return strtolower($this->GetBudgetConfidence());
     }
 
     public function GetPlatformCssClasses(){
@@ -931,5 +907,11 @@ class EstimateController extends Page_Controller {
         }
 
         return $this->customise(array('Estimate' => $estimate))->renderWith('EstimateController');
+    }
+}
+
+class Utilities {
+    public static function getCssClass($sourceName) {
+
     }
 }

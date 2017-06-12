@@ -125,9 +125,9 @@
                                     <div class="row">
                                         <div class="col center">
                                             <p>Tech</p>
-                                            <% if $GetTechnicalConfidence %>
+                                            <% if $TechnicalConfidence %>
                                                 <div class="chip $GetTechnicalConfidenceCssClass">
-                                                    $GetTechnicalConfidence
+                                                    $TechnicalConfidence
                                                 </div>
                                             <% end_if %>
                                         </div>
