@@ -108,7 +108,7 @@
                                     </span>
                                     <p>$Description</p>
 
-                                    <div class="chip $GetPlatformCssClasses">
+                                    <div class="chip <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %>">
                                         <% loop $Platforms %>$Name<% end_loop %>
                                     </div>
                                 </div>
