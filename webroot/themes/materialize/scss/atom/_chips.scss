@@ -1,0 +1,7 @@
+@each $name, $value in $platforms {
+    .chip.#{$name} {
+        background: color($value, 'darken-3');
+        color: color('shades', 'white');
+        margin-bottom: 0;
+    }
+}

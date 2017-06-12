@@ -2557,6 +2557,24 @@
   }
 }
 
+.chip.magento-1 {
+  background: #ef6c00;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.magento-2 {
+  background: #d84315;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.sales-force-commerce-cloud {
+  background: #00838f;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
 .layered-nav .label {
   position: relative;
   display: inline-block;
@@ -2583,15 +2601,36 @@
 
 .estimate-list .card {
   position: relative;
-  padding-bottom: 54px;
+  padding-bottom: 90px;
   width: 100%;
 }
 
-.estimate-list .card .card-content .card-title {
+.estimate-list .card .card-title {
   font-size: 16px;
   line-height: 20px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.estimate-list .card .card-content .chip {
+  position: absolute;
+  bottom: 65px;
+  right: 5px;
+}
+
+.estimate-list .card .chip.high {
+  color: #FFFFFF;
+  background: #2E7D32;
+}
+
+.estimate-list .card .chip.med {
+  color: #FFFFFF;
+  background: #ef6c00;
+}
+
+.estimate-list .card .chip.low {
+  color: #FFFFFF;
+  background: #C62828;
 }
 
 .estimate-list .card-parent {
@@ -2604,55 +2643,53 @@
   bottom: 0;
 }
 
-.estimate-list .card.magento-1 {
-  background: #ffcc80;
+.estimate-list .card-action a.activator:not(.btn):not(.btn-large):not(.btn-floating) {
+  margin-right: 0;
+}
+
+.estimate-list .card .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
 .estimate-list .card.magento-1 .card-title,
 .estimate-list .card.magento-1 .card-title a {
-  color: #e65100;
+  color: #ef6c00;
 }
 
 .estimate-list .card.magento-1 .card-action {
   border-top-color: #fb8c00;
 }
 
-.estimate-list .card.magento-1 .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #e65100;
-}
-
-.estimate-list .card.magento-2 {
-  background: #ffab91;
+.estimate-list .card.magento-1 .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: #ef6c00;
 }
 
 .estimate-list .card.magento-2 .card-title,
 .estimate-list .card.magento-2 .card-title a {
-  color: #bf360c;
+  color: #d84315;
 }
 
 .estimate-list .card.magento-2 .card-action {
   border-top-color: #f4511e;
 }
 
-.estimate-list .card.magento-2 .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #bf360c;
+.estimate-list .card.magento-2 .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: #d84315;
 }
 
-.estimate-list .card.sfcc {
-  background: #80deea;
+.estimate-list .card.sales-force-commerce-cloud .card-title,
+.estimate-list .card.sales-force-commerce-cloud .card-title a {
+  color: #00838f;
 }
 
-.estimate-list .card.sfcc .card-title,
-.estimate-list .card.sfcc .card-title a {
-  color: #006064;
-}
-
-.estimate-list .card.sfcc .card-action {
+.estimate-list .card.sales-force-commerce-cloud .card-action {
   border-top-color: #00acc1;
 }
 
-.estimate-list .card.sfcc .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #006064;
+.estimate-list .card.sales-force-commerce-cloud .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+  color: #00838f;
 }
 
 input[type="search"] {

@@ -1,15 +1,30 @@
 .estimate-list {
     .card {
         position: relative;
-        padding-bottom: 54px;
+        padding-bottom: 90px;
         width: 100%;
 
+        .card-title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
         .card-content {
-            .card-title {
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: 900;
-                text-transform: uppercase;
+            .chip {
+                position: absolute;
+                bottom: 65px;
+                right: 5px;
+            }
+        }
+
+        .chip {
+            @each $name, $value in $conf-levels {
+                &.#{$name} {
+                    color: color('shades','white');
+                    background: color($value, 'darken-3');
+                }
             }
         }
 
@@ -21,25 +36,36 @@
             position: absolute;
             width: 100%;
             bottom: 0;
+
+            a.activator:not(.btn):not(.btn-large):not(.btn-floating) {
+                margin-right: 0;
+            }
+        }
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
         }
 
         @each $name, $value in $platforms {
             &.#{$name} {
-                background: color($value, 'lighten-3');
 
                 .card-title,
                 .card-title a {
-                    color: color($value, 'darken-4');
+                    color: color($value, 'darken-3');
                 }
 
                 .card-action {
                     border-top-color: color($value, 'darken-1');
 
-                    a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-                        color: color($value, 'darken-4');
+                    a:not(.btn):not(.btn-large):not(.btn-floating) {
+                        color: color($value, 'darken-3');
                     }
                 }
             }
         }
+
+
     }
 }
