@@ -125,19 +125,19 @@
                                     <div class="row">
                                         <div class="col center">
                                             <p>Tech</p>
-                                                <div class="chip">
+                                                <div class="chip $Top.getCssClass($TechnicalConfidence)">
                                                     $TechnicalConfidence
                                                 </div>
                                         </div>
                                         <div class="col center">
                                             <p>Budget</p>
-                                                <div class="chip">
+                                                <div class="chip $Top.getCssClass($BudgetConfidence)">
                                                     $BudgetConfidence
                                                 </div>
                                         </div>
                                         <div class="col center">
                                             <p>Schedule</p>
-                                                <div class="chip">
+                                                <div class="chip $Top.getCssClass($ScheduleConfidence)">
                                                     $ScheduleConfidence
                                                 </div>
                                         </div>
