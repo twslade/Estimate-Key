@@ -5,7 +5,8 @@ class FieldsAdmin extends ModelAdmin {
         'Skill',
         'Role',
         'Platform',
-        'RiskType'
+        'RiskType',
+        'Category'
     );
 
     private static $url_segment = 'fields';

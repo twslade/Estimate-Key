@@ -25,6 +25,47 @@ class Seeder extends \Seeder\Provider {
         'HTML'
     );
 
+    protected $_category = array(
+        'Performance Tuning',
+        'Server Configuration',
+        '3rd Party Module',
+        'Product Feed',
+        'Order Export',
+        'Inventory Import',
+        'Checkout',
+        'Product Page',
+        'Payment Method',
+        'Shipping Method',
+        'Integration Modification',
+        'Internal Module',
+        'A/B Test',
+        'Marketing JS Snippet',
+        'Marketing Tagging',
+        '3rd Party Module Modifications',
+        'Environment Spinup',
+        'Security Patch',
+        'Codebase Patch',
+        'Category Page',
+        'Ajax',
+        'Data Import',
+        'Products',
+        'Categories',
+        'Customers',
+        'Report',
+        'Newsletter Integration'
+    );
+
+    protected $_risks = array(
+        '3rd Party Code Modification',
+        '3rd Party Module',
+        '3rd Party Vendor',
+        'Integration Dependency',
+        'Data Dependency',
+        'Performance Concerns',
+        'Server Configuration',
+        'Site Parity'
+    );
+
 
     protected $_estimateNames = array(
         'Additional Updates to Affirm',
@@ -66,7 +107,7 @@ class Seeder extends \Seeder\Provider {
         'Exact Target',
         'Header and Footer Theming',
         'Revisit all pages for social Annex',
-        'Review splotlights and sorting change order',
+        'Review spotlights and sorting change order',
         'Ajax compare products',
         'Employee payment method',
         'Refactor Social Login'
@@ -105,8 +146,16 @@ class Seeder extends \Seeder\Provider {
 
     }
 
+    protected function getRisk($state){
+        return $this->_getRandomArrayVal($this->_risks);
+    }
+
     protected function getSkill($state){
         return $this->_getRandomArrayVal($this->_skills);
+    }
+
+    protected function getCategory($state){
+        return $this->_getRandomArrayVal($this->_category);
     }
 
     protected function _getRandomArrayVal(&$arr){
