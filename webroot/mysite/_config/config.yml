@@ -37,7 +37,32 @@ Seeder\Seeder:
             key: Role3
             class: Role
             fields:
-                Name: Frontend Engineer
+                Name: Front-end Engineer
+        -
+            key: Role4
+            class: Role
+            fields:
+                Name: Production Engineer
+        -
+            key: Role5
+            class: Role
+            fields:
+                Name: eCommerce Solutions
+        -
+            key: Role6
+            class: Role
+            fields:
+                Name: Project Management
+        -
+            key: Role7
+            class: Role
+            fields:
+                Name: Client Success
+        -
+            key: Role8
+            class: Role
+            fields:
+                Name: Optimization Strategy
         -
             key: RiskType1
             class: RiskType

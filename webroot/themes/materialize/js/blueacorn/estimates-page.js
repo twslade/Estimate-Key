@@ -9,12 +9,25 @@
 
     EstimatesPage.prototype = {
         init() {
-            this.setupScrollSpy();
+            var self = this;
+
+            $(document).ready(function() {
+                self.setupScrollSpy();
+                self.setupPushPin();
+            });
         },
 
         setupScrollSpy() {
-            $(document).ready(function() {
-                $('.scrollspy').scrollSpy();
+            $.each($('.table-of-contents a'), function(idx, anchor) {
+                $(anchor).prop('href', $(anchor).data('new'));
+            });
+
+            $('.scrollspy').scrollSpy();
+        },
+
+        setupPushPin: function() {
+            $('.toc-wrapper').pushpin({
+                top: 75
             });
         }
     };

@@ -2557,22 +2557,2921 @@
   }
 }
 
+@font-face {
+  font-family: 'devicon';
+  src: url("../fonts/devicon/devicon.eot?-hdf3wh");
+  src: url("../fonts/devicon/devicon.eot?#iefix-hdf3wh") format("embedded-opentype"), url("../fonts/devicon/devicon.woff?-hdf3wh") format("woff"), url("../fonts/devicon/devicon.ttf?-hdf3wh") format("truetype"), url("../fonts/devicon/devicon.svg?-hdf3wh#devicon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="devicon-"], [class*=" devicon-"] {
+  font-family: 'devicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.devicon-couchdb-plain-wordmark:before {
+  content: "\e948";
+}
+
+.devicon-couchdb-plain:before {
+  content: "\e949";
+}
+
+.devicon-behance-plain-wordmark:before {
+  content: "\e943";
+}
+
+.devicon-behance-plain:before {
+  content: "\e945";
+}
+
+.devicon-linkedin-plain-wordmark:before {
+  content: "\e946";
+}
+
+.devicon-linkedin-plain:before {
+  content: "\e947";
+}
+
+.devicon-ceylon-plain-wordmark:before {
+  content: "\e943";
+}
+
+.devicon-ceylon-plain:before {
+  content: "\e944";
+}
+
+.devicon-elm-plain-wordmark:before {
+  content: "\e941";
+}
+
+.devicon-elm-plain:before {
+  content: "\e942";
+}
+
+.devicon-cakephp-plain-wordmark:before {
+  content: "\e93f";
+}
+
+.devicon-cakephp-plain:before {
+  content: "\e940";
+}
+
+.devicon-stylus-original:before {
+  content: "\e93e";
+}
+
+.devicon-express-original-wordmark:before {
+  content: "\e93c";
+}
+
+.devicon-express-original:before {
+  content: "\e93d";
+}
+
+.devicon-devicon-plain-wordmark:before {
+  content: "\e93a";
+}
+
+.devicon-devicon-plain:before {
+  content: "\e93b";
+}
+
+.devicon-intellij-plain-wordmark:before {
+  content: "\e932";
+}
+
+.devicon-intellij-plain:before {
+  content: "\e933";
+}
+
+.devicon-pycharm-plain-wordmark:before {
+  content: "\e934";
+}
+
+.devicon-pycharm-plain:before {
+  content: "\e935";
+}
+
+.devicon-rubymine-plain-wordmark:before {
+  content: "\e936";
+}
+
+.devicon-rubymine-plain:before {
+  content: "\e937";
+}
+
+.devicon-webstorm-plain-wordmark:before {
+  content: "\e938";
+}
+
+.devicon-webstorm-plain:before {
+  content: "\e939";
+}
+
+.devicon-tomcat-line-wordmark:before {
+  content: "\e92c";
+}
+
+.devicon-tomcat-line:before {
+  content: "\e92d";
+}
+
+.devicon-vuejs-line-wordmark:before {
+  content: "\e92e";
+}
+
+.devicon-vuejs-line:before {
+  content: "\e92f";
+}
+
+.devicon-vuejs-plain-wordmark:before {
+  content: "\e930";
+}
+
+.devicon-vuejs-plain:before {
+  content: "\e931";
+}
+
+.devicon-swift-plain-wordmark:before {
+  content: "\e92a";
+}
+
+.devicon-swift-plain:before {
+  content: "\e92b";
+}
+
+.devicon-webpack-plain-wordmark:before {
+  content: "\e928";
+}
+
+.devicon-webpack-plain:before {
+  content: "\e929";
+}
+
+.devicon-visualstudio-plain-wordmark:before {
+  content: "\e926";
+}
+
+.devicon-visualstudio-plain:before {
+  content: "\e927";
+}
+
+.devicon-slack-plain-wordmark:before {
+  content: "\e924";
+}
+
+.devicon-slack-plain:before {
+  content: "\e925";
+}
+
+.devicon-facebook-original:before,
+.devicon-facebook-plain:before {
+  content: "\e91c";
+}
+
+.devicon-typescript-original:before,
+.devicon-typescript-plain:before {
+  content: "\e920";
+}
+
+.devicon-babel-original:before,
+.devicon-babel-plain:before {
+  content: "\e921";
+}
+
+.devicon-mocha-plain:before {
+  content: "\e919";
+}
+
+.devicon-jasmine-plain-wordmark:before {
+  content: "\e91b";
+}
+
+.devicon-jasmine-plain:before {
+  content: "\e91a";
+}
+
+.devicon-gatling-plain-wordmark:before {
+  content: "\e918";
+}
+
+.devicon-gatling-plain:before {
+  content: "\e917";
+}
+
+.devicon-ssh-original-wordmark:before,
+.devicon-ssh-plain-wordmark:before {
+  content: "\e916";
+}
+
+.devicon-ssh-original:before,
+.devicon-ssh-plain:before {
+  content: "\e915";
+}
+
+.devicon-sourcetree-original-wordmark:before,
+.devicon-sourcetree-plain-wordmark:before {
+  content: "\e914";
+}
+
+.devicon-sourcetree-original:before,
+.devicon-sourcetree-plain:before {
+  content: "\e913";
+}
+
+.devicon-phpstorm-plain-wordmark:before {
+  content: "\e912";
+}
+
+.devicon-phpstorm-plain:before {
+  content: "\e911";
+}
+
+.devicon-protractor-plain-wordmark:before {
+  content: "\e901";
+}
+
+.devicon-protractor-plain:before {
+  content: "\e900";
+}
+
+.devicon-gradle-plain-wordmark:before {
+  content: "\e8f1";
+}
+
+.devicon-gradle-plain:before {
+  content: "\e902";
+}
+
+.devicon-cucumber-plain-wordmark:before {
+  content: "\e905";
+}
+
+.devicon-cucumber-plain:before {
+  content: "\e904";
+}
+
+.devicon-jeet-plain-wordmark:before {
+  content: "\e906";
+}
+
+.devicon-jeet-plain:before {
+  content: "\e903";
+}
+
+.devicon-gitlab-plain-wordmark:before {
+  content: "\e908";
+}
+
+.devicon-gitlab-plain:before {
+  content: "\e907";
+}
+
+.devicon-github-original-wordmark:before,
+.devicon-github-plain-wordmark:before {
+  content: "\e90a";
+}
+
+.devicon-github-original:before,
+.devicon-github-plain:before {
+  content: "\e909";
+}
+
+.devicon-d3js-plain:before {
+  content: "\e90c";
+}
+
+.devicon-confluence-original-wordmark:before,
+.devicon-confluence-plain-wordmark:before {
+  content: "\e90e";
+}
+
+.devicon-confluence-original:before,
+.devicon-confluence-plain:before {
+  content: "\e90d";
+}
+
+.devicon-bitbucket-original-wordmark:before,
+.devicon-bitbucket-plain-wordmark:before {
+  content: "\e910";
+}
+
+.devicon-bitbucket-original:before,
+.devicon-bitbucket-plain:before {
+  content: "\e90f";
+}
+
+.devicon-safari-line-wordmark:before {
+  content: "\e632";
+}
+
+.devicon-safari-line:before {
+  content: "\e63a";
+}
+
+.devicon-safari-plain-wordmark:before {
+  content: "\e63b";
+}
+
+.devicon-safari-plain:before {
+  content: "\e63c";
+}
+
+.devicon-jetbrains-plain:before,
+.devicon-jetbrains-line:before,
+.devicon-jetbrains-line-wordmark:before,
+.devicon-jetbrains-plain-wordmark:before {
+  content: "\e63d";
+}
+
+.devicon-django-line:before,
+.devicon-django-line-wordmark:before {
+  content: "\e63e";
+}
+
+.devicon-django-plain:before,
+.devicon-django-plain-wordmark:before {
+  content: "\e63f";
+}
+
+.devicon-gimp-plain:before {
+  content: "\e633";
+}
+
+.devicon-redhat-plain-wordmark:before {
+  content: "\e62a";
+}
+
+.devicon-redhat-plain:before {
+  content: "\e62b";
+}
+
+.devicon-cplusplus-line:before,
+.devicon-cplusplus-line-wordmark:before {
+  content: "\e634";
+}
+
+.devicon-cplusplus-plain:before,
+.devicon-cplusplus-plain-wordmark:before {
+  content: "\e635";
+}
+
+.devicon-csharp-line:before,
+.devicon-csharp-line-wordmark:before {
+  content: "\e636";
+}
+
+.devicon-csharp-plain:before,
+.devicon-csharp-plain-wordmark:before {
+  content: "\e637";
+}
+
+.devicon-c-line:before,
+.devicon-c-line-wordmark:before {
+  content: "\e638";
+}
+
+.devicon-c-plain:before,
+.devicon-c-plain-wordmark:before {
+  content: "\e639";
+}
+
+.devicon-nodewebkit-line-wordmark:before {
+  content: "\e611";
+}
+
+.devicon-nodewebkit-line:before {
+  content: "\e612";
+}
+
+.devicon-nodewebkit-plain-wordmark:before {
+  content: "\e613";
+}
+
+.devicon-nodewebkit-plain:before {
+  content: "\e614";
+}
+
+.devicon-nginx-original:before,
+.devicon-nginx-original-wordmark:before,
+.devicon-nginx-plain:before,
+.devicon-nginx-plain-wordmark:before {
+  content: "\e615";
+}
+
+.devicon-erlang-plain-wordmark:before {
+  content: "\e616";
+}
+
+.devicon-erlang-plain:before {
+  content: "\e617";
+}
+
+.devicon-doctrine-line-wordmark:before {
+  content: "\e618";
+}
+
+.devicon-doctrine-line:before {
+  content: "\e619";
+}
+
+.devicon-doctrine-plain-wordmark:before {
+  content: "\e61a";
+}
+
+.devicon-doctrine-plain:before {
+  content: "\e625";
+}
+
+.devicon-apache-line-wordmark:before {
+  content: "\e626";
+}
+
+.devicon-apache-line:before {
+  content: "\e627";
+}
+
+.devicon-apache-plain-wordmark:before {
+  content: "\e628";
+}
+
+.devicon-apache-plain:before {
+  content: "\e629";
+}
+
+.devicon-go-line:before {
+  content: "\e610";
+}
+
+.devicon-redis-plain-wordmark:before {
+  content: "\e606";
+}
+
+.devicon-redis-plain:before {
+  content: "\e607";
+}
+
+.devicon-meteor-plain-wordmark:before {
+  content: "\e608";
+}
+
+.devicon-meteor-plain:before {
+  content: "\e609";
+}
+
+.devicon-heroku-line-wordmark:before,
+.devicon-heroku-original-wordmark:before {
+  content: "\e60a";
+}
+
+.devicon-heroku-line:before,
+.devicon-heroku-original:before {
+  content: "\e60b";
+}
+
+.devicon-heroku-plain-wordmark:before {
+  content: "\e60c";
+}
+
+.devicon-heroku-plain:before {
+  content: "\e60f";
+}
+
+.devicon-go-plain:before {
+  content: "\e61b";
+}
+
+.devicon-docker-plain-wordmark:before {
+  content: "\e61e";
+}
+
+.devicon-docker-plain:before, .skill-chip.docker:before {
+  content: "\e61f";
+}
+
+.devicon-amazonwebservices-original:before,
+.devicon-amazonwebservices-plain:before {
+  content: "\e603";
+}
+
+.devicon-amazonwebservices-plain-wordmark:before {
+  content: "\e604";
+}
+
+.devicon-android-plain-wordmark:before {
+  content: "\e60d";
+}
+
+.devicon-android-plain:before {
+  content: "\e60e";
+}
+
+.devicon-angularjs-plain-wordmark:before {
+  content: "\e61c";
+}
+
+.devicon-angularjs-plain:before {
+  content: "\e61d";
+}
+
+.devicon-appcelerator-original:before,
+.devicon-appcelerator-plain:before {
+  content: "\e620";
+}
+
+.devicon-appcelerator-plain-wordmark:before {
+  content: "\e621";
+}
+
+.devicon-apple-original:before,
+.devicon-apple-plain:before {
+  content: "\e622";
+}
+
+.devicon-atom-original-wordmark:before,
+.devicon-atom-plain-wordmark:before {
+  content: "\e623";
+}
+
+.devicon-atom-original:before,
+.devicon-atom-plain:before {
+  content: "\e624";
+}
+
+.devicon-backbonejs-plain-wordmark:before {
+  content: "\e62c";
+}
+
+.devicon-backbonejs-plain:before {
+  content: "\e62d";
+}
+
+.devicon-bootstrap-plain-wordmark:before {
+  content: "\e62e";
+}
+
+.devicon-bootstrap-plain:before {
+  content: "\e62f";
+}
+
+.devicon-bower-line-wordmark:before {
+  content: "\e630";
+}
+
+.devicon-bower-line:before {
+  content: "\e631";
+}
+
+.devicon-bower-plain-wordmark:before {
+  content: "\e64e";
+}
+
+.devicon-bower-plain:before {
+  content: "\e64f";
+}
+
+.devicon-chrome-plain-wordmark:before {
+  content: "\e665";
+}
+
+.devicon-chrome-plain:before {
+  content: "\e666";
+}
+
+.devicon-codeigniter-plain-wordmark:before {
+  content: "\e667";
+}
+
+.devicon-codeigniter-plain:before {
+  content: "\e668";
+}
+
+.devicon-coffeescript-original-wordmark:before,
+.devicon-coffeescript-plain-wordmark:before {
+  content: "\e669";
+}
+
+.devicon-coffeescript-original:before,
+.devicon-coffeescript-plain:before {
+  content: "\e66a";
+}
+
+.devicon-css3-plain-wordmark:before, .skill-chip.css:before {
+  content: "\e678";
+}
+
+.devicon-css3-plain:before {
+  content: "\e679";
+}
+
+.devicon-debian-plain-wordmark:before {
+  content: "\e67e";
+}
+
+.devicon-debian-plain:before {
+  content: "\e67f";
+}
+
+.devicon-dot-net-plain-wordmark:before {
+  content: "\e6d3";
+}
+
+.devicon-dot-net-plain:before {
+  content: "\e6d4";
+}
+
+.devicon-drupal-plain-wordmark:before {
+  content: "\e6e2";
+}
+
+.devicon-drupal-plain:before {
+  content: "\e6e3";
+}
+
+.devicon-firefox-plain-wordmark:before {
+  content: "\e75d";
+}
+
+.devicon-firefox-plain:before {
+  content: "\e75e";
+}
+
+.devicon-foundation-plain-wordmark:before {
+  content: "\e7a2";
+}
+
+.devicon-foundation-plain:before {
+  content: "\e7a3";
+}
+
+.devicon-git-plain-wordmark:before {
+  content: "\e7a7";
+}
+
+.devicon-git-plain:before {
+  content: "\e7a8";
+}
+
+.devicon-google-original-wordmark:before,
+.devicon-google-plain-wordmark:before {
+  content: "\e91d";
+}
+
+.devicon-google-original:before,
+.devicon-google-plain:before {
+  content: "\e91e";
+}
+
+.devicon-grunt-line-wordmark:before, .skill-chip.grunt:before {
+  content: "\e7a9";
+}
+
+.devicon-grunt-line:before {
+  content: "\e7aa";
+}
+
+.devicon-grunt-plain-wordmark:before {
+  content: "\e7ea";
+}
+
+.devicon-grunt-plain:before {
+  content: "\e7eb";
+}
+
+.devicon-gulp-plain:before {
+  content: "\e7ec";
+}
+
+.devicon-html5-plain-wordmark:before {
+  content: "\e7f6";
+}
+
+.devicon-html5-plain:before {
+  content: "\e7f7";
+}
+
+.devicon-ie10-original:before,
+.devicon-ie10-plain:before {
+  content: "\e7f8";
+}
+
+.devicon-illustrator-line:before {
+  content: "\e7f9";
+}
+
+.devicon-illustrator-plain:before {
+  content: "\e7fa";
+}
+
+.devicon-inkscape-plain-wordmark:before {
+  content: "\e834";
+}
+
+.devicon-inkscape-plain:before {
+  content: "\e835";
+}
+
+.devicon-java-plain-wordmark:before {
+  content: "\e841";
+}
+
+.devicon-java-plain:before {
+  content: "\e842";
+}
+
+.devicon-javascript-plain:before, .skill-chip.javascript:before {
+  content: "\e845";
+}
+
+.devicon-jquery-plain-wordmark:before {
+  content: "\e849";
+}
+
+.devicon-jquery-plain:before {
+  content: "\e84a";
+}
+
+.devicon-krakenjs-plain-wordmark:before {
+  content: "\e84f";
+}
+
+.devicon-krakenjs-plain:before {
+  content: "\e850";
+}
+
+.devicon-laravel-plain-wordmark:before {
+  content: "\e851";
+}
+
+.devicon-laravel-plain:before {
+  content: "\e852";
+}
+
+.devicon-less-plain-wordmark:before, .skill-chip.less:before {
+  content: "\e853";
+}
+
+.devicon-linux-plain:before {
+  content: "\eb1c";
+}
+
+.devicon-mongodb-plain-wordmark:before {
+  content: "\eb43";
+}
+
+.devicon-mongodb-plain:before {
+  content: "\eb44";
+}
+
+.devicon-moodle-plain-wordmark:before {
+  content: "\eb5a";
+}
+
+.devicon-moodle-plain:before {
+  content: "\eb5b";
+}
+
+.devicon-mysql-plain-wordmark:before, .skill-chip.mysql:before {
+  content: "\eb60";
+}
+
+.devicon-mysql-plain:before {
+  content: "\eb61";
+}
+
+.devicon-nodejs-plain-wordmark:before {
+  content: "\eb69";
+}
+
+.devicon-nodejs-plain:before {
+  content: "\eb6a";
+}
+
+.devicon-oracle-original:before,
+.devicon-oracle-plain:before {
+  content: "\eb6b";
+}
+
+.devicon-photoshop-line:before {
+  content: "\eb6c";
+}
+
+.devicon-photoshop-plain:before {
+  content: "\eb6d";
+}
+
+.devicon-php-plain:before {
+  content: "\eb71";
+}
+
+.devicon-postgresql-plain-wordmark:before {
+  content: "\eb7c";
+}
+
+.devicon-postgresql-plain:before {
+  content: "\eb7d";
+}
+
+.devicon-python-plain-wordmark:before {
+  content: "\eb88";
+}
+
+.devicon-python-plain:before {
+  content: "\eb89";
+}
+
+.devicon-rails-plain-wordmark:before {
+  content: "\eba2";
+}
+
+.devicon-rails-plain:before {
+  content: "\eba3";
+}
+
+.devicon-react-original-wordmark:before,
+.devicon-react-plain-wordmark:before {
+  content: "\e600";
+}
+
+.devicon-react-original:before,
+.devicon-react-plain:before {
+  content: "\e601";
+}
+
+.devicon-ruby-plain-wordmark:before {
+  content: "\ebc9";
+}
+
+.devicon-ruby-plain:before {
+  content: "\ebca";
+}
+
+.devicon-sass-original:before, .skill-chip.sass:before,
+.devicon-sass-plain:before {
+  content: "\ebcb";
+}
+
+.devicon-sequelize-original-wordmark:before,
+.devicon-sequelize-plain-wordmark:before {
+  content: "\e922";
+}
+
+.devicon-sequelize-original:before,
+.devicon-sequelize-plain:before {
+  content: "\e923";
+}
+
+.devicon-symfony-original-wordmark:before,
+.devicon-symfony-plain-wordmark:before {
+  content: "\e602";
+}
+
+.devicon-symfony-original:before,
+.devicon-symfony-plain:before {
+  content: "\e605";
+}
+
+.devicon-travis-plain-wordmark:before {
+  content: "\ebcc";
+}
+
+.devicon-travis-plain:before {
+  content: "\ebcd";
+}
+
+.devicon-trello-plain-wordmark:before {
+  content: "\ebce";
+}
+
+.devicon-trello-plain:before {
+  content: "\ebcf";
+}
+
+.devicon-twitter-original:before,
+.devicon-twitter-plain:before {
+  content: "\e91f";
+}
+
+.devicon-ubuntu-plain-wordmark:before {
+  content: "\ebd0";
+}
+
+.devicon-ubuntu-plain:before {
+  content: "\ebd1";
+}
+
+.devicon-vim-plain:before {
+  content: "\ebf3";
+}
+
+.devicon-windows8-original-wordmark:before,
+.devicon-windows8-plain-wordmark:before {
+  content: "\ebf4";
+}
+
+.devicon-windows8-original:before,
+.devicon-windows8-plain:before {
+  content: "\ebf5";
+}
+
+.devicon-wordpress-plain-wordmark:before {
+  content: "\ebfd";
+}
+
+.devicon-wordpress-plain:before {
+  content: "\ebfe";
+}
+
+.devicon-yii-plain-wordmark:before {
+  content: "\ec01";
+}
+
+.devicon-yii-plain:before {
+  content: "\ec02";
+}
+
+.devicon-zend-plain-wordmark:before {
+  content: "\ec03";
+}
+
+.devicon-zend-plain:before {
+  content: "\ec04";
+}
+
+.devicon-couchdb-plain-wordmark.colored, .devicon-couchdb-plain-wordmark.skill-chip.docker, .devicon-couchdb-plain-wordmark.skill-chip.less, .devicon-couchdb-plain-wordmark.skill-chip.css, .devicon-couchdb-plain-wordmark.skill-chip.mysql, .devicon-couchdb-plain-wordmark.skill-chip.javascript, .devicon-couchdb-plain-wordmark.skill-chip.sass, .devicon-couchdb-plain-wordmark.skill-chip.grunt,
+.devicon-couchdb-plain.colored,
+.devicon-couchdb-plain.skill-chip.docker,
+.devicon-couchdb-plain.skill-chip.less,
+.devicon-couchdb-plain.skill-chip.css,
+.devicon-couchdb-plain.skill-chip.mysql,
+.devicon-couchdb-plain.skill-chip.javascript,
+.devicon-couchdb-plain.skill-chip.sass,
+.devicon-couchdb-plain.skill-chip.grunt {
+  color: #e42528;
+}
+
+.devicon-behance-plain-wordmark.colored, .devicon-behance-plain-wordmark.skill-chip.docker, .devicon-behance-plain-wordmark.skill-chip.less, .devicon-behance-plain-wordmark.skill-chip.css, .devicon-behance-plain-wordmark.skill-chip.mysql, .devicon-behance-plain-wordmark.skill-chip.javascript, .devicon-behance-plain-wordmark.skill-chip.sass, .devicon-behance-plain-wordmark.skill-chip.grunt,
+.devicon-behance-plain.colored,
+.devicon-behance-plain.skill-chip.docker,
+.devicon-behance-plain.skill-chip.less,
+.devicon-behance-plain.skill-chip.css,
+.devicon-behance-plain.skill-chip.mysql,
+.devicon-behance-plain.skill-chip.javascript,
+.devicon-behance-plain.skill-chip.sass,
+.devicon-behance-plain.skill-chip.grunt {
+  color: #0071e0;
+}
+
+.devicon-linkedin-plain-wordmark.colored, .devicon-linkedin-plain-wordmark.skill-chip.docker, .devicon-linkedin-plain-wordmark.skill-chip.less, .devicon-linkedin-plain-wordmark.skill-chip.css, .devicon-linkedin-plain-wordmark.skill-chip.mysql, .devicon-linkedin-plain-wordmark.skill-chip.javascript, .devicon-linkedin-plain-wordmark.skill-chip.sass, .devicon-linkedin-plain-wordmark.skill-chip.grunt,
+.devicon-linkedin-plain.colored,
+.devicon-linkedin-plain.skill-chip.docker,
+.devicon-linkedin-plain.skill-chip.less,
+.devicon-linkedin-plain.skill-chip.css,
+.devicon-linkedin-plain.skill-chip.mysql,
+.devicon-linkedin-plain.skill-chip.javascript,
+.devicon-linkedin-plain.skill-chip.sass,
+.devicon-linkedin-plain.skill-chip.grunt {
+  color: #0076b2;
+}
+
+.devicon-ceylon-plain-wordmark.colored, .devicon-ceylon-plain-wordmark.skill-chip.docker, .devicon-ceylon-plain-wordmark.skill-chip.less, .devicon-ceylon-plain-wordmark.skill-chip.css, .devicon-ceylon-plain-wordmark.skill-chip.mysql, .devicon-ceylon-plain-wordmark.skill-chip.javascript, .devicon-ceylon-plain-wordmark.skill-chip.sass, .devicon-ceylon-plain-wordmark.skill-chip.grunt,
+.devicon-ceylon-plain.colored,
+.devicon-ceylon-plain.skill-chip.docker,
+.devicon-ceylon-plain.skill-chip.less,
+.devicon-ceylon-plain.skill-chip.css,
+.devicon-ceylon-plain.skill-chip.mysql,
+.devicon-ceylon-plain.skill-chip.javascript,
+.devicon-ceylon-plain.skill-chip.sass,
+.devicon-ceylon-plain.skill-chip.grunt {
+  color: #AB710A;
+}
+
+.devicon-elm-plain-wordmark.colored, .devicon-elm-plain-wordmark.skill-chip.docker, .devicon-elm-plain-wordmark.skill-chip.less, .devicon-elm-plain-wordmark.skill-chip.css, .devicon-elm-plain-wordmark.skill-chip.mysql, .devicon-elm-plain-wordmark.skill-chip.javascript, .devicon-elm-plain-wordmark.skill-chip.sass, .devicon-elm-plain-wordmark.skill-chip.grunt,
+.devicon-elm-plain.colored,
+.devicon-elm-plain.skill-chip.docker,
+.devicon-elm-plain.skill-chip.less,
+.devicon-elm-plain.skill-chip.css,
+.devicon-elm-plain.skill-chip.mysql,
+.devicon-elm-plain.skill-chip.javascript,
+.devicon-elm-plain.skill-chip.sass,
+.devicon-elm-plain.skill-chip.grunt {
+  color: #34495E;
+}
+
+.devicon-cakephp-plain-wordmark.colored, .devicon-cakephp-plain-wordmark.skill-chip.docker, .devicon-cakephp-plain-wordmark.skill-chip.less, .devicon-cakephp-plain-wordmark.skill-chip.css, .devicon-cakephp-plain-wordmark.skill-chip.mysql, .devicon-cakephp-plain-wordmark.skill-chip.javascript, .devicon-cakephp-plain-wordmark.skill-chip.sass, .devicon-cakephp-plain-wordmark.skill-chip.grunt,
+.devicon-cakephp-plain.colored,
+.devicon-cakephp-plain.skill-chip.docker,
+.devicon-cakephp-plain.skill-chip.less,
+.devicon-cakephp-plain.skill-chip.css,
+.devicon-cakephp-plain.skill-chip.mysql,
+.devicon-cakephp-plain.skill-chip.javascript,
+.devicon-cakephp-plain.skill-chip.sass,
+.devicon-cakephp-plain.skill-chip.grunt {
+  color: #D43D44;
+}
+
+.devicon-stylus-original.colored, .devicon-stylus-original.skill-chip.docker, .devicon-stylus-original.skill-chip.less, .devicon-stylus-original.skill-chip.css, .devicon-stylus-original.skill-chip.mysql, .devicon-stylus-original.skill-chip.javascript, .devicon-stylus-original.skill-chip.sass, .devicon-stylus-original.skill-chip.grunt {
+  color: #333333;
+}
+
+.devicon-express-original-wordmark.colored, .devicon-express-original-wordmark.skill-chip.docker, .devicon-express-original-wordmark.skill-chip.less, .devicon-express-original-wordmark.skill-chip.css, .devicon-express-original-wordmark.skill-chip.mysql, .devicon-express-original-wordmark.skill-chip.javascript, .devicon-express-original-wordmark.skill-chip.sass, .devicon-express-original-wordmark.skill-chip.grunt,
+.devicon-express-original.colored,
+.devicon-express-original.skill-chip.docker,
+.devicon-express-original.skill-chip.less,
+.devicon-express-original.skill-chip.css,
+.devicon-express-original.skill-chip.mysql,
+.devicon-express-original.skill-chip.javascript,
+.devicon-express-original.skill-chip.sass,
+.devicon-express-original.skill-chip.grunt {
+  color: #444;
+}
+
+.devicon-devicon-plain-wordmark.colored, .devicon-devicon-plain-wordmark.skill-chip.docker, .devicon-devicon-plain-wordmark.skill-chip.less, .devicon-devicon-plain-wordmark.skill-chip.css, .devicon-devicon-plain-wordmark.skill-chip.mysql, .devicon-devicon-plain-wordmark.skill-chip.javascript, .devicon-devicon-plain-wordmark.skill-chip.sass, .devicon-devicon-plain-wordmark.skill-chip.grunt,
+.devicon-devicon-plain.colored,
+.devicon-devicon-plain.skill-chip.docker,
+.devicon-devicon-plain.skill-chip.less,
+.devicon-devicon-plain.skill-chip.css,
+.devicon-devicon-plain.skill-chip.mysql,
+.devicon-devicon-plain.skill-chip.javascript,
+.devicon-devicon-plain.skill-chip.sass,
+.devicon-devicon-plain.skill-chip.grunt {
+  color: #60BE86;
+}
+
+.devicon-intellij-plain-wordmark.colored, .devicon-intellij-plain-wordmark.skill-chip.docker, .devicon-intellij-plain-wordmark.skill-chip.less, .devicon-intellij-plain-wordmark.skill-chip.css, .devicon-intellij-plain-wordmark.skill-chip.mysql, .devicon-intellij-plain-wordmark.skill-chip.javascript, .devicon-intellij-plain-wordmark.skill-chip.sass, .devicon-intellij-plain-wordmark.skill-chip.grunt,
+.devicon-intellij-plain.colored,
+.devicon-intellij-plain.skill-chip.docker,
+.devicon-intellij-plain.skill-chip.less,
+.devicon-intellij-plain.skill-chip.css,
+.devicon-intellij-plain.skill-chip.mysql,
+.devicon-intellij-plain.skill-chip.javascript,
+.devicon-intellij-plain.skill-chip.sass,
+.devicon-intellij-plain.skill-chip.grunt {
+  color: #136BA2;
+}
+
+.devicon-pycharm-plain-wordmark.colored, .devicon-pycharm-plain-wordmark.skill-chip.docker, .devicon-pycharm-plain-wordmark.skill-chip.less, .devicon-pycharm-plain-wordmark.skill-chip.css, .devicon-pycharm-plain-wordmark.skill-chip.mysql, .devicon-pycharm-plain-wordmark.skill-chip.javascript, .devicon-pycharm-plain-wordmark.skill-chip.sass, .devicon-pycharm-plain-wordmark.skill-chip.grunt,
+.devicon-pycharm-plain.colored,
+.devicon-pycharm-plain.skill-chip.docker,
+.devicon-pycharm-plain.skill-chip.less,
+.devicon-pycharm-plain.skill-chip.css,
+.devicon-pycharm-plain.skill-chip.mysql,
+.devicon-pycharm-plain.skill-chip.javascript,
+.devicon-pycharm-plain.skill-chip.sass,
+.devicon-pycharm-plain.skill-chip.grunt {
+  color: #4D8548;
+}
+
+.devicon-rubymine-plain-wordmark.colored, .devicon-rubymine-plain-wordmark.skill-chip.docker, .devicon-rubymine-plain-wordmark.skill-chip.less, .devicon-rubymine-plain-wordmark.skill-chip.css, .devicon-rubymine-plain-wordmark.skill-chip.mysql, .devicon-rubymine-plain-wordmark.skill-chip.javascript, .devicon-rubymine-plain-wordmark.skill-chip.sass, .devicon-rubymine-plain-wordmark.skill-chip.grunt,
+.devicon-rubymine-plain.colored,
+.devicon-rubymine-plain.skill-chip.docker,
+.devicon-rubymine-plain.skill-chip.less,
+.devicon-rubymine-plain.skill-chip.css,
+.devicon-rubymine-plain.skill-chip.mysql,
+.devicon-rubymine-plain.skill-chip.javascript,
+.devicon-rubymine-plain.skill-chip.sass,
+.devicon-rubymine-plain.skill-chip.grunt {
+  color: #C12C4C;
+}
+
+.devicon-webstorm-plain-wordmark.colored, .devicon-webstorm-plain-wordmark.skill-chip.docker, .devicon-webstorm-plain-wordmark.skill-chip.less, .devicon-webstorm-plain-wordmark.skill-chip.css, .devicon-webstorm-plain-wordmark.skill-chip.mysql, .devicon-webstorm-plain-wordmark.skill-chip.javascript, .devicon-webstorm-plain-wordmark.skill-chip.sass, .devicon-webstorm-plain-wordmark.skill-chip.grunt,
+.devicon-webstorm-plain.colored,
+.devicon-webstorm-plain.skill-chip.docker,
+.devicon-webstorm-plain.skill-chip.less,
+.devicon-webstorm-plain.skill-chip.css,
+.devicon-webstorm-plain.skill-chip.mysql,
+.devicon-webstorm-plain.skill-chip.javascript,
+.devicon-webstorm-plain.skill-chip.sass,
+.devicon-webstorm-plain.skill-chip.grunt {
+  color: #2788B5;
+}
+
+.devicon-tomcat-line-wordmark.colored, .devicon-tomcat-line-wordmark.skill-chip.docker, .devicon-tomcat-line-wordmark.skill-chip.less, .devicon-tomcat-line-wordmark.skill-chip.css, .devicon-tomcat-line-wordmark.skill-chip.mysql, .devicon-tomcat-line-wordmark.skill-chip.javascript, .devicon-tomcat-line-wordmark.skill-chip.sass, .devicon-tomcat-line-wordmark.skill-chip.grunt,
+.devicon-tomcat-line.colored,
+.devicon-tomcat-line.skill-chip.docker,
+.devicon-tomcat-line.skill-chip.less,
+.devicon-tomcat-line.skill-chip.css,
+.devicon-tomcat-line.skill-chip.mysql,
+.devicon-tomcat-line.skill-chip.javascript,
+.devicon-tomcat-line.skill-chip.sass,
+.devicon-tomcat-line.skill-chip.grunt {
+  color: #D1A41A;
+}
+
+.devicon-vuejs-line-wordmark.colored, .devicon-vuejs-line-wordmark.skill-chip.docker, .devicon-vuejs-line-wordmark.skill-chip.less, .devicon-vuejs-line-wordmark.skill-chip.css, .devicon-vuejs-line-wordmark.skill-chip.mysql, .devicon-vuejs-line-wordmark.skill-chip.javascript, .devicon-vuejs-line-wordmark.skill-chip.sass, .devicon-vuejs-line-wordmark.skill-chip.grunt,
+.devicon-vuejs-line.colored,
+.devicon-vuejs-line.skill-chip.docker,
+.devicon-vuejs-line.skill-chip.less,
+.devicon-vuejs-line.skill-chip.css,
+.devicon-vuejs-line.skill-chip.mysql,
+.devicon-vuejs-line.skill-chip.javascript,
+.devicon-vuejs-line.skill-chip.sass,
+.devicon-vuejs-line.skill-chip.grunt,
+.devicon-vuejs-plain-wordmark.colored,
+.devicon-vuejs-plain-wordmark.skill-chip.docker,
+.devicon-vuejs-plain-wordmark.skill-chip.less,
+.devicon-vuejs-plain-wordmark.skill-chip.css,
+.devicon-vuejs-plain-wordmark.skill-chip.mysql,
+.devicon-vuejs-plain-wordmark.skill-chip.javascript,
+.devicon-vuejs-plain-wordmark.skill-chip.sass,
+.devicon-vuejs-plain-wordmark.skill-chip.grunt,
+.devicon-vuejs-plain.colored,
+.devicon-vuejs-plain.skill-chip.docker,
+.devicon-vuejs-plain.skill-chip.less,
+.devicon-vuejs-plain.skill-chip.css,
+.devicon-vuejs-plain.skill-chip.mysql,
+.devicon-vuejs-plain.skill-chip.javascript,
+.devicon-vuejs-plain.skill-chip.sass,
+.devicon-vuejs-plain.skill-chip.grunt {
+  color: #41B883;
+}
+
+.devicon-swift-plain-wordmark.colored, .devicon-swift-plain-wordmark.skill-chip.docker, .devicon-swift-plain-wordmark.skill-chip.less, .devicon-swift-plain-wordmark.skill-chip.css, .devicon-swift-plain-wordmark.skill-chip.mysql, .devicon-swift-plain-wordmark.skill-chip.javascript, .devicon-swift-plain-wordmark.skill-chip.sass, .devicon-swift-plain-wordmark.skill-chip.grunt,
+.devicon-swift-plain.colored,
+.devicon-swift-plain.skill-chip.docker,
+.devicon-swift-plain.skill-chip.less,
+.devicon-swift-plain.skill-chip.css,
+.devicon-swift-plain.skill-chip.mysql,
+.devicon-swift-plain.skill-chip.javascript,
+.devicon-swift-plain.skill-chip.sass,
+.devicon-swift-plain.skill-chip.grunt {
+  color: #F05138;
+}
+
+.devicon-webpack-plain-wordmark.colored, .devicon-webpack-plain-wordmark.skill-chip.docker, .devicon-webpack-plain-wordmark.skill-chip.less, .devicon-webpack-plain-wordmark.skill-chip.css, .devicon-webpack-plain-wordmark.skill-chip.mysql, .devicon-webpack-plain-wordmark.skill-chip.javascript, .devicon-webpack-plain-wordmark.skill-chip.sass, .devicon-webpack-plain-wordmark.skill-chip.grunt,
+.devicon-webpack-plain.colored,
+.devicon-webpack-plain.skill-chip.docker,
+.devicon-webpack-plain.skill-chip.less,
+.devicon-webpack-plain.skill-chip.css,
+.devicon-webpack-plain.skill-chip.mysql,
+.devicon-webpack-plain.skill-chip.javascript,
+.devicon-webpack-plain.skill-chip.sass,
+.devicon-webpack-plain.skill-chip.grunt {
+  color: #1C78C0;
+}
+
+.devicon-visualstudio-plain-wordmark.colored, .devicon-visualstudio-plain-wordmark.skill-chip.docker, .devicon-visualstudio-plain-wordmark.skill-chip.less, .devicon-visualstudio-plain-wordmark.skill-chip.css, .devicon-visualstudio-plain-wordmark.skill-chip.mysql, .devicon-visualstudio-plain-wordmark.skill-chip.javascript, .devicon-visualstudio-plain-wordmark.skill-chip.sass, .devicon-visualstudio-plain-wordmark.skill-chip.grunt,
+.devicon-visualstudio-plain.colored,
+.devicon-visualstudio-plain.skill-chip.docker,
+.devicon-visualstudio-plain.skill-chip.less,
+.devicon-visualstudio-plain.skill-chip.css,
+.devicon-visualstudio-plain.skill-chip.mysql,
+.devicon-visualstudio-plain.skill-chip.javascript,
+.devicon-visualstudio-plain.skill-chip.sass,
+.devicon-visualstudio-plain.skill-chip.grunt {
+  color: #68217A;
+}
+
+.devicon-slack-plain-wordmark.colored, .devicon-slack-plain-wordmark.skill-chip.docker, .devicon-slack-plain-wordmark.skill-chip.less, .devicon-slack-plain-wordmark.skill-chip.css, .devicon-slack-plain-wordmark.skill-chip.mysql, .devicon-slack-plain-wordmark.skill-chip.javascript, .devicon-slack-plain-wordmark.skill-chip.sass, .devicon-slack-plain-wordmark.skill-chip.grunt,
+.devicon-slack-plain.colored,
+.devicon-slack-plain.skill-chip.docker,
+.devicon-slack-plain.skill-chip.less,
+.devicon-slack-plain.skill-chip.css,
+.devicon-slack-plain.skill-chip.mysql,
+.devicon-slack-plain.skill-chip.javascript,
+.devicon-slack-plain.skill-chip.sass,
+.devicon-slack-plain.skill-chip.grunt {
+  color: #2D333A;
+}
+
+.devicon-gatling-plain-wordmark.colored, .devicon-gatling-plain-wordmark.skill-chip.docker, .devicon-gatling-plain-wordmark.skill-chip.less, .devicon-gatling-plain-wordmark.skill-chip.css, .devicon-gatling-plain-wordmark.skill-chip.mysql, .devicon-gatling-plain-wordmark.skill-chip.javascript, .devicon-gatling-plain-wordmark.skill-chip.sass, .devicon-gatling-plain-wordmark.skill-chip.grunt {
+  color: #E77500;
+}
+
+.devicon-gatling-plain.colored, .devicon-gatling-plain.skill-chip.docker, .devicon-gatling-plain.skill-chip.less, .devicon-gatling-plain.skill-chip.css, .devicon-gatling-plain.skill-chip.mysql, .devicon-gatling-plain.skill-chip.javascript, .devicon-gatling-plain.skill-chip.sass, .devicon-gatling-plain.skill-chip.grunt {
+  color: #E77500;
+}
+
+.devicon-ssh-original-wordmark.colored, .devicon-ssh-original-wordmark.skill-chip.docker, .devicon-ssh-original-wordmark.skill-chip.less, .devicon-ssh-original-wordmark.skill-chip.css, .devicon-ssh-original-wordmark.skill-chip.mysql, .devicon-ssh-original-wordmark.skill-chip.javascript, .devicon-ssh-original-wordmark.skill-chip.sass, .devicon-ssh-original-wordmark.skill-chip.grunt,
+.devicon-ssh-plain-wordmark.colored,
+.devicon-ssh-plain-wordmark.skill-chip.docker,
+.devicon-ssh-plain-wordmark.skill-chip.less,
+.devicon-ssh-plain-wordmark.skill-chip.css,
+.devicon-ssh-plain-wordmark.skill-chip.mysql,
+.devicon-ssh-plain-wordmark.skill-chip.javascript,
+.devicon-ssh-plain-wordmark.skill-chip.sass,
+.devicon-ssh-plain-wordmark.skill-chip.grunt {
+  color: #231F20;
+}
+
+.devicon-ssh-original.colored, .devicon-ssh-original.skill-chip.docker, .devicon-ssh-original.skill-chip.less, .devicon-ssh-original.skill-chip.css, .devicon-ssh-original.skill-chip.mysql, .devicon-ssh-original.skill-chip.javascript, .devicon-ssh-original.skill-chip.sass, .devicon-ssh-original.skill-chip.grunt,
+.devicon-ssh-plain.colored,
+.devicon-ssh-plain.skill-chip.docker,
+.devicon-ssh-plain.skill-chip.less,
+.devicon-ssh-plain.skill-chip.css,
+.devicon-ssh-plain.skill-chip.mysql,
+.devicon-ssh-plain.skill-chip.javascript,
+.devicon-ssh-plain.skill-chip.sass,
+.devicon-ssh-plain.skill-chip.grunt {
+  color: #231F20;
+}
+
+.devicon-sourcetree-original-wordmark.colored, .devicon-sourcetree-original-wordmark.skill-chip.docker, .devicon-sourcetree-original-wordmark.skill-chip.less, .devicon-sourcetree-original-wordmark.skill-chip.css, .devicon-sourcetree-original-wordmark.skill-chip.mysql, .devicon-sourcetree-original-wordmark.skill-chip.javascript, .devicon-sourcetree-original-wordmark.skill-chip.sass, .devicon-sourcetree-original-wordmark.skill-chip.grunt,
+.devicon-sourcetree-plain-wordmark.colored,
+.devicon-sourcetree-plain-wordmark.skill-chip.docker,
+.devicon-sourcetree-plain-wordmark.skill-chip.less,
+.devicon-sourcetree-plain-wordmark.skill-chip.css,
+.devicon-sourcetree-plain-wordmark.skill-chip.mysql,
+.devicon-sourcetree-plain-wordmark.skill-chip.javascript,
+.devicon-sourcetree-plain-wordmark.skill-chip.sass,
+.devicon-sourcetree-plain-wordmark.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-sourcetree-original.colored, .devicon-sourcetree-original.skill-chip.docker, .devicon-sourcetree-original.skill-chip.less, .devicon-sourcetree-original.skill-chip.css, .devicon-sourcetree-original.skill-chip.mysql, .devicon-sourcetree-original.skill-chip.javascript, .devicon-sourcetree-original.skill-chip.sass, .devicon-sourcetree-original.skill-chip.grunt,
+.devicon-sourcetree-plain.colored,
+.devicon-sourcetree-plain.skill-chip.docker,
+.devicon-sourcetree-plain.skill-chip.less,
+.devicon-sourcetree-plain.skill-chip.css,
+.devicon-sourcetree-plain.skill-chip.mysql,
+.devicon-sourcetree-plain.skill-chip.javascript,
+.devicon-sourcetree-plain.skill-chip.sass,
+.devicon-sourcetree-plain.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-phpstorm-plain-wordmark.colored, .devicon-phpstorm-plain-wordmark.skill-chip.docker, .devicon-phpstorm-plain-wordmark.skill-chip.less, .devicon-phpstorm-plain-wordmark.skill-chip.css, .devicon-phpstorm-plain-wordmark.skill-chip.mysql, .devicon-phpstorm-plain-wordmark.skill-chip.javascript, .devicon-phpstorm-plain-wordmark.skill-chip.sass, .devicon-phpstorm-plain-wordmark.skill-chip.grunt {
+  color: #5058A6;
+}
+
+.devicon-phpstorm-plain.colored, .devicon-phpstorm-plain.skill-chip.docker, .devicon-phpstorm-plain.skill-chip.less, .devicon-phpstorm-plain.skill-chip.css, .devicon-phpstorm-plain.skill-chip.mysql, .devicon-phpstorm-plain.skill-chip.javascript, .devicon-phpstorm-plain.skill-chip.sass, .devicon-phpstorm-plain.skill-chip.grunt {
+  color: #5058A6;
+}
+
+.devicon-protractor-plain-wordmark.colored, .devicon-protractor-plain-wordmark.skill-chip.docker, .devicon-protractor-plain-wordmark.skill-chip.less, .devicon-protractor-plain-wordmark.skill-chip.css, .devicon-protractor-plain-wordmark.skill-chip.mysql, .devicon-protractor-plain-wordmark.skill-chip.javascript, .devicon-protractor-plain-wordmark.skill-chip.sass, .devicon-protractor-plain-wordmark.skill-chip.grunt {
+  color: #b7111d;
+}
+
+.devicon-protractor-plain.colored, .devicon-protractor-plain.skill-chip.docker, .devicon-protractor-plain.skill-chip.less, .devicon-protractor-plain.skill-chip.css, .devicon-protractor-plain.skill-chip.mysql, .devicon-protractor-plain.skill-chip.javascript, .devicon-protractor-plain.skill-chip.sass, .devicon-protractor-plain.skill-chip.grunt {
+  color: #b7111d;
+}
+
+.devicon-cucumber-plain-wordmark.colored, .devicon-cucumber-plain-wordmark.skill-chip.docker, .devicon-cucumber-plain-wordmark.skill-chip.less, .devicon-cucumber-plain-wordmark.skill-chip.css, .devicon-cucumber-plain-wordmark.skill-chip.mysql, .devicon-cucumber-plain-wordmark.skill-chip.javascript, .devicon-cucumber-plain-wordmark.skill-chip.sass, .devicon-cucumber-plain-wordmark.skill-chip.grunt {
+  color: #00a818;
+}
+
+.devicon-cucumber-plain.colored, .devicon-cucumber-plain.skill-chip.docker, .devicon-cucumber-plain.skill-chip.less, .devicon-cucumber-plain.skill-chip.css, .devicon-cucumber-plain.skill-chip.mysql, .devicon-cucumber-plain.skill-chip.javascript, .devicon-cucumber-plain.skill-chip.sass, .devicon-cucumber-plain.skill-chip.grunt {
+  color: #00a818;
+}
+
+.devicon-gradle-plain-wordmark.colored, .devicon-gradle-plain-wordmark.skill-chip.docker, .devicon-gradle-plain-wordmark.skill-chip.less, .devicon-gradle-plain-wordmark.skill-chip.css, .devicon-gradle-plain-wordmark.skill-chip.mysql, .devicon-gradle-plain-wordmark.skill-chip.javascript, .devicon-gradle-plain-wordmark.skill-chip.sass, .devicon-gradle-plain-wordmark.skill-chip.grunt {
+  color: #02303a;
+}
+
+.devicon-gradle-plain.colored, .devicon-gradle-plain.skill-chip.docker, .devicon-gradle-plain.skill-chip.less, .devicon-gradle-plain.skill-chip.css, .devicon-gradle-plain.skill-chip.mysql, .devicon-gradle-plain.skill-chip.javascript, .devicon-gradle-plain.skill-chip.sass, .devicon-gradle-plain.skill-chip.grunt {
+  color: #02303a;
+}
+
+.devicon-jeet-plain-wordmark.colored, .devicon-jeet-plain-wordmark.skill-chip.docker, .devicon-jeet-plain-wordmark.skill-chip.less, .devicon-jeet-plain-wordmark.skill-chip.css, .devicon-jeet-plain-wordmark.skill-chip.mysql, .devicon-jeet-plain-wordmark.skill-chip.javascript, .devicon-jeet-plain-wordmark.skill-chip.sass, .devicon-jeet-plain-wordmark.skill-chip.grunt {
+  color: #FF664A;
+}
+
+.devicon-jeet-plain.colored, .devicon-jeet-plain.skill-chip.docker, .devicon-jeet-plain.skill-chip.less, .devicon-jeet-plain.skill-chip.css, .devicon-jeet-plain.skill-chip.mysql, .devicon-jeet-plain.skill-chip.javascript, .devicon-jeet-plain.skill-chip.sass, .devicon-jeet-plain.skill-chip.grunt {
+  color: #FF664A;
+}
+
+.devicon-gitlab-plain-wordmark.colored, .devicon-gitlab-plain-wordmark.skill-chip.docker, .devicon-gitlab-plain-wordmark.skill-chip.less, .devicon-gitlab-plain-wordmark.skill-chip.css, .devicon-gitlab-plain-wordmark.skill-chip.mysql, .devicon-gitlab-plain-wordmark.skill-chip.javascript, .devicon-gitlab-plain-wordmark.skill-chip.sass, .devicon-gitlab-plain-wordmark.skill-chip.grunt {
+  color: #E24329;
+}
+
+.devicon-gitlab-plain.colored, .devicon-gitlab-plain.skill-chip.docker, .devicon-gitlab-plain.skill-chip.less, .devicon-gitlab-plain.skill-chip.css, .devicon-gitlab-plain.skill-chip.mysql, .devicon-gitlab-plain.skill-chip.javascript, .devicon-gitlab-plain.skill-chip.sass, .devicon-gitlab-plain.skill-chip.grunt {
+  color: #E24329;
+}
+
+.devicon-github-original-wordmark.colored, .devicon-github-original-wordmark.skill-chip.docker, .devicon-github-original-wordmark.skill-chip.less, .devicon-github-original-wordmark.skill-chip.css, .devicon-github-original-wordmark.skill-chip.mysql, .devicon-github-original-wordmark.skill-chip.javascript, .devicon-github-original-wordmark.skill-chip.sass, .devicon-github-original-wordmark.skill-chip.grunt,
+.devicon-github-plain-wordmark.colored,
+.devicon-github-plain-wordmark.skill-chip.docker,
+.devicon-github-plain-wordmark.skill-chip.less,
+.devicon-github-plain-wordmark.skill-chip.css,
+.devicon-github-plain-wordmark.skill-chip.mysql,
+.devicon-github-plain-wordmark.skill-chip.javascript,
+.devicon-github-plain-wordmark.skill-chip.sass,
+.devicon-github-plain-wordmark.skill-chip.grunt {
+  color: #181616;
+}
+
+.devicon-github-original.colored, .devicon-github-original.skill-chip.docker, .devicon-github-original.skill-chip.less, .devicon-github-original.skill-chip.css, .devicon-github-original.skill-chip.mysql, .devicon-github-original.skill-chip.javascript, .devicon-github-original.skill-chip.sass, .devicon-github-original.skill-chip.grunt,
+.devicon-github-plain.colored,
+.devicon-github-plain.skill-chip.docker,
+.devicon-github-plain.skill-chip.less,
+.devicon-github-plain.skill-chip.css,
+.devicon-github-plain.skill-chip.mysql,
+.devicon-github-plain.skill-chip.javascript,
+.devicon-github-plain.skill-chip.sass,
+.devicon-github-plain.skill-chip.grunt {
+  color: #181616;
+}
+
+.devicon-d3js-plain.colored, .devicon-d3js-plain.skill-chip.docker, .devicon-d3js-plain.skill-chip.less, .devicon-d3js-plain.skill-chip.css, .devicon-d3js-plain.skill-chip.mysql, .devicon-d3js-plain.skill-chip.javascript, .devicon-d3js-plain.skill-chip.sass, .devicon-d3js-plain.skill-chip.grunt {
+  color: #f7974e;
+}
+
+.devicon-confluence-original-wordmark.colored, .devicon-confluence-original-wordmark.skill-chip.docker, .devicon-confluence-original-wordmark.skill-chip.less, .devicon-confluence-original-wordmark.skill-chip.css, .devicon-confluence-original-wordmark.skill-chip.mysql, .devicon-confluence-original-wordmark.skill-chip.javascript, .devicon-confluence-original-wordmark.skill-chip.sass, .devicon-confluence-original-wordmark.skill-chip.grunt,
+.devicon-confluence-plain-wordmark.colored,
+.devicon-confluence-plain-wordmark.skill-chip.docker,
+.devicon-confluence-plain-wordmark.skill-chip.less,
+.devicon-confluence-plain-wordmark.skill-chip.css,
+.devicon-confluence-plain-wordmark.skill-chip.mysql,
+.devicon-confluence-plain-wordmark.skill-chip.javascript,
+.devicon-confluence-plain-wordmark.skill-chip.sass,
+.devicon-confluence-plain-wordmark.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-confluence-original.colored, .devicon-confluence-original.skill-chip.docker, .devicon-confluence-original.skill-chip.less, .devicon-confluence-original.skill-chip.css, .devicon-confluence-original.skill-chip.mysql, .devicon-confluence-original.skill-chip.javascript, .devicon-confluence-original.skill-chip.sass, .devicon-confluence-original.skill-chip.grunt,
+.devicon-confluence-plain.colored,
+.devicon-confluence-plain.skill-chip.docker,
+.devicon-confluence-plain.skill-chip.less,
+.devicon-confluence-plain.skill-chip.css,
+.devicon-confluence-plain.skill-chip.mysql,
+.devicon-confluence-plain.skill-chip.javascript,
+.devicon-confluence-plain.skill-chip.sass,
+.devicon-confluence-plain.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-bitbucket-original-wordmark.colored, .devicon-bitbucket-original-wordmark.skill-chip.docker, .devicon-bitbucket-original-wordmark.skill-chip.less, .devicon-bitbucket-original-wordmark.skill-chip.css, .devicon-bitbucket-original-wordmark.skill-chip.mysql, .devicon-bitbucket-original-wordmark.skill-chip.javascript, .devicon-bitbucket-original-wordmark.skill-chip.sass, .devicon-bitbucket-original-wordmark.skill-chip.grunt,
+.devicon-bitbucket-plain-wordmark.colored,
+.devicon-bitbucket-plain-wordmark.skill-chip.docker,
+.devicon-bitbucket-plain-wordmark.skill-chip.less,
+.devicon-bitbucket-plain-wordmark.skill-chip.css,
+.devicon-bitbucket-plain-wordmark.skill-chip.mysql,
+.devicon-bitbucket-plain-wordmark.skill-chip.javascript,
+.devicon-bitbucket-plain-wordmark.skill-chip.sass,
+.devicon-bitbucket-plain-wordmark.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-bitbucket-original.colored, .devicon-bitbucket-original.skill-chip.docker, .devicon-bitbucket-original.skill-chip.less, .devicon-bitbucket-original.skill-chip.css, .devicon-bitbucket-original.skill-chip.mysql, .devicon-bitbucket-original.skill-chip.javascript, .devicon-bitbucket-original.skill-chip.sass, .devicon-bitbucket-original.skill-chip.grunt,
+.devicon-bitbucket-plain.colored,
+.devicon-bitbucket-plain.skill-chip.docker,
+.devicon-bitbucket-plain.skill-chip.less,
+.devicon-bitbucket-plain.skill-chip.css,
+.devicon-bitbucket-plain.skill-chip.mysql,
+.devicon-bitbucket-plain.skill-chip.javascript,
+.devicon-bitbucket-plain.skill-chip.sass,
+.devicon-bitbucket-plain.skill-chip.grunt {
+  color: #205081;
+}
+
+.devicon-amazonwebservices-plain-wordmark.colored, .devicon-amazonwebservices-plain-wordmark.skill-chip.docker, .devicon-amazonwebservices-plain-wordmark.skill-chip.less, .devicon-amazonwebservices-plain-wordmark.skill-chip.css, .devicon-amazonwebservices-plain-wordmark.skill-chip.mysql, .devicon-amazonwebservices-plain-wordmark.skill-chip.javascript, .devicon-amazonwebservices-plain-wordmark.skill-chip.sass, .devicon-amazonwebservices-plain-wordmark.skill-chip.grunt,
+.devicon-amazonwebservices-original.colored,
+.devicon-amazonwebservices-original.skill-chip.docker,
+.devicon-amazonwebservices-original.skill-chip.less,
+.devicon-amazonwebservices-original.skill-chip.css,
+.devicon-amazonwebservices-original.skill-chip.mysql,
+.devicon-amazonwebservices-original.skill-chip.javascript,
+.devicon-amazonwebservices-original.skill-chip.sass,
+.devicon-amazonwebservices-original.skill-chip.grunt,
+.devicon-amazonwebservices-plain.colored,
+.devicon-amazonwebservices-plain.skill-chip.docker,
+.devicon-amazonwebservices-plain.skill-chip.less,
+.devicon-amazonwebservices-plain.skill-chip.css,
+.devicon-amazonwebservices-plain.skill-chip.mysql,
+.devicon-amazonwebservices-plain.skill-chip.javascript,
+.devicon-amazonwebservices-plain.skill-chip.sass,
+.devicon-amazonwebservices-plain.skill-chip.grunt {
+  color: #F7A80D;
+}
+
+.devicon-android-plain-wordmark.colored, .devicon-android-plain-wordmark.skill-chip.docker, .devicon-android-plain-wordmark.skill-chip.less, .devicon-android-plain-wordmark.skill-chip.css, .devicon-android-plain-wordmark.skill-chip.mysql, .devicon-android-plain-wordmark.skill-chip.javascript, .devicon-android-plain-wordmark.skill-chip.sass, .devicon-android-plain-wordmark.skill-chip.grunt,
+.devicon-android-plain.colored,
+.devicon-android-plain.skill-chip.docker,
+.devicon-android-plain.skill-chip.less,
+.devicon-android-plain.skill-chip.css,
+.devicon-android-plain.skill-chip.mysql,
+.devicon-android-plain.skill-chip.javascript,
+.devicon-android-plain.skill-chip.sass,
+.devicon-android-plain.skill-chip.grunt {
+  color: #A4C439;
+}
+
+.devicon-angularjs-plain-wordmark.colored, .devicon-angularjs-plain-wordmark.skill-chip.docker, .devicon-angularjs-plain-wordmark.skill-chip.less, .devicon-angularjs-plain-wordmark.skill-chip.css, .devicon-angularjs-plain-wordmark.skill-chip.mysql, .devicon-angularjs-plain-wordmark.skill-chip.javascript, .devicon-angularjs-plain-wordmark.skill-chip.sass, .devicon-angularjs-plain-wordmark.skill-chip.grunt,
+.devicon-angularjs-plain.colored,
+.devicon-angularjs-plain.skill-chip.docker,
+.devicon-angularjs-plain.skill-chip.less,
+.devicon-angularjs-plain.skill-chip.css,
+.devicon-angularjs-plain.skill-chip.mysql,
+.devicon-angularjs-plain.skill-chip.javascript,
+.devicon-angularjs-plain.skill-chip.sass,
+.devicon-angularjs-plain.skill-chip.grunt {
+  color: #c4473a;
+}
+
+.devicon-apache-line-wordmark.colored, .devicon-apache-line-wordmark.skill-chip.docker, .devicon-apache-line-wordmark.skill-chip.less, .devicon-apache-line-wordmark.skill-chip.css, .devicon-apache-line-wordmark.skill-chip.mysql, .devicon-apache-line-wordmark.skill-chip.javascript, .devicon-apache-line-wordmark.skill-chip.sass, .devicon-apache-line-wordmark.skill-chip.grunt,
+.devicon-apache-line.colored,
+.devicon-apache-line.skill-chip.docker,
+.devicon-apache-line.skill-chip.less,
+.devicon-apache-line.skill-chip.css,
+.devicon-apache-line.skill-chip.mysql,
+.devicon-apache-line.skill-chip.javascript,
+.devicon-apache-line.skill-chip.sass,
+.devicon-apache-line.skill-chip.grunt,
+.devicon-apache-plain-wordmark.colored,
+.devicon-apache-plain-wordmark.skill-chip.docker,
+.devicon-apache-plain-wordmark.skill-chip.less,
+.devicon-apache-plain-wordmark.skill-chip.css,
+.devicon-apache-plain-wordmark.skill-chip.mysql,
+.devicon-apache-plain-wordmark.skill-chip.javascript,
+.devicon-apache-plain-wordmark.skill-chip.sass,
+.devicon-apache-plain-wordmark.skill-chip.grunt,
+.devicon-apache-plain.colored,
+.devicon-apache-plain.skill-chip.docker,
+.devicon-apache-plain.skill-chip.less,
+.devicon-apache-plain.skill-chip.css,
+.devicon-apache-plain.skill-chip.mysql,
+.devicon-apache-plain.skill-chip.javascript,
+.devicon-apache-plain.skill-chip.sass,
+.devicon-apache-plain.skill-chip.grunt {
+  color: #303284;
+}
+
+.devicon-appcelerator-plain-wordmark.colored, .devicon-appcelerator-plain-wordmark.skill-chip.docker, .devicon-appcelerator-plain-wordmark.skill-chip.less, .devicon-appcelerator-plain-wordmark.skill-chip.css, .devicon-appcelerator-plain-wordmark.skill-chip.mysql, .devicon-appcelerator-plain-wordmark.skill-chip.javascript, .devicon-appcelerator-plain-wordmark.skill-chip.sass, .devicon-appcelerator-plain-wordmark.skill-chip.grunt,
+.devicon-appcelerator-original.colored,
+.devicon-appcelerator-original.skill-chip.docker,
+.devicon-appcelerator-original.skill-chip.less,
+.devicon-appcelerator-original.skill-chip.css,
+.devicon-appcelerator-original.skill-chip.mysql,
+.devicon-appcelerator-original.skill-chip.javascript,
+.devicon-appcelerator-original.skill-chip.sass,
+.devicon-appcelerator-original.skill-chip.grunt,
+.devicon-appcelerator-plain.colored,
+.devicon-appcelerator-plain.skill-chip.docker,
+.devicon-appcelerator-plain.skill-chip.less,
+.devicon-appcelerator-plain.skill-chip.css,
+.devicon-appcelerator-plain.skill-chip.mysql,
+.devicon-appcelerator-plain.skill-chip.javascript,
+.devicon-appcelerator-plain.skill-chip.sass,
+.devicon-appcelerator-plain.skill-chip.grunt {
+  color: #ac162c;
+}
+
+.devicon-apple-original.colored, .devicon-apple-original.skill-chip.docker, .devicon-apple-original.skill-chip.less, .devicon-apple-original.skill-chip.css, .devicon-apple-original.skill-chip.mysql, .devicon-apple-original.skill-chip.javascript, .devicon-apple-original.skill-chip.sass, .devicon-apple-original.skill-chip.grunt,
+.devicon-apple-plain.colored,
+.devicon-apple-plain.skill-chip.docker,
+.devicon-apple-plain.skill-chip.less,
+.devicon-apple-plain.skill-chip.css,
+.devicon-apple-plain.skill-chip.mysql,
+.devicon-apple-plain.skill-chip.javascript,
+.devicon-apple-plain.skill-chip.sass,
+.devicon-apple-plain.skill-chip.grunt {
+  color: #000000;
+}
+
+.devicon-atom-original.colored, .devicon-atom-original.skill-chip.docker, .devicon-atom-original.skill-chip.less, .devicon-atom-original.skill-chip.css, .devicon-atom-original.skill-chip.mysql, .devicon-atom-original.skill-chip.javascript, .devicon-atom-original.skill-chip.sass, .devicon-atom-original.skill-chip.grunt,
+.devicon-atom-original-wordmark.colored,
+.devicon-atom-original-wordmark.skill-chip.docker,
+.devicon-atom-original-wordmark.skill-chip.less,
+.devicon-atom-original-wordmark.skill-chip.css,
+.devicon-atom-original-wordmark.skill-chip.mysql,
+.devicon-atom-original-wordmark.skill-chip.javascript,
+.devicon-atom-original-wordmark.skill-chip.sass,
+.devicon-atom-original-wordmark.skill-chip.grunt,
+.devicon-atom-plain.colored,
+.devicon-atom-plain.skill-chip.docker,
+.devicon-atom-plain.skill-chip.less,
+.devicon-atom-plain.skill-chip.css,
+.devicon-atom-plain.skill-chip.mysql,
+.devicon-atom-plain.skill-chip.javascript,
+.devicon-atom-plain.skill-chip.sass,
+.devicon-atom-plain.skill-chip.grunt,
+.devicon-atom-plain-wordmark.colored,
+.devicon-atom-plain-wordmark.skill-chip.docker,
+.devicon-atom-plain-wordmark.skill-chip.less,
+.devicon-atom-plain-wordmark.skill-chip.css,
+.devicon-atom-plain-wordmark.skill-chip.mysql,
+.devicon-atom-plain-wordmark.skill-chip.javascript,
+.devicon-atom-plain-wordmark.skill-chip.sass,
+.devicon-atom-plain-wordmark.skill-chip.grunt {
+  color: #67595D;
+}
+
+.devicon-babel-original.colored, .devicon-babel-original.skill-chip.docker, .devicon-babel-original.skill-chip.less, .devicon-babel-original.skill-chip.css, .devicon-babel-original.skill-chip.mysql, .devicon-babel-original.skill-chip.javascript, .devicon-babel-original.skill-chip.sass, .devicon-babel-original.skill-chip.grunt,
+.devicon-babel-plain.colored,
+.devicon-babel-plain.skill-chip.docker,
+.devicon-babel-plain.skill-chip.less,
+.devicon-babel-plain.skill-chip.css,
+.devicon-babel-plain.skill-chip.mysql,
+.devicon-babel-plain.skill-chip.javascript,
+.devicon-babel-plain.skill-chip.sass,
+.devicon-babel-plain.skill-chip.grunt {
+  color: #f9dc3e;
+}
+
+.devicon-backbonejs-plain.colored, .devicon-backbonejs-plain.skill-chip.docker, .devicon-backbonejs-plain.skill-chip.less, .devicon-backbonejs-plain.skill-chip.css, .devicon-backbonejs-plain.skill-chip.mysql, .devicon-backbonejs-plain.skill-chip.javascript, .devicon-backbonejs-plain.skill-chip.sass, .devicon-backbonejs-plain.skill-chip.grunt,
+.devicon-backbonejs-plain-wordmark.colored,
+.devicon-backbonejs-plain-wordmark.skill-chip.docker,
+.devicon-backbonejs-plain-wordmark.skill-chip.less,
+.devicon-backbonejs-plain-wordmark.skill-chip.css,
+.devicon-backbonejs-plain-wordmark.skill-chip.mysql,
+.devicon-backbonejs-plain-wordmark.skill-chip.javascript,
+.devicon-backbonejs-plain-wordmark.skill-chip.sass,
+.devicon-backbonejs-plain-wordmark.skill-chip.grunt {
+  color: #002A41;
+}
+
+.devicon-bootstrap-plain-wordmark.colored, .devicon-bootstrap-plain-wordmark.skill-chip.docker, .devicon-bootstrap-plain-wordmark.skill-chip.less, .devicon-bootstrap-plain-wordmark.skill-chip.css, .devicon-bootstrap-plain-wordmark.skill-chip.mysql, .devicon-bootstrap-plain-wordmark.skill-chip.javascript, .devicon-bootstrap-plain-wordmark.skill-chip.sass, .devicon-bootstrap-plain-wordmark.skill-chip.grunt,
+.devicon-bootstrap-plain.colored,
+.devicon-bootstrap-plain.skill-chip.docker,
+.devicon-bootstrap-plain.skill-chip.less,
+.devicon-bootstrap-plain.skill-chip.css,
+.devicon-bootstrap-plain.skill-chip.mysql,
+.devicon-bootstrap-plain.skill-chip.javascript,
+.devicon-bootstrap-plain.skill-chip.sass,
+.devicon-bootstrap-plain.skill-chip.grunt {
+  color: #59407f;
+}
+
+.devicon-bower-line-wordmark.colored, .devicon-bower-line-wordmark.skill-chip.docker, .devicon-bower-line-wordmark.skill-chip.less, .devicon-bower-line-wordmark.skill-chip.css, .devicon-bower-line-wordmark.skill-chip.mysql, .devicon-bower-line-wordmark.skill-chip.javascript, .devicon-bower-line-wordmark.skill-chip.sass, .devicon-bower-line-wordmark.skill-chip.grunt,
+.devicon-bower-line.colored,
+.devicon-bower-line.skill-chip.docker,
+.devicon-bower-line.skill-chip.less,
+.devicon-bower-line.skill-chip.css,
+.devicon-bower-line.skill-chip.mysql,
+.devicon-bower-line.skill-chip.javascript,
+.devicon-bower-line.skill-chip.sass,
+.devicon-bower-line.skill-chip.grunt,
+.devicon-bower-plain-wordmark.colored,
+.devicon-bower-plain-wordmark.skill-chip.docker,
+.devicon-bower-plain-wordmark.skill-chip.less,
+.devicon-bower-plain-wordmark.skill-chip.css,
+.devicon-bower-plain-wordmark.skill-chip.mysql,
+.devicon-bower-plain-wordmark.skill-chip.javascript,
+.devicon-bower-plain-wordmark.skill-chip.sass,
+.devicon-bower-plain-wordmark.skill-chip.grunt,
+.devicon-bower-plain.colored,
+.devicon-bower-plain.skill-chip.docker,
+.devicon-bower-plain.skill-chip.less,
+.devicon-bower-plain.skill-chip.css,
+.devicon-bower-plain.skill-chip.mysql,
+.devicon-bower-plain.skill-chip.javascript,
+.devicon-bower-plain.skill-chip.sass,
+.devicon-bower-plain.skill-chip.grunt {
+  color: #ef5734;
+}
+
+.devicon-c-line-wordmark.colored, .devicon-c-line-wordmark.skill-chip.docker, .devicon-c-line-wordmark.skill-chip.less, .devicon-c-line-wordmark.skill-chip.css, .devicon-c-line-wordmark.skill-chip.mysql, .devicon-c-line-wordmark.skill-chip.javascript, .devicon-c-line-wordmark.skill-chip.sass, .devicon-c-line-wordmark.skill-chip.grunt,
+.devicon-c-line.colored,
+.devicon-c-line.skill-chip.docker,
+.devicon-c-line.skill-chip.less,
+.devicon-c-line.skill-chip.css,
+.devicon-c-line.skill-chip.mysql,
+.devicon-c-line.skill-chip.javascript,
+.devicon-c-line.skill-chip.sass,
+.devicon-c-line.skill-chip.grunt,
+.devicon-c-plain-wordmark.colored,
+.devicon-c-plain-wordmark.skill-chip.docker,
+.devicon-c-plain-wordmark.skill-chip.less,
+.devicon-c-plain-wordmark.skill-chip.css,
+.devicon-c-plain-wordmark.skill-chip.mysql,
+.devicon-c-plain-wordmark.skill-chip.javascript,
+.devicon-c-plain-wordmark.skill-chip.sass,
+.devicon-c-plain-wordmark.skill-chip.grunt,
+.devicon-c-plain.colored,
+.devicon-c-plain.skill-chip.docker,
+.devicon-c-plain.skill-chip.less,
+.devicon-c-plain.skill-chip.css,
+.devicon-c-plain.skill-chip.mysql,
+.devicon-c-plain.skill-chip.javascript,
+.devicon-c-plain.skill-chip.sass,
+.devicon-c-plain.skill-chip.grunt {
+  color: #03599c;
+}
+
+.devicon-c-line-wordmark.colored, .devicon-c-line-wordmark.skill-chip.docker, .devicon-c-line-wordmark.skill-chip.less, .devicon-c-line-wordmark.skill-chip.css, .devicon-c-line-wordmark.skill-chip.mysql, .devicon-c-line-wordmark.skill-chip.javascript, .devicon-c-line-wordmark.skill-chip.sass, .devicon-c-line-wordmark.skill-chip.grunt,
+.devicon-c-line.colored,
+.devicon-c-line.skill-chip.docker,
+.devicon-c-line.skill-chip.less,
+.devicon-c-line.skill-chip.css,
+.devicon-c-line.skill-chip.mysql,
+.devicon-c-line.skill-chip.javascript,
+.devicon-c-line.skill-chip.sass,
+.devicon-c-line.skill-chip.grunt,
+.devicon-c-plain-wordmark.colored,
+.devicon-c-plain-wordmark.skill-chip.docker,
+.devicon-c-plain-wordmark.skill-chip.less,
+.devicon-c-plain-wordmark.skill-chip.css,
+.devicon-c-plain-wordmark.skill-chip.mysql,
+.devicon-c-plain-wordmark.skill-chip.javascript,
+.devicon-c-plain-wordmark.skill-chip.sass,
+.devicon-c-plain-wordmark.skill-chip.grunt,
+.devicon-c-plain.colored,
+.devicon-c-plain.skill-chip.docker,
+.devicon-c-plain.skill-chip.less,
+.devicon-c-plain.skill-chip.css,
+.devicon-c-plain.skill-chip.mysql,
+.devicon-c-plain.skill-chip.javascript,
+.devicon-c-plain.skill-chip.sass,
+.devicon-c-plain.skill-chip.grunt {
+  color: #03599c;
+}
+
+.devicon-chrome-plain-wordmark.colored, .devicon-chrome-plain-wordmark.skill-chip.docker, .devicon-chrome-plain-wordmark.skill-chip.less, .devicon-chrome-plain-wordmark.skill-chip.css, .devicon-chrome-plain-wordmark.skill-chip.mysql, .devicon-chrome-plain-wordmark.skill-chip.javascript, .devicon-chrome-plain-wordmark.skill-chip.sass, .devicon-chrome-plain-wordmark.skill-chip.grunt,
+.devicon-chrome-plain.colored,
+.devicon-chrome-plain.skill-chip.docker,
+.devicon-chrome-plain.skill-chip.less,
+.devicon-chrome-plain.skill-chip.css,
+.devicon-chrome-plain.skill-chip.mysql,
+.devicon-chrome-plain.skill-chip.javascript,
+.devicon-chrome-plain.skill-chip.sass,
+.devicon-chrome-plain.skill-chip.grunt {
+  color: #ce4e4e;
+}
+
+.devicon-codeigniter-plain-wordmark.colored, .devicon-codeigniter-plain-wordmark.skill-chip.docker, .devicon-codeigniter-plain-wordmark.skill-chip.less, .devicon-codeigniter-plain-wordmark.skill-chip.css, .devicon-codeigniter-plain-wordmark.skill-chip.mysql, .devicon-codeigniter-plain-wordmark.skill-chip.javascript, .devicon-codeigniter-plain-wordmark.skill-chip.sass, .devicon-codeigniter-plain-wordmark.skill-chip.grunt,
+.devicon-codeigniter-plain.colored,
+.devicon-codeigniter-plain.skill-chip.docker,
+.devicon-codeigniter-plain.skill-chip.less,
+.devicon-codeigniter-plain.skill-chip.css,
+.devicon-codeigniter-plain.skill-chip.mysql,
+.devicon-codeigniter-plain.skill-chip.javascript,
+.devicon-codeigniter-plain.skill-chip.sass,
+.devicon-codeigniter-plain.skill-chip.grunt {
+  color: #ee4323;
+}
+
+.devicon-coffeescript-original-wordmark.colored, .devicon-coffeescript-original-wordmark.skill-chip.docker, .devicon-coffeescript-original-wordmark.skill-chip.less, .devicon-coffeescript-original-wordmark.skill-chip.css, .devicon-coffeescript-original-wordmark.skill-chip.mysql, .devicon-coffeescript-original-wordmark.skill-chip.javascript, .devicon-coffeescript-original-wordmark.skill-chip.sass, .devicon-coffeescript-original-wordmark.skill-chip.grunt,
+.devicon-coffeescript-original.colored,
+.devicon-coffeescript-original.skill-chip.docker,
+.devicon-coffeescript-original.skill-chip.less,
+.devicon-coffeescript-original.skill-chip.css,
+.devicon-coffeescript-original.skill-chip.mysql,
+.devicon-coffeescript-original.skill-chip.javascript,
+.devicon-coffeescript-original.skill-chip.sass,
+.devicon-coffeescript-original.skill-chip.grunt,
+.devicon-coffeescript-plain-wordmark.colored,
+.devicon-coffeescript-plain-wordmark.skill-chip.docker,
+.devicon-coffeescript-plain-wordmark.skill-chip.less,
+.devicon-coffeescript-plain-wordmark.skill-chip.css,
+.devicon-coffeescript-plain-wordmark.skill-chip.mysql,
+.devicon-coffeescript-plain-wordmark.skill-chip.javascript,
+.devicon-coffeescript-plain-wordmark.skill-chip.sass,
+.devicon-coffeescript-plain-wordmark.skill-chip.grunt,
+.devicon-coffeescript-plain.colored,
+.devicon-coffeescript-plain.skill-chip.docker,
+.devicon-coffeescript-plain.skill-chip.less,
+.devicon-coffeescript-plain.skill-chip.css,
+.devicon-coffeescript-plain.skill-chip.mysql,
+.devicon-coffeescript-plain.skill-chip.javascript,
+.devicon-coffeescript-plain.skill-chip.sass,
+.devicon-coffeescript-plain.skill-chip.grunt {
+  color: #28334c;
+}
+
+.devicon-cplusplus-line-wordmark.colored, .devicon-cplusplus-line-wordmark.skill-chip.docker, .devicon-cplusplus-line-wordmark.skill-chip.less, .devicon-cplusplus-line-wordmark.skill-chip.css, .devicon-cplusplus-line-wordmark.skill-chip.mysql, .devicon-cplusplus-line-wordmark.skill-chip.javascript, .devicon-cplusplus-line-wordmark.skill-chip.sass, .devicon-cplusplus-line-wordmark.skill-chip.grunt,
+.devicon-cplusplus-line.colored,
+.devicon-cplusplus-line.skill-chip.docker,
+.devicon-cplusplus-line.skill-chip.less,
+.devicon-cplusplus-line.skill-chip.css,
+.devicon-cplusplus-line.skill-chip.mysql,
+.devicon-cplusplus-line.skill-chip.javascript,
+.devicon-cplusplus-line.skill-chip.sass,
+.devicon-cplusplus-line.skill-chip.grunt,
+.devicon-cplusplus-plain-wordmark.colored,
+.devicon-cplusplus-plain-wordmark.skill-chip.docker,
+.devicon-cplusplus-plain-wordmark.skill-chip.less,
+.devicon-cplusplus-plain-wordmark.skill-chip.css,
+.devicon-cplusplus-plain-wordmark.skill-chip.mysql,
+.devicon-cplusplus-plain-wordmark.skill-chip.javascript,
+.devicon-cplusplus-plain-wordmark.skill-chip.sass,
+.devicon-cplusplus-plain-wordmark.skill-chip.grunt,
+.devicon-cplusplus-plain.colored,
+.devicon-cplusplus-plain.skill-chip.docker,
+.devicon-cplusplus-plain.skill-chip.less,
+.devicon-cplusplus-plain.skill-chip.css,
+.devicon-cplusplus-plain.skill-chip.mysql,
+.devicon-cplusplus-plain.skill-chip.javascript,
+.devicon-cplusplus-plain.skill-chip.sass,
+.devicon-cplusplus-plain.skill-chip.grunt {
+  color: #9c033a;
+}
+
+.devicon-csharp-line-wordmark.colored, .devicon-csharp-line-wordmark.skill-chip.docker, .devicon-csharp-line-wordmark.skill-chip.less, .devicon-csharp-line-wordmark.skill-chip.css, .devicon-csharp-line-wordmark.skill-chip.mysql, .devicon-csharp-line-wordmark.skill-chip.javascript, .devicon-csharp-line-wordmark.skill-chip.sass, .devicon-csharp-line-wordmark.skill-chip.grunt,
+.devicon-csharp-line.colored,
+.devicon-csharp-line.skill-chip.docker,
+.devicon-csharp-line.skill-chip.less,
+.devicon-csharp-line.skill-chip.css,
+.devicon-csharp-line.skill-chip.mysql,
+.devicon-csharp-line.skill-chip.javascript,
+.devicon-csharp-line.skill-chip.sass,
+.devicon-csharp-line.skill-chip.grunt,
+.devicon-csharp-plain-wordmark.colored,
+.devicon-csharp-plain-wordmark.skill-chip.docker,
+.devicon-csharp-plain-wordmark.skill-chip.less,
+.devicon-csharp-plain-wordmark.skill-chip.css,
+.devicon-csharp-plain-wordmark.skill-chip.mysql,
+.devicon-csharp-plain-wordmark.skill-chip.javascript,
+.devicon-csharp-plain-wordmark.skill-chip.sass,
+.devicon-csharp-plain-wordmark.skill-chip.grunt,
+.devicon-csharp-plain.colored,
+.devicon-csharp-plain.skill-chip.docker,
+.devicon-csharp-plain.skill-chip.less,
+.devicon-csharp-plain.skill-chip.css,
+.devicon-csharp-plain.skill-chip.mysql,
+.devicon-csharp-plain.skill-chip.javascript,
+.devicon-csharp-plain.skill-chip.sass,
+.devicon-csharp-plain.skill-chip.grunt {
+  color: #68217a;
+}
+
+.devicon-css3-plain-wordmark.colored, .devicon-css3-plain-wordmark.skill-chip.docker, .devicon-css3-plain-wordmark.skill-chip.less, .skill-chip.css, .devicon-css3-plain-wordmark.skill-chip.mysql, .devicon-css3-plain-wordmark.skill-chip.javascript, .devicon-css3-plain-wordmark.skill-chip.sass, .devicon-css3-plain-wordmark.skill-chip.grunt,
+.devicon-css3-plain.colored,
+.devicon-css3-plain.skill-chip.docker,
+.devicon-css3-plain.skill-chip.less,
+.devicon-css3-plain.skill-chip.css,
+.devicon-css3-plain.skill-chip.mysql,
+.devicon-css3-plain.skill-chip.javascript,
+.devicon-css3-plain.skill-chip.sass,
+.devicon-css3-plain.skill-chip.grunt {
+  color: #3d8fc6;
+}
+
+.devicon-debian-plain-wordmark.colored, .devicon-debian-plain-wordmark.skill-chip.docker, .devicon-debian-plain-wordmark.skill-chip.less, .devicon-debian-plain-wordmark.skill-chip.css, .devicon-debian-plain-wordmark.skill-chip.mysql, .devicon-debian-plain-wordmark.skill-chip.javascript, .devicon-debian-plain-wordmark.skill-chip.sass, .devicon-debian-plain-wordmark.skill-chip.grunt,
+.devicon-debian-plain.colored,
+.devicon-debian-plain.skill-chip.docker,
+.devicon-debian-plain.skill-chip.less,
+.devicon-debian-plain.skill-chip.css,
+.devicon-debian-plain.skill-chip.mysql,
+.devicon-debian-plain.skill-chip.javascript,
+.devicon-debian-plain.skill-chip.sass,
+.devicon-debian-plain.skill-chip.grunt {
+  color: #A80030;
+}
+
+.devicon-django-line.colored, .devicon-django-line.skill-chip.docker, .devicon-django-line.skill-chip.less, .devicon-django-line.skill-chip.css, .devicon-django-line.skill-chip.mysql, .devicon-django-line.skill-chip.javascript, .devicon-django-line.skill-chip.sass, .devicon-django-line.skill-chip.grunt,
+.devicon-django-line-wordmark.colored,
+.devicon-django-line-wordmark.skill-chip.docker,
+.devicon-django-line-wordmark.skill-chip.less,
+.devicon-django-line-wordmark.skill-chip.css,
+.devicon-django-line-wordmark.skill-chip.mysql,
+.devicon-django-line-wordmark.skill-chip.javascript,
+.devicon-django-line-wordmark.skill-chip.sass,
+.devicon-django-line-wordmark.skill-chip.grunt,
+.devicon-django-plain.colored,
+.devicon-django-plain.skill-chip.docker,
+.devicon-django-plain.skill-chip.less,
+.devicon-django-plain.skill-chip.css,
+.devicon-django-plain.skill-chip.mysql,
+.devicon-django-plain.skill-chip.javascript,
+.devicon-django-plain.skill-chip.sass,
+.devicon-django-plain.skill-chip.grunt,
+.devicon-django-plain-wordmark.colored,
+.devicon-django-plain-wordmark.skill-chip.docker,
+.devicon-django-plain-wordmark.skill-chip.less,
+.devicon-django-plain-wordmark.skill-chip.css,
+.devicon-django-plain-wordmark.skill-chip.mysql,
+.devicon-django-plain-wordmark.skill-chip.javascript,
+.devicon-django-plain-wordmark.skill-chip.sass,
+.devicon-django-plain-wordmark.skill-chip.grunt {
+  color: #003A2B;
+}
+
+.devicon-docker-plain-wordmark.colored, .devicon-docker-plain-wordmark.skill-chip.docker, .devicon-docker-plain-wordmark.skill-chip.less, .devicon-docker-plain-wordmark.skill-chip.css, .devicon-docker-plain-wordmark.skill-chip.mysql, .devicon-docker-plain-wordmark.skill-chip.javascript, .devicon-docker-plain-wordmark.skill-chip.sass, .devicon-docker-plain-wordmark.skill-chip.grunt,
+.devicon-docker-plain.colored,
+.skill-chip.docker,
+.devicon-docker-plain.skill-chip.less,
+.devicon-docker-plain.skill-chip.css,
+.devicon-docker-plain.skill-chip.mysql,
+.devicon-docker-plain.skill-chip.javascript,
+.devicon-docker-plain.skill-chip.sass,
+.devicon-docker-plain.skill-chip.grunt {
+  color: #019bc6;
+}
+
+.devicon-doctrine-line-wordmark.colored, .devicon-doctrine-line-wordmark.skill-chip.docker, .devicon-doctrine-line-wordmark.skill-chip.less, .devicon-doctrine-line-wordmark.skill-chip.css, .devicon-doctrine-line-wordmark.skill-chip.mysql, .devicon-doctrine-line-wordmark.skill-chip.javascript, .devicon-doctrine-line-wordmark.skill-chip.sass, .devicon-doctrine-line-wordmark.skill-chip.grunt,
+.devicon-doctrine-line.colored,
+.devicon-doctrine-line.skill-chip.docker,
+.devicon-doctrine-line.skill-chip.less,
+.devicon-doctrine-line.skill-chip.css,
+.devicon-doctrine-line.skill-chip.mysql,
+.devicon-doctrine-line.skill-chip.javascript,
+.devicon-doctrine-line.skill-chip.sass,
+.devicon-doctrine-line.skill-chip.grunt,
+.devicon-doctrine-plain-wordmark.colored,
+.devicon-doctrine-plain-wordmark.skill-chip.docker,
+.devicon-doctrine-plain-wordmark.skill-chip.less,
+.devicon-doctrine-plain-wordmark.skill-chip.css,
+.devicon-doctrine-plain-wordmark.skill-chip.mysql,
+.devicon-doctrine-plain-wordmark.skill-chip.javascript,
+.devicon-doctrine-plain-wordmark.skill-chip.sass,
+.devicon-doctrine-plain-wordmark.skill-chip.grunt,
+.devicon-doctrine-plain.colored,
+.devicon-doctrine-plain.skill-chip.docker,
+.devicon-doctrine-plain.skill-chip.less,
+.devicon-doctrine-plain.skill-chip.css,
+.devicon-doctrine-plain.skill-chip.mysql,
+.devicon-doctrine-plain.skill-chip.javascript,
+.devicon-doctrine-plain.skill-chip.sass,
+.devicon-doctrine-plain.skill-chip.grunt {
+  color: #f56d39;
+}
+
+.devicon-dot-net-plain-wordmark.colored, .devicon-dot-net-plain-wordmark.skill-chip.docker, .devicon-dot-net-plain-wordmark.skill-chip.less, .devicon-dot-net-plain-wordmark.skill-chip.css, .devicon-dot-net-plain-wordmark.skill-chip.mysql, .devicon-dot-net-plain-wordmark.skill-chip.javascript, .devicon-dot-net-plain-wordmark.skill-chip.sass, .devicon-dot-net-plain-wordmark.skill-chip.grunt,
+.devicon-dot-net-plain.colored,
+.devicon-dot-net-plain.skill-chip.docker,
+.devicon-dot-net-plain.skill-chip.less,
+.devicon-dot-net-plain.skill-chip.css,
+.devicon-dot-net-plain.skill-chip.mysql,
+.devicon-dot-net-plain.skill-chip.javascript,
+.devicon-dot-net-plain.skill-chip.sass,
+.devicon-dot-net-plain.skill-chip.grunt {
+  color: #1384c8;
+}
+
+.devicon-drupal-plain-wordmark.colored, .devicon-drupal-plain-wordmark.skill-chip.docker, .devicon-drupal-plain-wordmark.skill-chip.less, .devicon-drupal-plain-wordmark.skill-chip.css, .devicon-drupal-plain-wordmark.skill-chip.mysql, .devicon-drupal-plain-wordmark.skill-chip.javascript, .devicon-drupal-plain-wordmark.skill-chip.sass, .devicon-drupal-plain-wordmark.skill-chip.grunt,
+.devicon-drupal-plain.colored,
+.devicon-drupal-plain.skill-chip.docker,
+.devicon-drupal-plain.skill-chip.less,
+.devicon-drupal-plain.skill-chip.css,
+.devicon-drupal-plain.skill-chip.mysql,
+.devicon-drupal-plain.skill-chip.javascript,
+.devicon-drupal-plain.skill-chip.sass,
+.devicon-drupal-plain.skill-chip.grunt {
+  color: #0073BA;
+}
+
+.devicon-erlang-plain-wordmark.colored, .devicon-erlang-plain-wordmark.skill-chip.docker, .devicon-erlang-plain-wordmark.skill-chip.less, .devicon-erlang-plain-wordmark.skill-chip.css, .devicon-erlang-plain-wordmark.skill-chip.mysql, .devicon-erlang-plain-wordmark.skill-chip.javascript, .devicon-erlang-plain-wordmark.skill-chip.sass, .devicon-erlang-plain-wordmark.skill-chip.grunt,
+.devicon-erlang-plain.colored,
+.devicon-erlang-plain.skill-chip.docker,
+.devicon-erlang-plain.skill-chip.less,
+.devicon-erlang-plain.skill-chip.css,
+.devicon-erlang-plain.skill-chip.mysql,
+.devicon-erlang-plain.skill-chip.javascript,
+.devicon-erlang-plain.skill-chip.sass,
+.devicon-erlang-plain.skill-chip.grunt {
+  color: #a90533;
+}
+
+.devicon-facebook-original.colored, .devicon-facebook-original.skill-chip.docker, .devicon-facebook-original.skill-chip.less, .devicon-facebook-original.skill-chip.css, .devicon-facebook-original.skill-chip.mysql, .devicon-facebook-original.skill-chip.javascript, .devicon-facebook-original.skill-chip.sass, .devicon-facebook-original.skill-chip.grunt,
+.devicon-facebook-plain.colored,
+.devicon-facebook-plain.skill-chip.docker,
+.devicon-facebook-plain.skill-chip.less,
+.devicon-facebook-plain.skill-chip.css,
+.devicon-facebook-plain.skill-chip.mysql,
+.devicon-facebook-plain.skill-chip.javascript,
+.devicon-facebook-plain.skill-chip.sass,
+.devicon-facebook-plain.skill-chip.grunt {
+  color: #3d5a98;
+}
+
+.devicon-firefox-plain-wordmark.colored, .devicon-firefox-plain-wordmark.skill-chip.docker, .devicon-firefox-plain-wordmark.skill-chip.less, .devicon-firefox-plain-wordmark.skill-chip.css, .devicon-firefox-plain-wordmark.skill-chip.mysql, .devicon-firefox-plain-wordmark.skill-chip.javascript, .devicon-firefox-plain-wordmark.skill-chip.sass, .devicon-firefox-plain-wordmark.skill-chip.grunt,
+.devicon-firefox-plain.colored,
+.devicon-firefox-plain.skill-chip.docker,
+.devicon-firefox-plain.skill-chip.less,
+.devicon-firefox-plain.skill-chip.css,
+.devicon-firefox-plain.skill-chip.mysql,
+.devicon-firefox-plain.skill-chip.javascript,
+.devicon-firefox-plain.skill-chip.sass,
+.devicon-firefox-plain.skill-chip.grunt {
+  color: #DD732A;
+}
+
+.devicon-foundation-plain-wordmark.colored, .devicon-foundation-plain-wordmark.skill-chip.docker, .devicon-foundation-plain-wordmark.skill-chip.less, .devicon-foundation-plain-wordmark.skill-chip.css, .devicon-foundation-plain-wordmark.skill-chip.mysql, .devicon-foundation-plain-wordmark.skill-chip.javascript, .devicon-foundation-plain-wordmark.skill-chip.sass, .devicon-foundation-plain-wordmark.skill-chip.grunt,
+.devicon-foundation-plain.colored,
+.devicon-foundation-plain.skill-chip.docker,
+.devicon-foundation-plain.skill-chip.less,
+.devicon-foundation-plain.skill-chip.css,
+.devicon-foundation-plain.skill-chip.mysql,
+.devicon-foundation-plain.skill-chip.javascript,
+.devicon-foundation-plain.skill-chip.sass,
+.devicon-foundation-plain.skill-chip.grunt {
+  color: #008cba;
+}
+
+.devicon-gimp-plain-wordmark.colored, .devicon-gimp-plain-wordmark.skill-chip.docker, .devicon-gimp-plain-wordmark.skill-chip.less, .devicon-gimp-plain-wordmark.skill-chip.css, .devicon-gimp-plain-wordmark.skill-chip.mysql, .devicon-gimp-plain-wordmark.skill-chip.javascript, .devicon-gimp-plain-wordmark.skill-chip.sass, .devicon-gimp-plain-wordmark.skill-chip.grunt,
+.devicon-gimp-plain.colored,
+.devicon-gimp-plain.skill-chip.docker,
+.devicon-gimp-plain.skill-chip.less,
+.devicon-gimp-plain.skill-chip.css,
+.devicon-gimp-plain.skill-chip.mysql,
+.devicon-gimp-plain.skill-chip.javascript,
+.devicon-gimp-plain.skill-chip.sass,
+.devicon-gimp-plain.skill-chip.grunt {
+  color: #716955;
+}
+
+.devicon-git-plain-wordmark.colored, .devicon-git-plain-wordmark.skill-chip.docker, .devicon-git-plain-wordmark.skill-chip.less, .devicon-git-plain-wordmark.skill-chip.css, .devicon-git-plain-wordmark.skill-chip.mysql, .devicon-git-plain-wordmark.skill-chip.javascript, .devicon-git-plain-wordmark.skill-chip.sass, .devicon-git-plain-wordmark.skill-chip.grunt,
+.devicon-git-plain.colored,
+.devicon-git-plain.skill-chip.docker,
+.devicon-git-plain.skill-chip.less,
+.devicon-git-plain.skill-chip.css,
+.devicon-git-plain.skill-chip.mysql,
+.devicon-git-plain.skill-chip.javascript,
+.devicon-git-plain.skill-chip.sass,
+.devicon-git-plain.skill-chip.grunt {
+  color: #f34f29;
+}
+
+.devicon-go-line.colored, .devicon-go-line.skill-chip.docker, .devicon-go-line.skill-chip.less, .devicon-go-line.skill-chip.css, .devicon-go-line.skill-chip.mysql, .devicon-go-line.skill-chip.javascript, .devicon-go-line.skill-chip.sass, .devicon-go-line.skill-chip.grunt,
+.devicon-go-plain.colored,
+.devicon-go-plain.skill-chip.docker,
+.devicon-go-plain.skill-chip.less,
+.devicon-go-plain.skill-chip.css,
+.devicon-go-plain.skill-chip.mysql,
+.devicon-go-plain.skill-chip.javascript,
+.devicon-go-plain.skill-chip.sass,
+.devicon-go-plain.skill-chip.grunt {
+  color: #000000;
+}
+
+.devicon-google-original-wordmark.colored, .devicon-google-original-wordmark.skill-chip.docker, .devicon-google-original-wordmark.skill-chip.less, .devicon-google-original-wordmark.skill-chip.css, .devicon-google-original-wordmark.skill-chip.mysql, .devicon-google-original-wordmark.skill-chip.javascript, .devicon-google-original-wordmark.skill-chip.sass, .devicon-google-original-wordmark.skill-chip.grunt,
+.devicon-google-plain-wordmark.colored,
+.devicon-google-plain-wordmark.skill-chip.docker,
+.devicon-google-plain-wordmark.skill-chip.less,
+.devicon-google-plain-wordmark.skill-chip.css,
+.devicon-google-plain-wordmark.skill-chip.mysql,
+.devicon-google-plain-wordmark.skill-chip.javascript,
+.devicon-google-plain-wordmark.skill-chip.sass,
+.devicon-google-plain-wordmark.skill-chip.grunt {
+  color: #587dbd;
+}
+
+.devicon-google-original.colored, .devicon-google-original.skill-chip.docker, .devicon-google-original.skill-chip.less, .devicon-google-original.skill-chip.css, .devicon-google-original.skill-chip.mysql, .devicon-google-original.skill-chip.javascript, .devicon-google-original.skill-chip.sass, .devicon-google-original.skill-chip.grunt,
+.devicon-google-plain.colored,
+.devicon-google-plain.skill-chip.docker,
+.devicon-google-plain.skill-chip.less,
+.devicon-google-plain.skill-chip.css,
+.devicon-google-plain.skill-chip.mysql,
+.devicon-google-plain.skill-chip.javascript,
+.devicon-google-plain.skill-chip.sass,
+.devicon-google-plain.skill-chip.grunt {
+  color: #587dbd;
+}
+
+.devicon-grunt-line-wordmark.colored, .devicon-grunt-line-wordmark.skill-chip.docker, .devicon-grunt-line-wordmark.skill-chip.less, .devicon-grunt-line-wordmark.skill-chip.css, .devicon-grunt-line-wordmark.skill-chip.mysql, .devicon-grunt-line-wordmark.skill-chip.javascript, .devicon-grunt-line-wordmark.skill-chip.sass, .skill-chip.grunt,
+.devicon-grunt-line.colored,
+.devicon-grunt-line.skill-chip.docker,
+.devicon-grunt-line.skill-chip.less,
+.devicon-grunt-line.skill-chip.css,
+.devicon-grunt-line.skill-chip.mysql,
+.devicon-grunt-line.skill-chip.javascript,
+.devicon-grunt-line.skill-chip.sass,
+.devicon-grunt-line.skill-chip.grunt,
+.devicon-grunt-plain-wordmark.colored,
+.devicon-grunt-plain-wordmark.skill-chip.docker,
+.devicon-grunt-plain-wordmark.skill-chip.less,
+.devicon-grunt-plain-wordmark.skill-chip.css,
+.devicon-grunt-plain-wordmark.skill-chip.mysql,
+.devicon-grunt-plain-wordmark.skill-chip.javascript,
+.devicon-grunt-plain-wordmark.skill-chip.sass,
+.devicon-grunt-plain-wordmark.skill-chip.grunt,
+.devicon-grunt-plain.colored,
+.devicon-grunt-plain.skill-chip.docker,
+.devicon-grunt-plain.skill-chip.less,
+.devicon-grunt-plain.skill-chip.css,
+.devicon-grunt-plain.skill-chip.mysql,
+.devicon-grunt-plain.skill-chip.javascript,
+.devicon-grunt-plain.skill-chip.sass,
+.devicon-grunt-plain.skill-chip.grunt {
+  color: #fcaa1a;
+}
+
+.devicon-gulp-plain.colored, .devicon-gulp-plain.skill-chip.docker, .devicon-gulp-plain.skill-chip.less, .devicon-gulp-plain.skill-chip.css, .devicon-gulp-plain.skill-chip.mysql, .devicon-gulp-plain.skill-chip.javascript, .devicon-gulp-plain.skill-chip.sass, .devicon-gulp-plain.skill-chip.grunt {
+  color: #eb4a4b;
+}
+
+.devicon-heroku-line-wordmark.colored, .devicon-heroku-line-wordmark.skill-chip.docker, .devicon-heroku-line-wordmark.skill-chip.less, .devicon-heroku-line-wordmark.skill-chip.css, .devicon-heroku-line-wordmark.skill-chip.mysql, .devicon-heroku-line-wordmark.skill-chip.javascript, .devicon-heroku-line-wordmark.skill-chip.sass, .devicon-heroku-line-wordmark.skill-chip.grunt,
+.devicon-heroku-line.colored,
+.devicon-heroku-line.skill-chip.docker,
+.devicon-heroku-line.skill-chip.less,
+.devicon-heroku-line.skill-chip.css,
+.devicon-heroku-line.skill-chip.mysql,
+.devicon-heroku-line.skill-chip.javascript,
+.devicon-heroku-line.skill-chip.sass,
+.devicon-heroku-line.skill-chip.grunt,
+.devicon-heroku-plain-wordmark.colored,
+.devicon-heroku-plain-wordmark.skill-chip.docker,
+.devicon-heroku-plain-wordmark.skill-chip.less,
+.devicon-heroku-plain-wordmark.skill-chip.css,
+.devicon-heroku-plain-wordmark.skill-chip.mysql,
+.devicon-heroku-plain-wordmark.skill-chip.javascript,
+.devicon-heroku-plain-wordmark.skill-chip.sass,
+.devicon-heroku-plain-wordmark.skill-chip.grunt,
+.devicon-heroku-plain.colored,
+.devicon-heroku-plain.skill-chip.docker,
+.devicon-heroku-plain.skill-chip.less,
+.devicon-heroku-plain.skill-chip.css,
+.devicon-heroku-plain.skill-chip.mysql,
+.devicon-heroku-plain.skill-chip.javascript,
+.devicon-heroku-plain.skill-chip.sass,
+.devicon-heroku-plain.skill-chip.grunt,
+.devicon-heroku-original-wordmark.colored,
+.devicon-heroku-original-wordmark.skill-chip.docker,
+.devicon-heroku-original-wordmark.skill-chip.less,
+.devicon-heroku-original-wordmark.skill-chip.css,
+.devicon-heroku-original-wordmark.skill-chip.mysql,
+.devicon-heroku-original-wordmark.skill-chip.javascript,
+.devicon-heroku-original-wordmark.skill-chip.sass,
+.devicon-heroku-original-wordmark.skill-chip.grunt,
+.devicon-heroku-original.colored,
+.devicon-heroku-original.skill-chip.docker,
+.devicon-heroku-original.skill-chip.less,
+.devicon-heroku-original.skill-chip.css,
+.devicon-heroku-original.skill-chip.mysql,
+.devicon-heroku-original.skill-chip.javascript,
+.devicon-heroku-original.skill-chip.sass,
+.devicon-heroku-original.skill-chip.grunt {
+  color: #6762a6;
+}
+
+.devicon-html5-plain-wordmark.colored, .devicon-html5-plain-wordmark.skill-chip.docker, .devicon-html5-plain-wordmark.skill-chip.less, .devicon-html5-plain-wordmark.skill-chip.css, .devicon-html5-plain-wordmark.skill-chip.mysql, .devicon-html5-plain-wordmark.skill-chip.javascript, .devicon-html5-plain-wordmark.skill-chip.sass, .devicon-html5-plain-wordmark.skill-chip.grunt,
+.devicon-html5-plain.colored,
+.devicon-html5-plain.skill-chip.docker,
+.devicon-html5-plain.skill-chip.less,
+.devicon-html5-plain.skill-chip.css,
+.devicon-html5-plain.skill-chip.mysql,
+.devicon-html5-plain.skill-chip.javascript,
+.devicon-html5-plain.skill-chip.sass,
+.devicon-html5-plain.skill-chip.grunt {
+  color: #e54d26;
+}
+
+.devicon-ie10-original.colored, .devicon-ie10-original.skill-chip.docker, .devicon-ie10-original.skill-chip.less, .devicon-ie10-original.skill-chip.css, .devicon-ie10-original.skill-chip.mysql, .devicon-ie10-original.skill-chip.javascript, .devicon-ie10-original.skill-chip.sass, .devicon-ie10-original.skill-chip.grunt,
+.devicon-ie10-plain.colored,
+.devicon-ie10-plain.skill-chip.docker,
+.devicon-ie10-plain.skill-chip.less,
+.devicon-ie10-plain.skill-chip.css,
+.devicon-ie10-plain.skill-chip.mysql,
+.devicon-ie10-plain.skill-chip.javascript,
+.devicon-ie10-plain.skill-chip.sass,
+.devicon-ie10-plain.skill-chip.grunt {
+  color: #1EBBEE;
+}
+
+.devicon-illustrator-line.colored, .devicon-illustrator-line.skill-chip.docker, .devicon-illustrator-line.skill-chip.less, .devicon-illustrator-line.skill-chip.css, .devicon-illustrator-line.skill-chip.mysql, .devicon-illustrator-line.skill-chip.javascript, .devicon-illustrator-line.skill-chip.sass, .devicon-illustrator-line.skill-chip.grunt,
+.devicon-illustrator-plain.colored,
+.devicon-illustrator-plain.skill-chip.docker,
+.devicon-illustrator-plain.skill-chip.less,
+.devicon-illustrator-plain.skill-chip.css,
+.devicon-illustrator-plain.skill-chip.mysql,
+.devicon-illustrator-plain.skill-chip.javascript,
+.devicon-illustrator-plain.skill-chip.sass,
+.devicon-illustrator-plain.skill-chip.grunt {
+  color: #faa625;
+}
+
+.devicon-inkscape-plain-wordmark.colored, .devicon-inkscape-plain-wordmark.skill-chip.docker, .devicon-inkscape-plain-wordmark.skill-chip.less, .devicon-inkscape-plain-wordmark.skill-chip.css, .devicon-inkscape-plain-wordmark.skill-chip.mysql, .devicon-inkscape-plain-wordmark.skill-chip.javascript, .devicon-inkscape-plain-wordmark.skill-chip.sass, .devicon-inkscape-plain-wordmark.skill-chip.grunt,
+.devicon-inkscape-plain.colored,
+.devicon-inkscape-plain.skill-chip.docker,
+.devicon-inkscape-plain.skill-chip.less,
+.devicon-inkscape-plain.skill-chip.css,
+.devicon-inkscape-plain.skill-chip.mysql,
+.devicon-inkscape-plain.skill-chip.javascript,
+.devicon-inkscape-plain.skill-chip.sass,
+.devicon-inkscape-plain.skill-chip.grunt {
+  color: #000000;
+}
+
+.devicon-java-plain-wordmark.colored, .devicon-java-plain-wordmark.skill-chip.docker, .devicon-java-plain-wordmark.skill-chip.less, .devicon-java-plain-wordmark.skill-chip.css, .devicon-java-plain-wordmark.skill-chip.mysql, .devicon-java-plain-wordmark.skill-chip.javascript, .devicon-java-plain-wordmark.skill-chip.sass, .devicon-java-plain-wordmark.skill-chip.grunt,
+.devicon-java-plain.colored,
+.devicon-java-plain.skill-chip.docker,
+.devicon-java-plain.skill-chip.less,
+.devicon-java-plain.skill-chip.css,
+.devicon-java-plain.skill-chip.mysql,
+.devicon-java-plain.skill-chip.javascript,
+.devicon-java-plain.skill-chip.sass,
+.devicon-java-plain.skill-chip.grunt {
+  color: #EA2D2E;
+}
+
+.devicon-jasmine-plain-wordmark.colored, .devicon-jasmine-plain-wordmark.skill-chip.docker, .devicon-jasmine-plain-wordmark.skill-chip.less, .devicon-jasmine-plain-wordmark.skill-chip.css, .devicon-jasmine-plain-wordmark.skill-chip.mysql, .devicon-jasmine-plain-wordmark.skill-chip.javascript, .devicon-jasmine-plain-wordmark.skill-chip.sass, .devicon-jasmine-plain-wordmark.skill-chip.grunt,
+.devicon-jasmine-plain.colored,
+.devicon-jasmine-plain.skill-chip.docker,
+.devicon-jasmine-plain.skill-chip.less,
+.devicon-jasmine-plain.skill-chip.css,
+.devicon-jasmine-plain.skill-chip.mysql,
+.devicon-jasmine-plain.skill-chip.javascript,
+.devicon-jasmine-plain.skill-chip.sass,
+.devicon-jasmine-plain.skill-chip.grunt {
+  color: #8a4182;
+}
+
+.devicon-javascript-plain.colored, .devicon-javascript-plain.skill-chip.docker, .devicon-javascript-plain.skill-chip.less, .devicon-javascript-plain.skill-chip.css, .devicon-javascript-plain.skill-chip.mysql, .skill-chip.javascript, .devicon-javascript-plain.skill-chip.sass, .devicon-javascript-plain.skill-chip.grunt {
+  color: #f0db4f;
+}
+
+.devicon-jetbrains-plain.colored, .devicon-jetbrains-plain.skill-chip.docker, .devicon-jetbrains-plain.skill-chip.less, .devicon-jetbrains-plain.skill-chip.css, .devicon-jetbrains-plain.skill-chip.mysql, .devicon-jetbrains-plain.skill-chip.javascript, .devicon-jetbrains-plain.skill-chip.sass, .devicon-jetbrains-plain.skill-chip.grunt,
+.devicon-jetbrains-line.colored,
+.devicon-jetbrains-line.skill-chip.docker,
+.devicon-jetbrains-line.skill-chip.less,
+.devicon-jetbrains-line.skill-chip.css,
+.devicon-jetbrains-line.skill-chip.mysql,
+.devicon-jetbrains-line.skill-chip.javascript,
+.devicon-jetbrains-line.skill-chip.sass,
+.devicon-jetbrains-line.skill-chip.grunt,
+.devicon-jetbrains-line-wordmark.colored,
+.devicon-jetbrains-line-wordmark.skill-chip.docker,
+.devicon-jetbrains-line-wordmark.skill-chip.less,
+.devicon-jetbrains-line-wordmark.skill-chip.css,
+.devicon-jetbrains-line-wordmark.skill-chip.mysql,
+.devicon-jetbrains-line-wordmark.skill-chip.javascript,
+.devicon-jetbrains-line-wordmark.skill-chip.sass,
+.devicon-jetbrains-line-wordmark.skill-chip.grunt,
+.devicon-jetbrains-plain-wordmark.colored,
+.devicon-jetbrains-plain-wordmark.skill-chip.docker,
+.devicon-jetbrains-plain-wordmark.skill-chip.less,
+.devicon-jetbrains-plain-wordmark.skill-chip.css,
+.devicon-jetbrains-plain-wordmark.skill-chip.mysql,
+.devicon-jetbrains-plain-wordmark.skill-chip.javascript,
+.devicon-jetbrains-plain-wordmark.skill-chip.sass,
+.devicon-jetbrains-plain-wordmark.skill-chip.grunt {
+  color: #F68B1F;
+}
+
+.devicon-jquery-plain-wordmark.colored, .devicon-jquery-plain-wordmark.skill-chip.docker, .devicon-jquery-plain-wordmark.skill-chip.less, .devicon-jquery-plain-wordmark.skill-chip.css, .devicon-jquery-plain-wordmark.skill-chip.mysql, .devicon-jquery-plain-wordmark.skill-chip.javascript, .devicon-jquery-plain-wordmark.skill-chip.sass, .devicon-jquery-plain-wordmark.skill-chip.grunt,
+.devicon-jquery-plain.colored,
+.devicon-jquery-plain.skill-chip.docker,
+.devicon-jquery-plain.skill-chip.less,
+.devicon-jquery-plain.skill-chip.css,
+.devicon-jquery-plain.skill-chip.mysql,
+.devicon-jquery-plain.skill-chip.javascript,
+.devicon-jquery-plain.skill-chip.sass,
+.devicon-jquery-plain.skill-chip.grunt {
+  color: #0769ad;
+}
+
+.devicon-krakenjs-plain.colored, .devicon-krakenjs-plain.skill-chip.docker, .devicon-krakenjs-plain.skill-chip.less, .devicon-krakenjs-plain.skill-chip.css, .devicon-krakenjs-plain.skill-chip.mysql, .devicon-krakenjs-plain.skill-chip.javascript, .devicon-krakenjs-plain.skill-chip.sass, .devicon-krakenjs-plain.skill-chip.grunt,
+.devicon-krakenjs-plain-wordmark.colored,
+.devicon-krakenjs-plain-wordmark.skill-chip.docker,
+.devicon-krakenjs-plain-wordmark.skill-chip.less,
+.devicon-krakenjs-plain-wordmark.skill-chip.css,
+.devicon-krakenjs-plain-wordmark.skill-chip.mysql,
+.devicon-krakenjs-plain-wordmark.skill-chip.javascript,
+.devicon-krakenjs-plain-wordmark.skill-chip.sass,
+.devicon-krakenjs-plain-wordmark.skill-chip.grunt {
+  color: #0081C2;
+}
+
+.devicon-laravel-plain-wordmark.colored, .devicon-laravel-plain-wordmark.skill-chip.docker, .devicon-laravel-plain-wordmark.skill-chip.less, .devicon-laravel-plain-wordmark.skill-chip.css, .devicon-laravel-plain-wordmark.skill-chip.mysql, .devicon-laravel-plain-wordmark.skill-chip.javascript, .devicon-laravel-plain-wordmark.skill-chip.sass, .devicon-laravel-plain-wordmark.skill-chip.grunt,
+.devicon-laravel-plain.colored,
+.devicon-laravel-plain.skill-chip.docker,
+.devicon-laravel-plain.skill-chip.less,
+.devicon-laravel-plain.skill-chip.css,
+.devicon-laravel-plain.skill-chip.mysql,
+.devicon-laravel-plain.skill-chip.javascript,
+.devicon-laravel-plain.skill-chip.sass,
+.devicon-laravel-plain.skill-chip.grunt {
+  color: #fd4f31;
+}
+
+.devicon-less-plain-wordmark.colored, .devicon-less-plain-wordmark.skill-chip.docker, .skill-chip.less, .devicon-less-plain-wordmark.skill-chip.css, .devicon-less-plain-wordmark.skill-chip.mysql, .devicon-less-plain-wordmark.skill-chip.javascript, .devicon-less-plain-wordmark.skill-chip.sass, .devicon-less-plain-wordmark.skill-chip.grunt {
+  color: #2a4d80;
+}
+
+.devicon-linux-plain.colored, .devicon-linux-plain.skill-chip.docker, .devicon-linux-plain.skill-chip.less, .devicon-linux-plain.skill-chip.css, .devicon-linux-plain.skill-chip.mysql, .devicon-linux-plain.skill-chip.javascript, .devicon-linux-plain.skill-chip.sass, .devicon-linux-plain.skill-chip.grunt {
+  color: #000000;
+}
+
+.devicon-meteor-plain.colored, .devicon-meteor-plain.skill-chip.docker, .devicon-meteor-plain.skill-chip.less, .devicon-meteor-plain.skill-chip.css, .devicon-meteor-plain.skill-chip.mysql, .devicon-meteor-plain.skill-chip.javascript, .devicon-meteor-plain.skill-chip.sass, .devicon-meteor-plain.skill-chip.grunt,
+.devicon-meteor-plain-wordmark.colored,
+.devicon-meteor-plain-wordmark.skill-chip.docker,
+.devicon-meteor-plain-wordmark.skill-chip.less,
+.devicon-meteor-plain-wordmark.skill-chip.css,
+.devicon-meteor-plain-wordmark.skill-chip.mysql,
+.devicon-meteor-plain-wordmark.skill-chip.javascript,
+.devicon-meteor-plain-wordmark.skill-chip.sass,
+.devicon-meteor-plain-wordmark.skill-chip.grunt {
+  color: #df5052;
+}
+
+.devicon-mocha-plain.colored, .devicon-mocha-plain.skill-chip.docker, .devicon-mocha-plain.skill-chip.less, .devicon-mocha-plain.skill-chip.css, .devicon-mocha-plain.skill-chip.mysql, .devicon-mocha-plain.skill-chip.javascript, .devicon-mocha-plain.skill-chip.sass, .devicon-mocha-plain.skill-chip.grunt {
+  color: #8d6748;
+}
+
+.devicon-mongodb-plain.colored, .devicon-mongodb-plain.skill-chip.docker, .devicon-mongodb-plain.skill-chip.less, .devicon-mongodb-plain.skill-chip.css, .devicon-mongodb-plain.skill-chip.mysql, .devicon-mongodb-plain.skill-chip.javascript, .devicon-mongodb-plain.skill-chip.sass, .devicon-mongodb-plain.skill-chip.grunt,
+.devicon-mongodb-plain-wordmark.colored,
+.devicon-mongodb-plain-wordmark.skill-chip.docker,
+.devicon-mongodb-plain-wordmark.skill-chip.less,
+.devicon-mongodb-plain-wordmark.skill-chip.css,
+.devicon-mongodb-plain-wordmark.skill-chip.mysql,
+.devicon-mongodb-plain-wordmark.skill-chip.javascript,
+.devicon-mongodb-plain-wordmark.skill-chip.sass,
+.devicon-mongodb-plain-wordmark.skill-chip.grunt {
+  color: #4FAA41;
+}
+
+.devicon-moodle-plain.colored, .devicon-moodle-plain.skill-chip.docker, .devicon-moodle-plain.skill-chip.less, .devicon-moodle-plain.skill-chip.css, .devicon-moodle-plain.skill-chip.mysql, .devicon-moodle-plain.skill-chip.javascript, .devicon-moodle-plain.skill-chip.sass, .devicon-moodle-plain.skill-chip.grunt,
+.devicon-moodle-plain-wordmark.colored,
+.devicon-moodle-plain-wordmark.skill-chip.docker,
+.devicon-moodle-plain-wordmark.skill-chip.less,
+.devicon-moodle-plain-wordmark.skill-chip.css,
+.devicon-moodle-plain-wordmark.skill-chip.mysql,
+.devicon-moodle-plain-wordmark.skill-chip.javascript,
+.devicon-moodle-plain-wordmark.skill-chip.sass,
+.devicon-moodle-plain-wordmark.skill-chip.grunt {
+  color: #F7931E;
+}
+
+.devicon-mysql-plain.colored, .devicon-mysql-plain.skill-chip.docker, .devicon-mysql-plain.skill-chip.less, .devicon-mysql-plain.skill-chip.css, .devicon-mysql-plain.skill-chip.mysql, .devicon-mysql-plain.skill-chip.javascript, .devicon-mysql-plain.skill-chip.sass, .devicon-mysql-plain.skill-chip.grunt,
+.devicon-mysql-plain-wordmark.colored,
+.devicon-mysql-plain-wordmark.skill-chip.docker,
+.devicon-mysql-plain-wordmark.skill-chip.less,
+.devicon-mysql-plain-wordmark.skill-chip.css,
+.skill-chip.mysql,
+.devicon-mysql-plain-wordmark.skill-chip.javascript,
+.devicon-mysql-plain-wordmark.skill-chip.sass,
+.devicon-mysql-plain-wordmark.skill-chip.grunt {
+  color: #00618a;
+}
+
+.devicon-nginx-original.colored, .devicon-nginx-original.skill-chip.docker, .devicon-nginx-original.skill-chip.less, .devicon-nginx-original.skill-chip.css, .devicon-nginx-original.skill-chip.mysql, .devicon-nginx-original.skill-chip.javascript, .devicon-nginx-original.skill-chip.sass, .devicon-nginx-original.skill-chip.grunt,
+.devicon-nginx-original-wordmark.colored,
+.devicon-nginx-original-wordmark.skill-chip.docker,
+.devicon-nginx-original-wordmark.skill-chip.less,
+.devicon-nginx-original-wordmark.skill-chip.css,
+.devicon-nginx-original-wordmark.skill-chip.mysql,
+.devicon-nginx-original-wordmark.skill-chip.javascript,
+.devicon-nginx-original-wordmark.skill-chip.sass,
+.devicon-nginx-original-wordmark.skill-chip.grunt,
+.devicon-nginx-plain.colored,
+.devicon-nginx-plain.skill-chip.docker,
+.devicon-nginx-plain.skill-chip.less,
+.devicon-nginx-plain.skill-chip.css,
+.devicon-nginx-plain.skill-chip.mysql,
+.devicon-nginx-plain.skill-chip.javascript,
+.devicon-nginx-plain.skill-chip.sass,
+.devicon-nginx-plain.skill-chip.grunt,
+.devicon-nginx-plain-wordmark.colored,
+.devicon-nginx-plain-wordmark.skill-chip.docker,
+.devicon-nginx-plain-wordmark.skill-chip.less,
+.devicon-nginx-plain-wordmark.skill-chip.css,
+.devicon-nginx-plain-wordmark.skill-chip.mysql,
+.devicon-nginx-plain-wordmark.skill-chip.javascript,
+.devicon-nginx-plain-wordmark.skill-chip.sass,
+.devicon-nginx-plain-wordmark.skill-chip.grunt {
+  color: #090;
+}
+
+.devicon-nodejs-plain.colored, .devicon-nodejs-plain.skill-chip.docker, .devicon-nodejs-plain.skill-chip.less, .devicon-nodejs-plain.skill-chip.css, .devicon-nodejs-plain.skill-chip.mysql, .devicon-nodejs-plain.skill-chip.javascript, .devicon-nodejs-plain.skill-chip.sass, .devicon-nodejs-plain.skill-chip.grunt,
+.devicon-nodejs-plain-wordmark.colored,
+.devicon-nodejs-plain-wordmark.skill-chip.docker,
+.devicon-nodejs-plain-wordmark.skill-chip.less,
+.devicon-nodejs-plain-wordmark.skill-chip.css,
+.devicon-nodejs-plain-wordmark.skill-chip.mysql,
+.devicon-nodejs-plain-wordmark.skill-chip.javascript,
+.devicon-nodejs-plain-wordmark.skill-chip.sass,
+.devicon-nodejs-plain-wordmark.skill-chip.grunt {
+  color: #83CD29;
+}
+
+.devicon-nodewebkit-line.colored, .devicon-nodewebkit-line.skill-chip.docker, .devicon-nodewebkit-line.skill-chip.less, .devicon-nodewebkit-line.skill-chip.css, .devicon-nodewebkit-line.skill-chip.mysql, .devicon-nodewebkit-line.skill-chip.javascript, .devicon-nodewebkit-line.skill-chip.sass, .devicon-nodewebkit-line.skill-chip.grunt,
+.devicon-nodewebkit-line-wordmark.colored,
+.devicon-nodewebkit-line-wordmark.skill-chip.docker,
+.devicon-nodewebkit-line-wordmark.skill-chip.less,
+.devicon-nodewebkit-line-wordmark.skill-chip.css,
+.devicon-nodewebkit-line-wordmark.skill-chip.mysql,
+.devicon-nodewebkit-line-wordmark.skill-chip.javascript,
+.devicon-nodewebkit-line-wordmark.skill-chip.sass,
+.devicon-nodewebkit-line-wordmark.skill-chip.grunt,
+.devicon-nodewebkit-plain.colored,
+.devicon-nodewebkit-plain.skill-chip.docker,
+.devicon-nodewebkit-plain.skill-chip.less,
+.devicon-nodewebkit-plain.skill-chip.css,
+.devicon-nodewebkit-plain.skill-chip.mysql,
+.devicon-nodewebkit-plain.skill-chip.javascript,
+.devicon-nodewebkit-plain.skill-chip.sass,
+.devicon-nodewebkit-plain.skill-chip.grunt,
+.devicon-nodewebkit-plain-wordmark.colored,
+.devicon-nodewebkit-plain-wordmark.skill-chip.docker,
+.devicon-nodewebkit-plain-wordmark.skill-chip.less,
+.devicon-nodewebkit-plain-wordmark.skill-chip.css,
+.devicon-nodewebkit-plain-wordmark.skill-chip.mysql,
+.devicon-nodewebkit-plain-wordmark.skill-chip.javascript,
+.devicon-nodewebkit-plain-wordmark.skill-chip.sass,
+.devicon-nodewebkit-plain-wordmark.skill-chip.grunt {
+  color: #3d3b47;
+}
+
+.devicon-oracle-original.colored, .devicon-oracle-original.skill-chip.docker, .devicon-oracle-original.skill-chip.less, .devicon-oracle-original.skill-chip.css, .devicon-oracle-original.skill-chip.mysql, .devicon-oracle-original.skill-chip.javascript, .devicon-oracle-original.skill-chip.sass, .devicon-oracle-original.skill-chip.grunt,
+.devicon-oracle-plain.colored,
+.devicon-oracle-plain.skill-chip.docker,
+.devicon-oracle-plain.skill-chip.less,
+.devicon-oracle-plain.skill-chip.css,
+.devicon-oracle-plain.skill-chip.mysql,
+.devicon-oracle-plain.skill-chip.javascript,
+.devicon-oracle-plain.skill-chip.sass,
+.devicon-oracle-plain.skill-chip.grunt,
+.devicon-oracle-plain-wordmark.colored,
+.devicon-oracle-plain-wordmark.skill-chip.docker,
+.devicon-oracle-plain-wordmark.skill-chip.less,
+.devicon-oracle-plain-wordmark.skill-chip.css,
+.devicon-oracle-plain-wordmark.skill-chip.mysql,
+.devicon-oracle-plain-wordmark.skill-chip.javascript,
+.devicon-oracle-plain-wordmark.skill-chip.sass,
+.devicon-oracle-plain-wordmark.skill-chip.grunt {
+  color: #EA1B22;
+}
+
+.devicon-photoshop-line.colored, .devicon-photoshop-line.skill-chip.docker, .devicon-photoshop-line.skill-chip.less, .devicon-photoshop-line.skill-chip.css, .devicon-photoshop-line.skill-chip.mysql, .devicon-photoshop-line.skill-chip.javascript, .devicon-photoshop-line.skill-chip.sass, .devicon-photoshop-line.skill-chip.grunt,
+.devicon-photoshop-plain.colored,
+.devicon-photoshop-plain.skill-chip.docker,
+.devicon-photoshop-plain.skill-chip.less,
+.devicon-photoshop-plain.skill-chip.css,
+.devicon-photoshop-plain.skill-chip.mysql,
+.devicon-photoshop-plain.skill-chip.javascript,
+.devicon-photoshop-plain.skill-chip.sass,
+.devicon-photoshop-plain.skill-chip.grunt {
+  color: #80b5e2;
+}
+
+.devicon-php-plain.colored, .devicon-php-plain.skill-chip.docker, .devicon-php-plain.skill-chip.less, .devicon-php-plain.skill-chip.css, .devicon-php-plain.skill-chip.mysql, .devicon-php-plain.skill-chip.javascript, .devicon-php-plain.skill-chip.sass, .devicon-php-plain.skill-chip.grunt {
+  color: #6181b6;
+}
+
+.devicon-postgresql-plain.colored, .devicon-postgresql-plain.skill-chip.docker, .devicon-postgresql-plain.skill-chip.less, .devicon-postgresql-plain.skill-chip.css, .devicon-postgresql-plain.skill-chip.mysql, .devicon-postgresql-plain.skill-chip.javascript, .devicon-postgresql-plain.skill-chip.sass, .devicon-postgresql-plain.skill-chip.grunt,
+.devicon-postgresql-plain-wordmark.colored,
+.devicon-postgresql-plain-wordmark.skill-chip.docker,
+.devicon-postgresql-plain-wordmark.skill-chip.less,
+.devicon-postgresql-plain-wordmark.skill-chip.css,
+.devicon-postgresql-plain-wordmark.skill-chip.mysql,
+.devicon-postgresql-plain-wordmark.skill-chip.javascript,
+.devicon-postgresql-plain-wordmark.skill-chip.sass,
+.devicon-postgresql-plain-wordmark.skill-chip.grunt {
+  color: #336791;
+}
+
+.devicon-python-plain-wordmark.colored, .devicon-python-plain-wordmark.skill-chip.docker, .devicon-python-plain-wordmark.skill-chip.less, .devicon-python-plain-wordmark.skill-chip.css, .devicon-python-plain-wordmark.skill-chip.mysql, .devicon-python-plain-wordmark.skill-chip.javascript, .devicon-python-plain-wordmark.skill-chip.sass, .devicon-python-plain-wordmark.skill-chip.grunt,
+.devicon-python-plain.colored,
+.devicon-python-plain.skill-chip.docker,
+.devicon-python-plain.skill-chip.less,
+.devicon-python-plain.skill-chip.css,
+.devicon-python-plain.skill-chip.mysql,
+.devicon-python-plain.skill-chip.javascript,
+.devicon-python-plain.skill-chip.sass,
+.devicon-python-plain.skill-chip.grunt {
+  color: #ffd845;
+}
+
+.devicon-rails-plain-wordmark.colored, .devicon-rails-plain-wordmark.skill-chip.docker, .devicon-rails-plain-wordmark.skill-chip.less, .devicon-rails-plain-wordmark.skill-chip.css, .devicon-rails-plain-wordmark.skill-chip.mysql, .devicon-rails-plain-wordmark.skill-chip.javascript, .devicon-rails-plain-wordmark.skill-chip.sass, .devicon-rails-plain-wordmark.skill-chip.grunt,
+.devicon-rails-plain.colored,
+.devicon-rails-plain.skill-chip.docker,
+.devicon-rails-plain.skill-chip.less,
+.devicon-rails-plain.skill-chip.css,
+.devicon-rails-plain.skill-chip.mysql,
+.devicon-rails-plain.skill-chip.javascript,
+.devicon-rails-plain.skill-chip.sass,
+.devicon-rails-plain.skill-chip.grunt {
+  color: #a62c46;
+}
+
+.devicon-ruby-plain-wordmark.colored, .devicon-ruby-plain-wordmark.skill-chip.docker, .devicon-ruby-plain-wordmark.skill-chip.less, .devicon-ruby-plain-wordmark.skill-chip.css, .devicon-ruby-plain-wordmark.skill-chip.mysql, .devicon-ruby-plain-wordmark.skill-chip.javascript, .devicon-ruby-plain-wordmark.skill-chip.sass, .devicon-ruby-plain-wordmark.skill-chip.grunt,
+.devicon-ruby-plain.colored,
+.devicon-ruby-plain.skill-chip.docker,
+.devicon-ruby-plain.skill-chip.less,
+.devicon-ruby-plain.skill-chip.css,
+.devicon-ruby-plain.skill-chip.mysql,
+.devicon-ruby-plain.skill-chip.javascript,
+.devicon-ruby-plain.skill-chip.sass,
+.devicon-ruby-plain.skill-chip.grunt {
+  color: #d91404;
+}
+
+.devicon-safari-line-wordmark.colored, .devicon-safari-line-wordmark.skill-chip.docker, .devicon-safari-line-wordmark.skill-chip.less, .devicon-safari-line-wordmark.skill-chip.css, .devicon-safari-line-wordmark.skill-chip.mysql, .devicon-safari-line-wordmark.skill-chip.javascript, .devicon-safari-line-wordmark.skill-chip.sass, .devicon-safari-line-wordmark.skill-chip.grunt,
+.devicon-safari-line.colored,
+.devicon-safari-line.skill-chip.docker,
+.devicon-safari-line.skill-chip.less,
+.devicon-safari-line.skill-chip.css,
+.devicon-safari-line.skill-chip.mysql,
+.devicon-safari-line.skill-chip.javascript,
+.devicon-safari-line.skill-chip.sass,
+.devicon-safari-line.skill-chip.grunt,
+.devicon-safari-plain-wordmark.colored,
+.devicon-safari-plain-wordmark.skill-chip.docker,
+.devicon-safari-plain-wordmark.skill-chip.less,
+.devicon-safari-plain-wordmark.skill-chip.css,
+.devicon-safari-plain-wordmark.skill-chip.mysql,
+.devicon-safari-plain-wordmark.skill-chip.javascript,
+.devicon-safari-plain-wordmark.skill-chip.sass,
+.devicon-safari-plain-wordmark.skill-chip.grunt,
+.devicon-safari-plain.colored,
+.devicon-safari-plain.skill-chip.docker,
+.devicon-safari-plain.skill-chip.less,
+.devicon-safari-plain.skill-chip.css,
+.devicon-safari-plain.skill-chip.mysql,
+.devicon-safari-plain.skill-chip.javascript,
+.devicon-safari-plain.skill-chip.sass,
+.devicon-safari-plain.skill-chip.grunt {
+  color: #1B88CA;
+}
+
+.devicon-react-plain-wordmark.colored, .devicon-react-plain-wordmark.skill-chip.docker, .devicon-react-plain-wordmark.skill-chip.less, .devicon-react-plain-wordmark.skill-chip.css, .devicon-react-plain-wordmark.skill-chip.mysql, .devicon-react-plain-wordmark.skill-chip.javascript, .devicon-react-plain-wordmark.skill-chip.sass, .devicon-react-plain-wordmark.skill-chip.grunt,
+.devicon-react-plain.colored,
+.devicon-react-plain.skill-chip.docker,
+.devicon-react-plain.skill-chip.less,
+.devicon-react-plain.skill-chip.css,
+.devicon-react-plain.skill-chip.mysql,
+.devicon-react-plain.skill-chip.javascript,
+.devicon-react-plain.skill-chip.sass,
+.devicon-react-plain.skill-chip.grunt,
+.devicon-react-original-wordmark.colored,
+.devicon-react-original-wordmark.skill-chip.docker,
+.devicon-react-original-wordmark.skill-chip.less,
+.devicon-react-original-wordmark.skill-chip.css,
+.devicon-react-original-wordmark.skill-chip.mysql,
+.devicon-react-original-wordmark.skill-chip.javascript,
+.devicon-react-original-wordmark.skill-chip.sass,
+.devicon-react-original-wordmark.skill-chip.grunt,
+.devicon-react-original.colored,
+.devicon-react-original.skill-chip.docker,
+.devicon-react-original.skill-chip.less,
+.devicon-react-original.skill-chip.css,
+.devicon-react-original.skill-chip.mysql,
+.devicon-react-original.skill-chip.javascript,
+.devicon-react-original.skill-chip.sass,
+.devicon-react-original.skill-chip.grunt {
+  color: #61dafb;
+}
+
+.devicon-redhat-plain-wordmark.colored, .devicon-redhat-plain-wordmark.skill-chip.docker, .devicon-redhat-plain-wordmark.skill-chip.less, .devicon-redhat-plain-wordmark.skill-chip.css, .devicon-redhat-plain-wordmark.skill-chip.mysql, .devicon-redhat-plain-wordmark.skill-chip.javascript, .devicon-redhat-plain-wordmark.skill-chip.sass, .devicon-redhat-plain-wordmark.skill-chip.grunt,
+.devicon-redhat-plain.colored,
+.devicon-redhat-plain.skill-chip.docker,
+.devicon-redhat-plain.skill-chip.less,
+.devicon-redhat-plain.skill-chip.css,
+.devicon-redhat-plain.skill-chip.mysql,
+.devicon-redhat-plain.skill-chip.javascript,
+.devicon-redhat-plain.skill-chip.sass,
+.devicon-redhat-plain.skill-chip.grunt,
+.devicon-redhat-original-wordmark.colored,
+.devicon-redhat-original-wordmark.skill-chip.docker,
+.devicon-redhat-original-wordmark.skill-chip.less,
+.devicon-redhat-original-wordmark.skill-chip.css,
+.devicon-redhat-original-wordmark.skill-chip.mysql,
+.devicon-redhat-original-wordmark.skill-chip.javascript,
+.devicon-redhat-original-wordmark.skill-chip.sass,
+.devicon-redhat-original-wordmark.skill-chip.grunt,
+.devicon-redhat-original.colored,
+.devicon-redhat-original.skill-chip.docker,
+.devicon-redhat-original.skill-chip.less,
+.devicon-redhat-original.skill-chip.css,
+.devicon-redhat-original.skill-chip.mysql,
+.devicon-redhat-original.skill-chip.javascript,
+.devicon-redhat-original.skill-chip.sass,
+.devicon-redhat-original.skill-chip.grunt {
+  color: #e93442;
+}
+
+.devicon-redis-plain-wordmark.colored, .devicon-redis-plain-wordmark.skill-chip.docker, .devicon-redis-plain-wordmark.skill-chip.less, .devicon-redis-plain-wordmark.skill-chip.css, .devicon-redis-plain-wordmark.skill-chip.mysql, .devicon-redis-plain-wordmark.skill-chip.javascript, .devicon-redis-plain-wordmark.skill-chip.sass, .devicon-redis-plain-wordmark.skill-chip.grunt,
+.devicon-redis-plain.colored,
+.devicon-redis-plain.skill-chip.docker,
+.devicon-redis-plain.skill-chip.less,
+.devicon-redis-plain.skill-chip.css,
+.devicon-redis-plain.skill-chip.mysql,
+.devicon-redis-plain.skill-chip.javascript,
+.devicon-redis-plain.skill-chip.sass,
+.devicon-redis-plain.skill-chip.grunt {
+  color: #d82c20;
+}
+
+.devicon-ubuntu-plain-wordmark.colored, .devicon-ubuntu-plain-wordmark.skill-chip.docker, .devicon-ubuntu-plain-wordmark.skill-chip.less, .devicon-ubuntu-plain-wordmark.skill-chip.css, .devicon-ubuntu-plain-wordmark.skill-chip.mysql, .devicon-ubuntu-plain-wordmark.skill-chip.javascript, .devicon-ubuntu-plain-wordmark.skill-chip.sass, .devicon-ubuntu-plain-wordmark.skill-chip.grunt,
+.devicon-ubuntu-plain.colored,
+.devicon-ubuntu-plain.skill-chip.docker,
+.devicon-ubuntu-plain.skill-chip.less,
+.devicon-ubuntu-plain.skill-chip.css,
+.devicon-ubuntu-plain.skill-chip.mysql,
+.devicon-ubuntu-plain.skill-chip.javascript,
+.devicon-ubuntu-plain.skill-chip.sass,
+.devicon-ubuntu-plain.skill-chip.grunt {
+  color: #DD4814;
+}
+
+.devicon-sass-original.colored, .devicon-sass-original.skill-chip.docker, .devicon-sass-original.skill-chip.less, .devicon-sass-original.skill-chip.css, .devicon-sass-original.skill-chip.mysql, .devicon-sass-original.skill-chip.javascript, .skill-chip.sass, .devicon-sass-original.skill-chip.grunt,
+.devicon-sass-plain.colored,
+.devicon-sass-plain.skill-chip.docker,
+.devicon-sass-plain.skill-chip.less,
+.devicon-sass-plain.skill-chip.css,
+.devicon-sass-plain.skill-chip.mysql,
+.devicon-sass-plain.skill-chip.javascript,
+.devicon-sass-plain.skill-chip.sass,
+.devicon-sass-plain.skill-chip.grunt,
+.devicon-sass-plain-wordmark.colored,
+.devicon-sass-plain-wordmark.skill-chip.docker,
+.devicon-sass-plain-wordmark.skill-chip.less,
+.devicon-sass-plain-wordmark.skill-chip.css,
+.devicon-sass-plain-wordmark.skill-chip.mysql,
+.devicon-sass-plain-wordmark.skill-chip.javascript,
+.devicon-sass-plain-wordmark.skill-chip.sass,
+.devicon-sass-plain-wordmark.skill-chip.grunt {
+  color: #cc6699;
+}
+
+.devicon-sequelize-original-wordmark.colored, .devicon-sequelize-original-wordmark.skill-chip.docker, .devicon-sequelize-original-wordmark.skill-chip.less, .devicon-sequelize-original-wordmark.skill-chip.css, .devicon-sequelize-original-wordmark.skill-chip.mysql, .devicon-sequelize-original-wordmark.skill-chip.javascript, .devicon-sequelize-original-wordmark.skill-chip.sass, .devicon-sequelize-original-wordmark.skill-chip.grunt,
+.devicon-sequelize-plain-wordmark.colored,
+.devicon-sequelize-plain-wordmark.skill-chip.docker,
+.devicon-sequelize-plain-wordmark.skill-chip.less,
+.devicon-sequelize-plain-wordmark.skill-chip.css,
+.devicon-sequelize-plain-wordmark.skill-chip.mysql,
+.devicon-sequelize-plain-wordmark.skill-chip.javascript,
+.devicon-sequelize-plain-wordmark.skill-chip.sass,
+.devicon-sequelize-plain-wordmark.skill-chip.grunt,
+.devicon-sequelize-original.colored,
+.devicon-sequelize-original.skill-chip.docker,
+.devicon-sequelize-original.skill-chip.less,
+.devicon-sequelize-original.skill-chip.css,
+.devicon-sequelize-original.skill-chip.mysql,
+.devicon-sequelize-original.skill-chip.javascript,
+.devicon-sequelize-original.skill-chip.sass,
+.devicon-sequelize-original.skill-chip.grunt,
+.devicon-sequelize-plain.colored,
+.devicon-sequelize-plain.skill-chip.docker,
+.devicon-sequelize-plain.skill-chip.less,
+.devicon-sequelize-plain.skill-chip.css,
+.devicon-sequelize-plain.skill-chip.mysql,
+.devicon-sequelize-plain.skill-chip.javascript,
+.devicon-sequelize-plain.skill-chip.sass,
+.devicon-sequelize-plain.skill-chip.grunt {
+  color: #3b4b72;
+}
+
+.devicon-symfony-original.colored, .devicon-symfony-original.skill-chip.docker, .devicon-symfony-original.skill-chip.less, .devicon-symfony-original.skill-chip.css, .devicon-symfony-original.skill-chip.mysql, .devicon-symfony-original.skill-chip.javascript, .devicon-symfony-original.skill-chip.sass, .devicon-symfony-original.skill-chip.grunt,
+.devicon-symfony-original-wordmark.colored,
+.devicon-symfony-original-wordmark.skill-chip.docker,
+.devicon-symfony-original-wordmark.skill-chip.less,
+.devicon-symfony-original-wordmark.skill-chip.css,
+.devicon-symfony-original-wordmark.skill-chip.mysql,
+.devicon-symfony-original-wordmark.skill-chip.javascript,
+.devicon-symfony-original-wordmark.skill-chip.sass,
+.devicon-symfony-original-wordmark.skill-chip.grunt,
+.devicon-symfony-plain.colored,
+.devicon-symfony-plain.skill-chip.docker,
+.devicon-symfony-plain.skill-chip.less,
+.devicon-symfony-plain.skill-chip.css,
+.devicon-symfony-plain.skill-chip.mysql,
+.devicon-symfony-plain.skill-chip.javascript,
+.devicon-symfony-plain.skill-chip.sass,
+.devicon-symfony-plain.skill-chip.grunt,
+.devicon-symfony-plain-wordmark.colored,
+.devicon-symfony-plain-wordmark.skill-chip.docker,
+.devicon-symfony-plain-wordmark.skill-chip.less,
+.devicon-symfony-plain-wordmark.skill-chip.css,
+.devicon-symfony-plain-wordmark.skill-chip.mysql,
+.devicon-symfony-plain-wordmark.skill-chip.javascript,
+.devicon-symfony-plain-wordmark.skill-chip.sass,
+.devicon-symfony-plain-wordmark.skill-chip.grunt {
+  color: #1A171B;
+}
+
+.devicon-travis-plain-wordmark.colored, .devicon-travis-plain-wordmark.skill-chip.docker, .devicon-travis-plain-wordmark.skill-chip.less, .devicon-travis-plain-wordmark.skill-chip.css, .devicon-travis-plain-wordmark.skill-chip.mysql, .devicon-travis-plain-wordmark.skill-chip.javascript, .devicon-travis-plain-wordmark.skill-chip.sass, .devicon-travis-plain-wordmark.skill-chip.grunt,
+.devicon-travis-plain.colored,
+.devicon-travis-plain.skill-chip.docker,
+.devicon-travis-plain.skill-chip.less,
+.devicon-travis-plain.skill-chip.css,
+.devicon-travis-plain.skill-chip.mysql,
+.devicon-travis-plain.skill-chip.javascript,
+.devicon-travis-plain.skill-chip.sass,
+.devicon-travis-plain.skill-chip.grunt {
+  color: #bb2031;
+}
+
+.devicon-trello-plain-wordmark.colored, .devicon-trello-plain-wordmark.skill-chip.docker, .devicon-trello-plain-wordmark.skill-chip.less, .devicon-trello-plain-wordmark.skill-chip.css, .devicon-trello-plain-wordmark.skill-chip.mysql, .devicon-trello-plain-wordmark.skill-chip.javascript, .devicon-trello-plain-wordmark.skill-chip.sass, .devicon-trello-plain-wordmark.skill-chip.grunt,
+.devicon-trello-plain.colored,
+.devicon-trello-plain.skill-chip.docker,
+.devicon-trello-plain.skill-chip.less,
+.devicon-trello-plain.skill-chip.css,
+.devicon-trello-plain.skill-chip.mysql,
+.devicon-trello-plain.skill-chip.javascript,
+.devicon-trello-plain.skill-chip.sass,
+.devicon-trello-plain.skill-chip.grunt {
+  color: #23719f;
+}
+
+.devicon-twitter-original.colored, .devicon-twitter-original.skill-chip.docker, .devicon-twitter-original.skill-chip.less, .devicon-twitter-original.skill-chip.css, .devicon-twitter-original.skill-chip.mysql, .devicon-twitter-original.skill-chip.javascript, .devicon-twitter-original.skill-chip.sass, .devicon-twitter-original.skill-chip.grunt,
+.devicon-twitter-plain.colored,
+.devicon-twitter-plain.skill-chip.docker,
+.devicon-twitter-plain.skill-chip.less,
+.devicon-twitter-plain.skill-chip.css,
+.devicon-twitter-plain.skill-chip.mysql,
+.devicon-twitter-plain.skill-chip.javascript,
+.devicon-twitter-plain.skill-chip.sass,
+.devicon-twitter-plain.skill-chip.grunt {
+  color: #1da1f2;
+}
+
+.devicon-typescript-original.colored, .devicon-typescript-original.skill-chip.docker, .devicon-typescript-original.skill-chip.less, .devicon-typescript-original.skill-chip.css, .devicon-typescript-original.skill-chip.mysql, .devicon-typescript-original.skill-chip.javascript, .devicon-typescript-original.skill-chip.sass, .devicon-typescript-original.skill-chip.grunt,
+.devicon-typescript-plain.colored,
+.devicon-typescript-plain.skill-chip.docker,
+.devicon-typescript-plain.skill-chip.less,
+.devicon-typescript-plain.skill-chip.css,
+.devicon-typescript-plain.skill-chip.mysql,
+.devicon-typescript-plain.skill-chip.javascript,
+.devicon-typescript-plain.skill-chip.sass,
+.devicon-typescript-plain.skill-chip.grunt {
+  color: #007acc;
+}
+
+.devicon-ubuntu-plain-wordmark.colored, .devicon-ubuntu-plain-wordmark.skill-chip.docker, .devicon-ubuntu-plain-wordmark.skill-chip.less, .devicon-ubuntu-plain-wordmark.skill-chip.css, .devicon-ubuntu-plain-wordmark.skill-chip.mysql, .devicon-ubuntu-plain-wordmark.skill-chip.javascript, .devicon-ubuntu-plain-wordmark.skill-chip.sass, .devicon-ubuntu-plain-wordmark.skill-chip.grunt,
+.devicon-ubuntu-plain.colored,
+.devicon-ubuntu-plain.skill-chip.docker,
+.devicon-ubuntu-plain.skill-chip.less,
+.devicon-ubuntu-plain.skill-chip.css,
+.devicon-ubuntu-plain.skill-chip.mysql,
+.devicon-ubuntu-plain.skill-chip.javascript,
+.devicon-ubuntu-plain.skill-chip.sass,
+.devicon-ubuntu-plain.skill-chip.grunt {
+  color: #dd4814;
+}
+
+.devicon-vim-plain.colored, .devicon-vim-plain.skill-chip.docker, .devicon-vim-plain.skill-chip.less, .devicon-vim-plain.skill-chip.css, .devicon-vim-plain.skill-chip.mysql, .devicon-vim-plain.skill-chip.javascript, .devicon-vim-plain.skill-chip.sass, .devicon-vim-plain.skill-chip.grunt {
+  color: #179a33;
+}
+
+.devicon-windows8-original-wordmark.colored, .devicon-windows8-original-wordmark.skill-chip.docker, .devicon-windows8-original-wordmark.skill-chip.less, .devicon-windows8-original-wordmark.skill-chip.css, .devicon-windows8-original-wordmark.skill-chip.mysql, .devicon-windows8-original-wordmark.skill-chip.javascript, .devicon-windows8-original-wordmark.skill-chip.sass, .devicon-windows8-original-wordmark.skill-chip.grunt,
+.devicon-windows8-original.colored,
+.devicon-windows8-original.skill-chip.docker,
+.devicon-windows8-original.skill-chip.less,
+.devicon-windows8-original.skill-chip.css,
+.devicon-windows8-original.skill-chip.mysql,
+.devicon-windows8-original.skill-chip.javascript,
+.devicon-windows8-original.skill-chip.sass,
+.devicon-windows8-original.skill-chip.grunt,
+.devicon-windows8-plain-wordmark.colored,
+.devicon-windows8-plain-wordmark.skill-chip.docker,
+.devicon-windows8-plain-wordmark.skill-chip.less,
+.devicon-windows8-plain-wordmark.skill-chip.css,
+.devicon-windows8-plain-wordmark.skill-chip.mysql,
+.devicon-windows8-plain-wordmark.skill-chip.javascript,
+.devicon-windows8-plain-wordmark.skill-chip.sass,
+.devicon-windows8-plain-wordmark.skill-chip.grunt,
+.devicon-windows8-plain.colored,
+.devicon-windows8-plain.skill-chip.docker,
+.devicon-windows8-plain.skill-chip.less,
+.devicon-windows8-plain.skill-chip.css,
+.devicon-windows8-plain.skill-chip.mysql,
+.devicon-windows8-plain.skill-chip.javascript,
+.devicon-windows8-plain.skill-chip.sass,
+.devicon-windows8-plain.skill-chip.grunt {
+  color: #00adef;
+}
+
+.devicon-wordpress-plain-wordmark.colored, .devicon-wordpress-plain-wordmark.skill-chip.docker, .devicon-wordpress-plain-wordmark.skill-chip.less, .devicon-wordpress-plain-wordmark.skill-chip.css, .devicon-wordpress-plain-wordmark.skill-chip.mysql, .devicon-wordpress-plain-wordmark.skill-chip.javascript, .devicon-wordpress-plain-wordmark.skill-chip.sass, .devicon-wordpress-plain-wordmark.skill-chip.grunt,
+.devicon-wordpress-plain.colored,
+.devicon-wordpress-plain.skill-chip.docker,
+.devicon-wordpress-plain.skill-chip.less,
+.devicon-wordpress-plain.skill-chip.css,
+.devicon-wordpress-plain.skill-chip.mysql,
+.devicon-wordpress-plain.skill-chip.javascript,
+.devicon-wordpress-plain.skill-chip.sass,
+.devicon-wordpress-plain.skill-chip.grunt {
+  color: #494949;
+}
+
+.devicon-yii-plain-wordmark.colored, .devicon-yii-plain-wordmark.skill-chip.docker, .devicon-yii-plain-wordmark.skill-chip.less, .devicon-yii-plain-wordmark.skill-chip.css, .devicon-yii-plain-wordmark.skill-chip.mysql, .devicon-yii-plain-wordmark.skill-chip.javascript, .devicon-yii-plain-wordmark.skill-chip.sass, .devicon-yii-plain-wordmark.skill-chip.grunt,
+.devicon-yii-plain.colored,
+.devicon-yii-plain.skill-chip.docker,
+.devicon-yii-plain.skill-chip.less,
+.devicon-yii-plain.skill-chip.css,
+.devicon-yii-plain.skill-chip.mysql,
+.devicon-yii-plain.skill-chip.javascript,
+.devicon-yii-plain.skill-chip.sass,
+.devicon-yii-plain.skill-chip.grunt {
+  color: #0073bb;
+}
+
+.devicon-zend-plain-wordmark.colored, .devicon-zend-plain-wordmark.skill-chip.docker, .devicon-zend-plain-wordmark.skill-chip.less, .devicon-zend-plain-wordmark.skill-chip.css, .devicon-zend-plain-wordmark.skill-chip.mysql, .devicon-zend-plain-wordmark.skill-chip.javascript, .devicon-zend-plain-wordmark.skill-chip.sass, .devicon-zend-plain-wordmark.skill-chip.grunt,
+.devicon-zend-plain.colored,
+.devicon-zend-plain.skill-chip.docker,
+.devicon-zend-plain.skill-chip.less,
+.devicon-zend-plain.skill-chip.css,
+.devicon-zend-plain.skill-chip.mysql,
+.devicon-zend-plain.skill-chip.javascript,
+.devicon-zend-plain.skill-chip.sass,
+.devicon-zend-plain.skill-chip.grunt {
+  color: #68b604;
+}
+
 .chip.magento-1 {
-  background: #ef6c00;
+  background: #f57c00;
   color: #FFFFFF;
   margin-bottom: 0;
 }
 
 .chip.magento-2 {
-  background: #d84315;
+  background: #e64a19;
   color: #FFFFFF;
   margin-bottom: 0;
 }
 
 .chip.sales-force-commerce-cloud {
-  background: #00838f;
+  background: #0097a7;
   color: #FFFFFF;
   margin-bottom: 0;
+}
+
+.chip.applications-engineer {
+  background: #f9a825;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.front-end-engineer {
+  background: #00acc1;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.quality-engineer {
+  background: #1565C0;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.client-success {
+  background: #9e9d24;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.production-engineer {
+  background: #ff6f00;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.ecommerce-solutions {
+  background: #5d4037;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.chip.optimization-strategy {
+  background: #d81b60;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+.skill-chip span {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.skill-chip.docker:before, .skill-chip.less:before, .skill-chip.css:before, .skill-chip.mysql:before, .skill-chip.javascript:before, .skill-chip.sass:before, .skill-chip.grunt:before {
+  font-family: 'devicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skill-chip.docker {
+  position: relative;
+}
+
+.skill-chip.docker:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.docker span {
+  display: none;
+}
+
+.skill-chip.docker:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.less {
+  position: relative;
+}
+
+.skill-chip.less:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.less span {
+  display: none;
+}
+
+.skill-chip.less:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.css {
+  position: relative;
+}
+
+.skill-chip.css:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.css span {
+  display: none;
+}
+
+.skill-chip.css:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.mysql {
+  position: relative;
+}
+
+.skill-chip.mysql:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.mysql span {
+  display: none;
+}
+
+.skill-chip.mysql:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.javascript {
+  position: relative;
+}
+
+.skill-chip.javascript:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.javascript span {
+  display: none;
+}
+
+.skill-chip.javascript:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.sass {
+  position: relative;
+}
+
+.skill-chip.sass:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.sass span {
+  display: none;
+}
+
+.skill-chip.sass:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
+}
+
+.skill-chip.grunt {
+  position: relative;
+}
+
+.skill-chip.grunt:before {
+  font-size: 30px;
+  padding: 4px;
+  border-radius: 100%;
+  background: #fafafa;
+}
+
+.skill-chip.grunt span {
+  display: none;
+}
+
+.skill-chip.grunt:hover span {
+  position: relative;
+  left: 100%;
+  display: block;
 }
 
 .layered-nav .label {
@@ -2690,6 +5589,34 @@
 
 .estimate-list .card.sales-force-commerce-cloud .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
   color: #00838f;
+}
+
+.estimate-view.magento-1 .card-panel.hours-card {
+  background: #ef6c00;
+}
+
+.estimate-view.magento-1 .estimate.-desc h3 {
+  color: #ef6c00;
+}
+
+.estimate-view.magento-2 .card-panel.hours-card {
+  background: #d84315;
+}
+
+.estimate-view.magento-2 .estimate.-desc h3 {
+  color: #d84315;
+}
+
+.estimate-view.sales-force-commerce-cloud .card-panel.hours-card {
+  background: #00838f;
+}
+
+.estimate-view.sales-force-commerce-cloud .estimate.-desc h3 {
+  color: #00838f;
+}
+
+.estimate-view .stories table {
+  margin-bottom: 75px;
 }
 
 input[type="search"] {

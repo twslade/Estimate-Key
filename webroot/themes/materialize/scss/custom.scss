@@ -8,10 +8,17 @@
 @import "components/flex-grid";
 @import "components/helpers";
 
-@import "atom/chips";
+// Vendor
+@import "vendor/devicon-colors";
 
+// Atoms
+@import "atom/chips";
+@import "atom/skill-chips";
+
+// Organisms
 @import "organism/layered-nav";
 @import "organism/estimate-list";
+@import "organism/estimate-view";
 
 input[type="search"] {
     height: 64px !important; /* or height of nav */
