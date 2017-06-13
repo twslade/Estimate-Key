@@ -582,7 +582,7 @@ class Page_Controller extends ContentController {
         'Skill'
     );
 
-    private static $allowed_actions = array ();
+    private static $allowed_actions = array ('ajax', 'index');
 
     public function init() {
         parent::init();
@@ -926,7 +926,8 @@ class EstimatePage extends Page{
 class EstimateController extends Page_Controller {
 
     private static $allowed_actions = array(
-        'view'
+        'view',
+        'ajax'
     );
 
     public function view(SS_HTTPRequest $request){
@@ -937,5 +938,23 @@ class EstimateController extends Page_Controller {
         }
 
         return $this->customise(array('Estimate' => $estimate))->renderWith('EstimateController');
+    }
+
+    public function ajax(SS_HTTPRequest $request){
+        $resp = '[]';
+        if($searchTerms = $request->getVar('Search')){
+
+            $fields = array('Name', 'ID');
+
+            $estimates = Estimate::get();
+            $estimates = $estimates->filter('SearchFields:fulltext', $searchTerms);
+
+            $formatter = new JSONDataFormatter();
+
+            $resp = $formatter->convertDataObjectSet($estimates, $fields);
+        }
+        $this->getResponse()->addHeader('Content-type', 'application/json')->setBody($resp);
+        return $this->getResponse();
+
     }
 }
