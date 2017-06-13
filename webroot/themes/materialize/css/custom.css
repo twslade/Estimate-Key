@@ -8612,7 +8612,7 @@
   background: #2E7D32;
 }
 
-.estimate-list .card .chip.med {
+.estimate-list .card .chip.medium {
   color: #FFFFFF;
   background: #ef6c00;
 }
@@ -8681,6 +8681,30 @@
   color: #00838f;
 }
 
+.estimate-view .left-wrapper h3 {
+  display: none;
+}
+
+.estimate-view .left-wrapper.pinned h3 {
+  display: inline;
+}
+
+@media only screen and (min-width: 771px) {
+  .estimate-view .left-wrapper.pinned {
+    max-width: 22.4704%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .estimate-view .left-wrapper.pinned {
+    max-width: 15.1042%;
+  }
+}
+
+.estimate-view.magento-1 .estimate-left h3 {
+  color: #ef6c00;
+}
+
 .estimate-view.magento-1 .card-panel.hours-card {
   background: #ef6c00;
 }
@@ -8689,12 +8713,20 @@
   color: #ef6c00;
 }
 
+.estimate-view.magento-2 .estimate-left h3 {
+  color: #d84315;
+}
+
 .estimate-view.magento-2 .card-panel.hours-card {
   background: #d84315;
 }
 
 .estimate-view.magento-2 .estimate.-desc h3 {
   color: #d84315;
+}
+
+.estimate-view.sales-force-commerce-cloud .estimate-left h3 {
+  color: #00838f;
 }
 
 .estimate-view.sales-force-commerce-cloud .card-panel.hours-card {

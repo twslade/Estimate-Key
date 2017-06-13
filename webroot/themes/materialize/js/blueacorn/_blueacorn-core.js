@@ -38,9 +38,9 @@
         bp: {
             xxsmall: 320,
             xsmall: 480,
-            small: 640,
-            medium: 768,
-            large: 1024,
+            small: 600,
+            medium: 771,
+            large: 980,
             xlarge: 1440
         },
 
