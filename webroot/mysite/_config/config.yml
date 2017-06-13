@@ -94,7 +94,7 @@ Seeder\Seeder:
             fields:
                 Name: Sales Force Commerce Cloud
         Skill:
-            count: 10
+            count: 30
             fields:
                 Name: Seeder(skill)
         Category:
