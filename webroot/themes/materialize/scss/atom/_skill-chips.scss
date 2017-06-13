@@ -3,11 +3,22 @@
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
+        line-height: 38px;
     }
 }
 
-%devicon-base {
-    font-family: 'devicon';
+%icon-span-base {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 20px);
+    background: color('grey', 'lighten-5');
+    padding: 0 10px 0 30px;
+    z-index: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+%icon-base {
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -18,6 +29,18 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    font-size: 30px;
+    padding: 4px;
+    border-radius: 100%;
+    background: color('grey', 'lighten-5');
+    z-index: 1;
+    position: relative;
+}
+
+%devicon-base {
+    font-family: 'devicon';
+    @extend %icon-base;
 }
 
 @each $name, $value in $skills {
@@ -27,22 +50,75 @@
 
         &:before {
             @extend %devicon-base;
-            font-size: 30px;
-            padding: 4px;
-            border-radius: 100%;
-            background: color('grey', 'lighten-5');
         }
 
         span {
             display: none;
+            @extend %icon-span-base;
+            top: -4px;
+        }
+    }
+}
+
+%additional-skill-icons {
+    font-family: $icon-font;
+    @extend %icon-base;
+}
+
+.skill-chip {
+    &.load-testing,
+    &.server-configuration,
+    &.code-profiling {
+        position: relative;
+
+        &:before {
+            @extend %additional-skill-icons;
+            display: inline-block;
         }
 
-        &:hover {
-            span {
-                position: relative;
-                left: 100%;
-                display: block;
-            }
+        span {
+            display: none;
+            @extend %icon-span-base;
         }
+    }
+
+    &.load-testing:before {
+        content: 'equalizer';
+    }
+
+    &.server-configuration:before {
+        content: 'settings';
+    }
+
+    &.code-profiling:before {
+        content: 'subtitles';
+    }
+
+    &.rhino {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: relative;
+            width: 38px;
+            height: 38px;
+            display: inline-block;
+            background: url('../images/icons/rhino.png');
+            padding: 4px;
+            border-radius: 100%;
+            background-color: color('grey', 'lighten-5');
+            z-index: 1;
+        }
+
+        span {
+            display: none;
+            @extend %icon-span-base;
+        }
+    }
+}
+
+.skill-chip:hover {
+    span {
+        display: block;
     }
 }

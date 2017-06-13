@@ -7,24 +7,25 @@
     <% with $Estimate %>
         <div class="row <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %> estimate-view">
             <div class="estimate-left col s12 m3 xl2">
-                <h1 class="hide-on-large-only">$Name</h1>
+                <div class="left-wrapper pin-top">
+                    <h3>$Name</h3>
 
-                <div class="row hours">
-                    <div class="card-panel hours-card col s6 z-depth-0">
-                        <div class="card-content white-text ">
-                            <span class="card-title">Hours:</span>
-                            <h5>$TotalHours</h5>
+                    <div class="flex-row hours">
+                        <div class="card-panel hours-card flex-col flex-s6 z-depth-0">
+                            <div class="card-content white-text ">
+                                <span class="card-title">Hours:</span>
+                                <h6 class="flow-text">$TotalHours</h6>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card-panel col s6 grey white-text z-depth-0">
-                        <div class="card-content">
-                            <span class="card-title">ROM</span>
-                            <h5>$RomLow - $RomHigh</h5>
+                        <div class="card-panel flex-col flex-s6 grey white-text z-depth-0">
+                            <div class="card-content">
+                                <span class="card-title">ROM</span>
+                                <h6 class="flow-text">$RomLow - $RomHigh</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="estimate-desc col s12 m7 xl9">
                 <h1 class="hide-on-med-and-down">$Name</h1>
@@ -34,6 +35,17 @@
                 <div id="description" class="description section scrollspy">
                     <h3>Description</h3>
                     <p class="flow-text">$Description</p>
+                </div>
+
+                <div id="requirements" class="requirements section scrollspy">
+                    <h3>Requirements</h3>
+                    <div class="divider"></div>
+
+                    <h4>Business Requirements</h4>
+                    $BusinessRequirements
+
+                    <h4>Functional Requirements</h4>
+                    $FunctionalRequirements
                 </div>
 
                 <div id="stories" class="stories section scrollspy">
@@ -93,6 +105,7 @@
                 <div class="toc-wrapper pin-top">
                     <ul class="section table-of-contents">
                         <li><a data-new="#description">Description</a></li>
+                        <li><a data-new="#requirements">Requirements</a></li>
                         <li><a data-new="#stories">Stories</a></li>
                     </ul>
                 </div>

@@ -22,7 +22,23 @@ class Seeder extends \Seeder\Provider {
         'Mysql',
         'Load Testing',
         'Rhino',
-        'HTML'
+        'HTML',
+        'AWS',
+        'Apache',
+        'Babel',
+        'Bower',
+        'CUCUMBER',
+        'Foundation',
+        'GIT',
+        'GULP',
+        'jQuery',
+        'LINUX',
+        'NGINX',
+        'REACT',
+        'SSH',
+        'Typescript',
+        'Wordpress',
+        'Twitter Bootstrap'
     );
 
     protected $_category = array(

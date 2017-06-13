@@ -1,7 +1,33 @@
 .estimate-view {
 
+    .estimate-left {
+
+    }
+
+    .left-wrapper {
+        h3 { display: none; }
+
+        &.pinned {
+            h3 { display: inline; }
+
+            @include bp('min-width', $bp-medium + 1) {
+                max-width: percentage(171/761);
+            }
+
+            @include bp('min-width', $bp-xlarge + 1) {
+                max-width: percentage(217.5/1440);
+            }
+        }
+    }
+
     @each $name, $value in $platforms {
         &.#{$name} {
+
+            .estimate-left {
+                h3 {
+                    color: color($value, 'darken-3');
+                }
+            }
 
             .card-panel.hours-card {
                 background: color($value, 'darken-3');
