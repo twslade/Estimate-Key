@@ -157,9 +157,9 @@
         return ba;
     });
 
-    // moduleLoader.define('enquire', function() {
-    //     return enquire;
-    // });
+    moduleLoader.define('enquire', function() {
+        return enquire;
+    });
 
     return moduleLoader;
 });

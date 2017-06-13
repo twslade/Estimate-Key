@@ -1,6 +1,6 @@
 (function (root, factory) {
-    root.ba.moduleLoader.define('EstimatesPage', ['jquery'], factory);
-}(this, function($) {
+    root.ba.moduleLoader.define('EstimatesPage', ['jquery', 'enquire'], factory);
+}(this, function($, enquire) {
     'use strict';
 
     function EstimatesPage() {
@@ -13,7 +13,8 @@
 
             $(document).ready(function() {
                 self.setupScrollSpy();
-                self.setupPushPin();
+                self.setupTOCPushpin();
+                self.setupLeftPushpin();
             });
         },
 
@@ -25,9 +26,22 @@
             $('.scrollspy').scrollSpy();
         },
 
-        setupPushPin: function() {
+        setupTOCPushpin() {
             $('.toc-wrapper').pushpin({
                 top: 75
+            });
+        },
+
+        setupLeftPushpin() {
+            enquire.register('screen and (min-width:' + ba.bp.medium + 'px)', {
+                match: function() {
+                    $('.left-wrapper').pushpin({
+                        top: 75
+                    });
+                },
+                unmatch: function() {
+                    $('.left-wrapper').pushpin('remove');
+                }
             });
         }
     };
