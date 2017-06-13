@@ -15,6 +15,7 @@
                 self.setupScrollSpy();
                 self.setupTOCPushpin();
                 self.setupLeftPushpin();
+                self.setupRisks();
             });
         },
 
@@ -43,6 +44,10 @@
                     $('.left-wrapper').pushpin('remove');
                 }
             });
+        },
+
+        setupRisks() {
+            $('.collapsible').collapsible();
         }
     };
 

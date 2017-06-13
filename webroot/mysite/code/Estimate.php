@@ -555,6 +555,13 @@ class Page extends SiteTree {
         return $ret;
     }
 
+    public function getRoleAbbr($arg) {
+        preg_match_all('/(?<=[\s,_-]|^)[a-z]/i', $arg, $matches);
+        $result = implode('', $matches[0]);
+
+        return strtoupper($result);
+    }
+
 }
 class Page_Controller extends ContentController {
 
