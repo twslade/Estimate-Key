@@ -49,7 +49,6 @@ $grid-count: 12;
     }
 
     &-col {
-        display: flex;
 
         @for $i from 1 through $grid-count {
             &.flex-s#{$i} {

@@ -6,6 +6,14 @@
     }
 }
 
+@each $name, $value in $conf-levels {
+    .chip.#{$name} {
+        background: color($value, 'darken-2');
+        color: color('shades', 'white');
+        margin-bottom: 0;
+    }
+}
+
 @each $name, $value in $roles {
     .chip.#{$name} {
         background: color(nth($value, 1), nth($value, 2));
