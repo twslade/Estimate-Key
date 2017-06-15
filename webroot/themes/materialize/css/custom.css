@@ -2342,6 +2342,11 @@
   }
 }
 
+.flex-parent {
+  display: flex;
+  height: 100%;
+}
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -4982,6 +4987,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.docker span {
+  display: inline-block;
+}
+
 .skill-chip.less {
   position: relative;
 }
@@ -4989,6 +4998,10 @@
 .skill-chip.less span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.less span {
+  display: inline-block;
 }
 
 .skill-chip.css {
@@ -5000,6 +5013,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.css span {
+  display: inline-block;
+}
+
 .skill-chip.mysql {
   position: relative;
 }
@@ -5007,6 +5024,10 @@
 .skill-chip.mysql span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.mysql span {
+  display: inline-block;
 }
 
 .skill-chip.javascript {
@@ -5018,6 +5039,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.javascript span {
+  display: inline-block;
+}
+
 .skill-chip.sass {
   position: relative;
 }
@@ -5025,6 +5050,10 @@
 .skill-chip.sass span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.sass span {
+  display: inline-block;
 }
 
 .skill-chip.grunt {
@@ -5036,6 +5065,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.grunt span {
+  display: inline-block;
+}
+
 .skill-chip.node {
   position: relative;
 }
@@ -5043,6 +5076,10 @@
 .skill-chip.node span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.node span {
+  display: inline-block;
 }
 
 .skill-chip.php {
@@ -5054,6 +5091,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.php span {
+  display: inline-block;
+}
+
 .skill-chip.html {
   position: relative;
 }
@@ -5061,6 +5102,10 @@
 .skill-chip.html span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.html span {
+  display: inline-block;
 }
 
 .skill-chip.aws {
@@ -5072,6 +5117,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.aws span {
+  display: inline-block;
+}
+
 .skill-chip.apache {
   position: relative;
 }
@@ -5079,6 +5128,10 @@
 .skill-chip.apache span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.apache span {
+  display: inline-block;
 }
 
 .skill-chip.babel {
@@ -5090,6 +5143,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.babel span {
+  display: inline-block;
+}
+
 .skill-chip.bower {
   position: relative;
 }
@@ -5097,6 +5154,10 @@
 .skill-chip.bower span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.bower span {
+  display: inline-block;
 }
 
 .skill-chip.cucumber {
@@ -5108,6 +5169,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.cucumber span {
+  display: inline-block;
+}
+
 .skill-chip.foundation {
   position: relative;
 }
@@ -5115,6 +5180,10 @@
 .skill-chip.foundation span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.foundation span {
+  display: inline-block;
 }
 
 .skill-chip.twitter-bootstrap {
@@ -5126,6 +5195,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.twitter-bootstrap span {
+  display: inline-block;
+}
+
 .skill-chip.git {
   position: relative;
 }
@@ -5133,6 +5206,10 @@
 .skill-chip.git span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.git span {
+  display: inline-block;
 }
 
 .skill-chip.gulp {
@@ -5144,6 +5221,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.gulp span {
+  display: inline-block;
+}
+
 .skill-chip.jquery {
   position: relative;
 }
@@ -5151,6 +5232,10 @@
 .skill-chip.jquery span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.jquery span {
+  display: inline-block;
 }
 
 .skill-chip.linux {
@@ -5162,6 +5247,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.linux span {
+  display: inline-block;
+}
+
 .skill-chip.nginx {
   position: relative;
 }
@@ -5169,6 +5258,10 @@
 .skill-chip.nginx span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.nginx span {
+  display: inline-block;
 }
 
 .skill-chip.react {
@@ -5180,6 +5273,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.react span {
+  display: inline-block;
+}
+
 .skill-chip.ssh {
   position: relative;
 }
@@ -5187,6 +5284,10 @@
 .skill-chip.ssh span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.ssh span {
+  display: inline-block;
 }
 
 .skill-chip.typescript {
@@ -5198,6 +5299,10 @@
   top: -4px;
 }
 
+.label.skill .skill-chip.typescript span {
+  display: inline-block;
+}
+
 .skill-chip.wordpress {
   position: relative;
 }
@@ -5205,6 +5310,10 @@
 .skill-chip.wordpress span {
   display: none;
   top: -4px;
+}
+
+.label.skill .skill-chip.wordpress span {
+  display: inline-block;
 }
 
 .skill-chip.load-testing:before, .skill-chip.server-configuration:before, .skill-chip.code-profiling:before {
@@ -5256,32 +5365,55 @@
   display: none;
 }
 
+.label.skill .skill-chip.load-testing span, .label.skill .skill-chip.server-configuration span, .label.skill .skill-chip.code-profiling span, .label.skill .skill-chip.rhino span {
+  display: inline-block;
+}
+
 .skill-chip:hover span {
   display: block;
 }
 
 .layered-nav .label {
+  line-height: 32px;
   position: relative;
   display: inline-block;
-  padding-left: 35px;
+  width: 100%;
 }
 
-.layered-nav .label:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  z-index: 0;
-  border: 2px solid #5a5a5a;
-  border-radius: 1px;
-  margin-top: 2px;
-  transition: .2s;
+.layered-nav .label .chip {
+  overflow: hidden;
+  float: left;
+  margin-bottom: 5px;
 }
 
-.layered-nav .label:hover:before {
-  background-color: rgba(0, 0, 0, 0.1);
+.layered-nav .label.platform, .layered-nav .label.role, .layered-nav .label.skill {
+  width: auto;
+}
+
+.layered-nav .label.skill {
+  height: 38px;
+}
+
+.layered-nav .label .skill-chip {
+  width: auto;
+  display: inline-block;
+  height: 38px;
+}
+
+.layered-nav .label .skill-chip:before {
+  position: relative;
+  left: auto;
+  top: auto;
+  float: left;
+  background-color: transparent;
+}
+
+.layered-nav .label .skill-chip span {
+  position: relative;
+  top: auto;
+  left: -20px;
+  float: left;
+  background-color: transparent;
 }
 
 .estimate-list .card {
