@@ -58,6 +58,12 @@
             top: -4px;
         }
     }
+
+    .label.skill {
+        .skill-chip.#{$name} span {
+            display: inline-block;
+        }
+    }
 }
 
 %additional-skill-icons {
@@ -113,6 +119,17 @@
         span {
             display: none;
             @extend %icon-span-base;
+        }
+    }
+
+    .label.skill & {
+        &.load-testing,
+        &.server-configuration,
+        &.code-profiling,
+        &.rhino {
+            span {
+                display: inline-block;
+            }
         }
     }
 }
