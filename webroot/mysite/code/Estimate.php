@@ -932,9 +932,12 @@ class Page_Controller extends ContentController {
 
         $estimates = Estimate::get();
         if($estimates->count() > 0){
-            $formatter = new JSONDataFormatter();
             foreach ($estimates as $estimate){
-                $resp[$estimate->Name . ' - ' . implode(', ', $estimate->Clients()->column('Name'))] = $estimate->ID;
+                $resp[$estimate->ID] = array(
+                    'Name' => $estimate->Name,
+                    'Clients' => implode(', ', $estimate->Clients()->column('Name')),
+                    'Platforms' => implode(', ', $estimate->Platforms()->column('Name'))
+                );
             }
         }
         return json_encode($resp);

@@ -28,7 +28,8 @@ var themes = {
         bowerJs: [
             'materialize/dist/js/materialize.js',
             'jquery/dist/jquery.js',
-            'enquire/dist/enquire.min.js'
+            'enquire/dist/enquire.min.js',
+            'typeahead.js/dist/typeahead.bundle.js'
         ],
         autoPrefixerBlackList: [],
         jsDirs: [
