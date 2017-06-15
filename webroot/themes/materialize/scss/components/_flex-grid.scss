@@ -42,6 +42,11 @@ $grid-count: 12;
     }
 }
 
+.flex-parent {
+    display: flex;
+    height: 100%;
+}
+
 .flex {
     &-row {
         display: flex;

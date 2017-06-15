@@ -1,26 +1,44 @@
 .layered-nav {
     .label {
+        line-height: 32px;
         position: relative;
         display: inline-block;
-        padding-left: 35px;
+        width: 100%;
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 18px;
-            height: 18px;
-            z-index: 0;
-            border: 2px solid $radio-empty-color;
-            border-radius: 1px;
-            margin-top: 2px;
-            transition: .2s;
+        .chip {
+            overflow: hidden;
+            float: left;
+            margin-bottom: 5px;
         }
 
-        &:hover {
+        &.platform,
+        &.role,
+        &.skill {
+            width: auto;
+        }
+
+        &.skill {
+            height: 38px;
+        }
+
+        .skill-chip {
+            width: auto;
+            display: inline-block;
+            height: 38px;
+
             &:before {
-                background-color: rgba(0,0,0,.1);
+                position: relative;
+                left: auto;
+                top: auto;
+                float: left;
+                background-color: color('shades', 'transparent');
+            }
+            span {
+                position: relative;
+                top: auto;
+                left: -20px;
+                float: left;
+                background-color: color('shades', 'transparent');
             }
         }
     }

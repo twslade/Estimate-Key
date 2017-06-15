@@ -51,15 +51,11 @@
                                     $className
                                 </div>
                                 <div class="collapsible-body">
-                                    <ul>
-                                        <% loop $Up.getSanitizeMembers($className) %>
-                                            <li>
-                                                <a class="label" href="$Up.GetFilterLink($filter.ClassName, $filter.ID)">
-                                                    $filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))
-                                                </a>
-                                            </li>
-                                        <% end_loop %>
-                                    </ul>
+                                    <% loop $Up.getSanitizeMembers($className) %>
+                                        <a class="label $Up.getCssClass($filter.ClassName)" href="$Up.GetFilterLink($filter.ClassName, $filter.ID)" data-abbr="$Up.getRoleAbbr($filter.Name) ($Up.GetFilterCount($filter.ClassName, $filter.ID))">
+                                            <span class="simple $Up.getCssClass($filter.Name)">$filter.Name ($Up.GetFilterCount($filter.ClassName, $filter.ID))</span>
+                                        </a>
+                                    <% end_loop %>
                                 </div>
                             </li>
                         <% end_if %>
@@ -101,7 +97,7 @@
                 <div class="flex-row">
                     <% loop $Results %>
                         <div class="flex-col flex-xs12 flex-s6 flex-l4 flex-xl3 card-parent">
-                            <div class="card hoverable <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %>">
+                            <div class="card hoverable flex-parent <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %>">
                                 <div class="card-content">
                                     <span class="card-title">
                                         <a href="$Link">$Name</a>
