@@ -104,9 +104,9 @@
                                     </span>
                                     <p>$Description</p>
 
-                                    <div class="chip <% loop $Platforms %>$Top.getCssClass($Name)<% end_loop %>">
-                                        <% loop $Platforms %>$Name<% end_loop %>
-                                    </div>
+                                    <% loop $Platforms %>
+                                        <a href="$Top.GetFilterLink('Platform',$ID)" class="chip $Top.getCssClass($Name)">$Name</a>
+                                    <% end_loop %>
                                 </div>
                                 <div class="card-action">
                                     <a href="$Link">View</a>
