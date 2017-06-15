@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box !important;
+}
 
 // Import from Materialize
 @import "components/color";
@@ -18,6 +20,7 @@
 @import "atom/skill-chips";
 
 // Organisms
+@import "organism/header";
 @import "organism/layered-nav";
 @import "organism/estimate-list";
 @import "organism/estimate-view";

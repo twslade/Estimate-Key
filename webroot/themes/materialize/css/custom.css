@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 .materialize-red {
@@ -5371,6 +5371,32 @@
 
 .skill-chip:hover span {
   display: block;
+}
+
+.search .input-field {
+  position: relative;
+}
+
+.search .twitter-typeahead {
+  width: 100%;
+}
+
+.search .search-select.typeahead {
+  margin: 0;
+  line-height: 64px;
+}
+
+.search .tt-input {
+  height: 64px;
+}
+
+.search input[type=text]:focus:not([readonly]) {
+  border-bottom-color: #e1f5fe;
+  box-shadow: inset 0 -1px 0 0 #e1f5fe;
+}
+
+.search .tt-menu {
+  background: #039be5;
 }
 
 .layered-nav .label {

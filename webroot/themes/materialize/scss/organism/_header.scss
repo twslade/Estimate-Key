@@ -1,0 +1,27 @@
+.search {
+    .input-field {
+        position: relative;
+    }
+
+    .twitter-typeahead {
+        width: 100%;
+    }
+
+    .search-select.typeahead {
+        margin: 0;
+        line-height: 64px;
+    }
+
+    .tt-input {
+        height: 64px;
+    }
+
+    input[type=text]:focus:not([readonly]) {
+        border-bottom-color: color('light-blue','lighten-5');
+        box-shadow: inset 0 -1px 0 0 color('light-blue','lighten-5');
+    }
+
+    .tt-menu {
+        background: color('light-blue','darken-1');
+    }
+}

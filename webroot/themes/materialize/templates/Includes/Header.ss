@@ -5,11 +5,11 @@
                 <div class="col s6">
                     <!-- Todo: Add real search form -->
                     <% if $SearchForm %>
-                        <form id="SearchForm_SearchForm" action="/" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
+                        <form id="SearchForm_SearchForm" class="search" action="/" method="get" enctype="application/x-www-form-urlencoded" _lpchecked="1">
                             <div class="input-field">
                                 <p id="SearchForm_SearchForm_error" class="message " style="display: none"></p>
                                 <input
-                                        type="search"
+                                        type="text"
                                         name="Search"
                                         value="$GetSearchText"
                                         placeholder="Search"
@@ -18,7 +18,7 @@
                                         class="search-select typeahead"
                                 >
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
+                                <%-- <i class="material-icons">close</i> --%>
                             </div>
                         </form>
                     <%--$SearchForm--%>
