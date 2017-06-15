@@ -15,8 +15,7 @@
                                         placeholder="Search"
                                         required
                                         id="SearchForm_SearchForm_Search"
-                                        data-url="/estimate/ajax"
-                                        class="search-select autocomplete"
+                                        class="search-select typeahead"
                                 >
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
@@ -34,17 +33,38 @@
 </header>
 
 <script>
-    var searchJsonData;
-    $(document).ready(function(){
-        searchJsonData = $getEstimatesForSearchJSON;
 
-            $('input.autocomplete').autocomplete({
-                data: searchJsonData,
-                limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
-                onAutocomplete: function(val) {
-                    // Callback function when value is autcompleted.
-                },
-                minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+    var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function(i, str) {
+                if (substrRegex.test(str.Name)) {
+                    matches.push(str);
+                }
             });
+
+            cb(matches);
+        };
+    };
+
+    var searchJsonData = $getEstimatesForSearchJSON;
+
+    $('.typeahead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    },{
+        name: 'estimates',
+        source: substringMatcher(searchJsonData)
     });
+
 </script>
