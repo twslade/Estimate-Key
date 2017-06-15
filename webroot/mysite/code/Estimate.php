@@ -196,6 +196,10 @@ class Estimate extends DataObject {
         return array_key_exists($idx, $this->_confidenceLevels) ? $this->_confidenceLevels[$idx] : '';
     }
 
+    public function canView($member = null){
+        return true;
+    }
+
 }
 
 /**
@@ -921,6 +925,19 @@ class Page_Controller extends ContentController {
         }
 
         return $estimates;
+    }
+
+    public function getEstimatesForSearchJSON(){
+        $resp = array();
+
+        $estimates = Estimate::get();
+        if($estimates->count() > 0){
+            $formatter = new JSONDataFormatter();
+            foreach ($estimates as $estimate){
+                $resp[$estimate->Name . ' - ' . implode(', ', $estimate->Clients()->column('Name'))] = $estimate->ID;
+            }
+        }
+        return json_encode($resp);
     }
 }
 
