@@ -34,37 +34,29 @@
 
 <script>
 
-    var substringMatcher = function(strs) {
-        return function findMatches(q, cb) {
-            var matches, substringRegex;
-
-            // an array that will be populated with substring matches
-            matches = [];
-
-            // regex used to determine if a string contains the substring `q`
-            substrRegex = new RegExp(q, 'i');
-
-            // iterate through the pool of strings and for any string that
-            // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function(i, str) {
-                if (substrRegex.test(str.Name + ' ' + str.Clients + ' ' + str.Platforms)) {
-                    matches.push(str.Clients + ' - ' + str.Name + ' - ' + str.Platforms);
-                }
-            });
-
-            cb(matches);
-        };
-    };
-
     var searchJsonData = $getEstimatesForSearchJSON;
+    var searchJsonArray = Object.keys(searchJsonData).map(
+        function(val) {
+            return searchJsonData[val].Clients + ' - ' +
+                    searchJsonData[val].Name + ' - ' +
+                    searchJsonData[val].Platforms;
+
+        }
+    );
+
+    var estimates = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: searchJsonArray
+    });
 
     $('.typeahead').typeahead({
         hint: true,
         highlight: true,
-        minLength: 1
+        minLength: 1,
     },{
         name: 'estimates',
-        source: substringMatcher(searchJsonData)
+        source: estimates
     });
 
 </script>
