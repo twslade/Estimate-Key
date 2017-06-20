@@ -41,7 +41,8 @@ class Estimate extends DataObject {
         'Stories' => 'Story',
         'Platforms' => 'Platform',
         'Files' => 'File',
-        'Categorys' => 'Category'
+        'Categorys' => 'Category',
+        'Actuals' => 'Actual'
     );
 
     private static $has_one = array(
@@ -165,6 +166,47 @@ class Estimate extends DataObject {
         return;
     }
 
+    private function _getActualsTab(){
+
+
+        $actuals = new GridField('Actuals', 'Actuals', $this->Actuals());
+
+        /** @var $LineItems GridFieldDataColumns */
+        $actuals->getConfig()
+            ->addComponent(new GridFieldButtonRow('before'))
+            ->addComponent(new GridFieldEditableColumns())
+            ->addComponent(new GridFieldDeleteAction())
+            ->addComponent(new GridFieldDataColumns())
+            ->addComponent(new GridFieldAddNewInlineButton())
+            ->getComponentByType('GridFieldEditableColumns')
+            ->setDisplayFields(array(
+                'LegacyURL' => array(
+                    'title' => 'Legacy URL',
+                    'callback' => function($record, $column, $grid) {
+                        return new TextField('LegacyURL', 'Legacy Workfront URL');
+                    },
+                ),
+                'WorkfrontRef' => array(
+                    'title' => 'WorkFront Reference',
+                    'callback' => function($record, $column, $grid) {
+                        return new TextField('WorkfrontRef', 'Workfront Reference');
+                    }
+                ),
+                'Hours' => array(
+                    'title' => 'Hours',
+                    'callback' => function($record, $column, $grid) {
+                        return new TextField('Hours', 'Actual Hours');
+                    }
+                )
+        ));
+
+        $this->_getFields()->addFieldsToTab('Root.Actuals', array(
+            $actuals
+        ));
+
+        return;
+    }
+
     public function getCMSFields()
     {
 
@@ -174,6 +216,7 @@ class Estimate extends DataObject {
         $this->_getTechnicalTab();
         $this->_getStoryTab();
         $this->_getArtifactsTab();
+        $this->_getActualsTab();
 
         return $this->_getFields();
     }
@@ -200,6 +243,54 @@ class Estimate extends DataObject {
         return true;
     }
 
+}
+
+class Actual extends DataObject{
+
+    const ISSUE_IDENTIFIER = 'issue';
+    const TASK_IDENTIFIER = 'task';
+    const WORKFRONT_BASE_URL = 'https://blueacorn.my.workfront.com/';
+
+
+    private static $db = array(
+        'LegacyURL' => 'Varchar(255)',
+        'WorkfrontRef' => 'Varchar(255)',
+        'Hours' => 'Varchar(255)'
+    );
+
+    private static $belongs_many_many = array(
+        'Estimates' => 'Estimate'
+    );
+
+    public function isIssue($link){
+        return strpos(self::ISSUE_IDENTIFIER, $link) !== false;
+    }
+
+    public function isTask($link){
+        return strpos(self::TASK_IDENTIFIER, $link) !== false;
+    }
+
+    public function getWorkFrontBaseUrl($type = self::TASK_IDENTIFIER){
+        return self::WORKFRONT_BASE_URL . $type . '/view?ID=';
+    }
+
+    public function getWorkFrontTaskLink($uuid = ''){
+        return $this->getWorkFrontBaseUrl(self::TASK_IDENTIFIER) . $this->WorkfrontRef;
+    }
+
+    public function getWorkFrontIssueLink($uuid = ''){
+        return $this->getWorkFrontBaseUrl(self::ISSUE_IDENTIFIER) . $this->WorkfrontRef;
+    }
+
+    public function getCMSFields()
+    {
+        $fields = FieldList::create(
+            TextField::create('WorkfrontRef'),
+            TextField::create('Hours')
+        );
+
+        return $fields;
+    }
 }
 
 /**
