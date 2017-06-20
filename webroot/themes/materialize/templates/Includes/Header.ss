@@ -39,8 +39,7 @@
         function(val) {
             return searchJsonData[val].Clients + ' - ' +
                     searchJsonData[val].Name + ' - ' +
-                    searchJsonData[val].Platforms;
-
+                    searchJsonData[val].Platforms + '%' + val + '%';
         }
     );
 
@@ -57,6 +56,12 @@
     },{
         name: 'estimates',
         source: estimates
+    });
+    $('.typeahead').bind('typeahead:select', function(ev, suggestion) {
+        var start = suggestion.indexOf('%') + 1;
+        var stop = suggestion.indexOf('%',start);
+        var selectedId  = suggestion.substring(start,stop);
+        window.location.href='./estimate/view/' + selectedId;
     });
 
 </script>
