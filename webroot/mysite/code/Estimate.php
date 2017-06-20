@@ -536,36 +536,34 @@ class Story extends DataObject {
 
     public function getCMSFields()
     {
-        $lineItems = new GridField('LineItems', 'Line Items', $this->LineItems(),
-            GridFieldConfig::create()
-                ->addComponent(new GridFieldButtonRow('before'))
-                ->addComponent(new GridFieldToolbarHeader())
-                ->addComponent(new GridFieldTitleHeader())
-                ->addComponent(new GridFieldEditableColumns())
-                ->addComponent(new GridFieldDeleteAction())
-                ->addComponent(new GridFieldAddNewInlineButton())
-        );
+        $lineItems = new GridField('LineItems', 'Line Items', $this->LineItems());
 
         /** @var $LineItems GridFieldDataColumns */
-        $lineItems->getConfig()->getComponentByType('GridFieldEditableColumns')->setDisplayFields(array(
-            'NumHours' => function($record, $column, $grid) {
+        $lineItems->getConfig()
+            ->addComponent(new GridFieldButtonRow('before'))
+            ->addComponent(new GridFieldEditableColumns())
+            ->addComponent(new GridFieldDeleteAction())
+            ->addComponent(new GridFieldAddNewInlineButton())
+            ->getComponentByType('GridFieldEditableColumns')
+            ->setDisplayFields(array(
+            'NumHours' => array('title' => 'Hours', 'callback' => function($record, $column, $grid) {
                 return new TextField('NumHours', 'Number of hours');
-            },
-            'Description' => function($record, $column, $grid) {
+            }),
+            'Description' => array('title' => 'Description', 'callback' => function($record, $column, $grid) {
                 return new TextField('Description', 'Description');
-            },
-            'Roles' => function($record, $column, $grid) {
+            }),
+            'Roles' => array('title' => 'Roles', 'callback' => function($record, $column, $grid) {
                 return ListboxField::create($column)
                     ->setMultiple(true)
                     ->setValue(($record->ID && get_class($record) == 'LineItem') ? $record->Roles()->column('ID') : '')
                     ->setSource(Role::get()->map('ID', 'Name')->toArray());
-            },
-            'Skills' => function($record, $column, $grid) {
+            }),
+            'Skills' =>  array('title' => 'Skills', 'callback' => function($record, $column, $grid) {
                 return ListboxField::create($column)
                     ->setMultiple(true)
                     ->setValue(($record->ID && get_class($record) == 'LineItem') ? $record->Skills()->column('ID') : '')
                     ->setSource(Skill::get()->map('ID', 'Name')->toArray());
-            }
+            })
         ));
 
 
