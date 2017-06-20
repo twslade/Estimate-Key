@@ -4,7 +4,7 @@ class Seeder extends \Seeder\Provider {
 
     public static $shorthand = 'Seeder';
 
-    protected $_skills = array(
+    protected static $_skills = array(
         'Javascript',
         'PHP',
         'SOAP',
@@ -41,7 +41,7 @@ class Seeder extends \Seeder\Provider {
         'Twitter Bootstrap'
     );
 
-    protected $_category = array(
+    protected static $_category = array(
         'Performance Tuning',
         'Server Configuration',
         '3rd Party Module',
@@ -71,7 +71,7 @@ class Seeder extends \Seeder\Provider {
         'Newsletter Integration'
     );
 
-    protected $_risks = array(
+    protected static $_risks = array(
         '3rd Party Code Modification',
         '3rd Party Module',
         '3rd Party Vendor',
@@ -83,7 +83,7 @@ class Seeder extends \Seeder\Provider {
     );
 
 
-    protected $_estimateNames = array(
+    protected static $_estimateNames = array(
         'Additional Updates to Affirm',
         'Replace Gigya with Native Reviews',
         'Newsletter Signup Welcome Email',
@@ -158,20 +158,20 @@ class Seeder extends \Seeder\Provider {
     }
 
     protected function getName($state){
-        return ucwords($this->_estimateNames[array_rand($this->_estimateNames)]);
+        return ucwords($this->_getRandomArrayVal(self::$_estimateNames));
 
     }
 
     protected function getRisk($state){
-        return $this->_getRandomArrayVal($this->_risks);
+        return $this->_getRandomArrayVal(self::$_risks);
     }
 
     protected function getSkill($state){
-        return $this->_getRandomArrayVal($this->_skills);
+        return $this->_getRandomArrayVal(self::$_skills);
     }
 
     protected function getCategory($state){
-        return $this->_getRandomArrayVal($this->_category);
+        return $this->_getRandomArrayVal(self::$_category);
     }
 
     protected function _getRandomArrayVal(&$arr){
